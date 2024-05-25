@@ -49,35 +49,31 @@
 
 			<div class="col-sm-12">
 				<div class="login-card card-block">
-					<form class="md-float-material">
+					<form class="md-float-material" id="loginForm">
 						<div class="text-center">
-							<!-- <img src="assets/images/logo-black.png" alt="logo"> -->
-							<h3 id="project_name_title">Policy Link Rwanda Client</h3> 
+							<h3 id="project_name_title">Policy Link Rwanda Client</h3>
+							<div id="output" style="color:red;"></div>
 						</div>
-						<h3 class="text-center txt-primary">
-							Sign In to your account
-						</h3>
+						<h3 class="text-center txt-primary">Sign In to your account</h3>
 						<div class="row">
 							<div class="col-md-12">
 								<div class="md-input-wrapper">
-									<input type="email" class="md-form-control" required="required"/>
+									<input type="email" class="md-form-control" required="required" id="email"/>
 									<label>Email</label>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="md-input-wrapper">
-									<input type="password" class="md-form-control" required="required"/>
+									<input type="password" class="md-form-control" required="required" id="password" />
 									<label>Password</label>
 								</div>
 							</div>
-							
 						</div>
 						<div class="row">
 							<div class="col-xs-10 offset-xs-1">
-								<button type="button" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">LOGIN</button>
+								<button type="submit" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">LOGIN</button>
 							</div>
 						</div>
-						<!-- <div class="card-footer"> -->
 						<div class="col-sm-12 col-xs-12 text-center">
 							<div class="col-sm-12 col-xs-12 forgot-phone text-center">
 								<a href="forgot-password.html" class="text-center f-w-600"> Forget Password ?</a>
@@ -88,10 +84,8 @@
 							<span class="text-muted">Don't have an account?</span>
 							<a href="register.html" class="f-w-600 p-l-5">Sign up Now</a>
 						</div>
-
-
-						<!-- </div> -->
 					</form>
+					
 					<!-- end of form -->
 				</div>
 				<!-- end of login-card -->
@@ -102,6 +96,39 @@
 	</div>
 	<!-- end of container-fluid -->
 </section>
+
+<script>
+	document.getElementById('loginForm').addEventListener('submit', function(event) {
+		event.preventDefault(); // Prevent the default form submission
+
+		// Get the email and password from the form
+		const username = document.getElementById('email').value;
+		const password = document.getElementById('password').value;
+
+		// Make a POST request to the login API endpoint
+		fetch('https://policy-link-rwanda-client-project-with.onrender.com/account/login', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({ username, password })
+		})
+		.then(response => {
+			if (response.ok) {
+				// If login is successful, redirect or display a success message
+				window.location.href = 'OTP.html'; // Redirect to dashboard page
+			} else {
+				// If login fails, display an error message
+				document.getElementById('output').innerText = 'Login failed. Please check your email and password.';
+			}
+		})
+		.catch(error => {
+			console.error('Error during login:', error);
+			document.getElementById('output').innerText = 'An error occurred during login. Please try again later.';
+		});
+	});
+
+</script>
 
 <!-- Required Jqurey -->
 <script src="assets/plugins/jquery/dist/jquery.min.js"></script>

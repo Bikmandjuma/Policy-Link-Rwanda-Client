@@ -38,11 +38,12 @@
 			<div class="row">
 					<div class="col-sm-12">
 						<div class="login-card card-block bg-white">
-							<div id="output" style="color: red;"></div>
+							
 							<form class="md-float-material" id="registerForm">
 								<div class="text-center">
 									<!-- <img src="assets/images/logo-black.png" alt="logo"> -->
-									<h3 id="project_name_title">Policy Link Rwanda Client</h3> 
+									<h3 id="project_name_title">Policy Link Rwanda Client</h3>
+									<div id="output" style="color: red;"></div> 
 								</div>
 								<h3 class="text-center txt-primary">Create an account </h3>
 								<div class="row">
@@ -102,50 +103,50 @@
 	</section>
 	<script>
 		//call registration api end-point
-		document.getElementById("registerForm").addEventListener(submit,function(event){
+		document.getElementById("registerForm").addEventListener("submit", function(event){
 			event.preventDefault();
-
-			const fname=document.getElementById('firstname').value;
-			const lname=document.getElementById('lastname').value;
-			const email=document.getElementById('email').value;
-			const phone=document.getElementById('phone').value;
-			const uname=document.getElementById('username').value;
-
-			fetch('https://policy-link-rwanda-client-project-with.onrender.com/account/signup/',{
-				method:'POST',
-				headers:{
-					'content-type':'application/json'
+	
+			const fname = document.getElementById('firstname').value;
+			const lname = document.getElementById('lastname').value;
+			const email = document.getElementById('email').value;
+			const phone = document.getElementById('phone').value;
+			const uname = document.getElementById('username').value;
+	
+			fetch('https://policy-link-rwanda-client-project-with.onrender.com/account/signup/', {
+				method: 'POST',
+				headers: {
+					'content-type': 'application/json'
 				},
-				body:JSON.stringify({fname,lname,email,phone,uname})
+				body: JSON.stringify({ fname, lname, email, phone, uname }) // Include uname for username
 			})
-			.then(response =>{
+			.then(response => {
 				if(response.ok){
-					window.location.href='Password_validation.html';
-				}else{
+					window.location.href = 'Password_validation.html';
+				} else {
 					// If registration fails, handle different error scenarios
-                    response.json().then(data => {
-                        if (data.error === "Username is already taken") {
-                            document.getElementById('output').innerText = 'Username is already taken. Please choose another.';
-                        } else if (data.error === "Email is already taken") {
-                            document.getElementById('output').innerText = 'Email is already taken. Please use another email address.';
-                        } else if (data.error === "Phone number is already taken") {
-                            document.getElementById('output').innerText = 'Phone number is already taken. Please use another phone number.';
-                        } else {
-                            document.getElementById('output').innerText = 'Registration failed. Please try again later.';
-                        }
-                    }).catch(error => {
-                        console.error('Error parsing response:', error);
-                        document.getElementById('output').innerText = 'An error occurred during registration. Please try again later.';
-                    });
-                }
+					response.json().then(data => {
+						if (data.error === "Username is already taken") {
+							document.getElementById('output').innerText = 'Username is already taken. Please choose another.';
+						} else if (data.error === "Email is already taken") {
+							document.getElementById('output').innerText = 'Email is already taken. Please use another email address.';
+						} else if (data.error === "Phone number is already taken") {
+							document.getElementById('output').innerText = 'Phone number is already taken. Please use another phone number.';
+						} else {
+							document.getElementById('output').innerText = 'Registration failed. Please try again later.';
+						}
+					}).catch(error => {
+						console.error('Error parsing response:', error);
+						document.getElementById('output').innerText = 'An error occurred during registration. Please try again later.';
+					});
+				}
 			})
 			.catch(error => {
-				console.error("Error durring registration ",error);
-				document.getElementById('output').innerText="An error occurred during registration. Please try again later.";
+				console.error("Error during registration ", error);
+				document.getElementById('output').innerText = "An error occurred during registration. Please try again later.";
 			});
-
 		});
 	</script>
+	
    <!-- Required Jqurey -->
    <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
    <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
