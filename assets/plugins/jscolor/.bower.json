@@ -1,0 +1,20 @@
+{
+  "name": "jscolor",
+  "version": "1.4.2",
+  "main": [
+    "jscolor.js"
+  ],
+  "ignore": [],
+  "dependencies": {},
+  "homepage": "https://github.com/freegroup/jscolor",
+  "_release": "1.4.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.4.2",
+    "commit": "c31449b92fa9db247c6297a744d9972c29e94975"
+  },
+  "_source": "https://github.com/freegroup/jscolor.git",
+  "_target": "1.4.2",
+  "_originalSource": "jscolor",
+  "_direct": true
+}

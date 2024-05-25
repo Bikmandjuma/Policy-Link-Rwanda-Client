@@ -1,0 +1,131 @@
+//  	margin mixin
+@mixin m($val) {
+	margin: $val;
+}
+@mixin mt($val) {
+	margin-top: $val;
+}
+@mixin mb($val) {
+	margin-bottom: $val;
+}
+@mixin ml($val) {
+	margin-left: $val;
+}
+@mixin mr($val) {
+	margin-right: $val;
+}
+//  	padding mixin
+@mixin p($val) {
+	padding: $val;
+}
+@mixin pt($val) {
+	padding-top: $val;
+}
+@mixin pb($val) {
+	padding-bottom: $val;
+}
+@mixin pl($val) {
+	padding-left: $val;
+}
+@mixin pr($val) {
+	padding-right: $val;
+}
+// 		font mixin
+@mixin f-s($val) {
+	font-size: $val;
+}
+@mixin f-w($val) {
+	font-weight: $val;
+}
+@mixin f-st($val) {
+	font-style: $val;
+}
+// 		text mixin
+@mixin t-a($val) {
+	text-align: $val;
+}
+@mixin t-d($val) {
+	text-decoration: $val;
+}
+// 	   Positions mixin
+@mixin pos($val) {
+	position: $val;
+}
+// 	   float mixin
+@mixin flt($val) {
+	float: $val;
+}
+//     Overflow mixin
+@mixin o-f($val) {
+	overflow: $val;
+}
+//     display mixin
+@mixin disp($val) {
+	display: $val;
+}
+//     color mixin
+$bg-color: #2196F3 !important,#2f80e7 !important, #4CAF50 !important, #4ca250 !important, #ff5252 !important,#ff5252 !important,#40c4ff !important, #f57c00 !important,#de7203 !important,#757575 !important,#fff !important,#1da1f2,#3b5998,#334e88 !important,#d7d8da;
+$bg-color-name:primary,dark-primary,success,dark-success,danger,alert-danger,info,warning,dark-warning,default,white,twitter,facebook,dark-facebook,gray;
+
+$bg:#ff4444,#ffbb33,#00C851,#33b5e5,#2BBBAD,#4285F4,#aa66cc, #2E2E2E, #3F729B, #3F729B, #37474F;
+$bg-name:danger-color,warning-color,success-color,info-color,default-color,primary-color,secondary-color,elegant-color,stylish-color, unique-color,special-color;
+
+$t-c-v:#2196F3 !important, #fff !important, #777 !important, #4CAF50 !important, #40c4ff !important, #f57c00 !important, #ff5252 !important;
+$t-c-n:primary,white,muted,success,info,warning,danger;
+
+$txt-color-n:text-pink,text-custom,text-dark,text-purple,text-danger-color,text-warning-color,text-success-color,text-info-color,text-default-color,text-primary-color;
+$txt-color-v:#ff7aa3,#64b0f2,#2b3d51,#9261c6,#ff4444,#f57c00,#00C851,#33b5e5,#2BBBAD,#4285F4;
+
+@mixin c($val) {
+	color: $val;
+}
+@mixin bg($val) {
+	background: $val;
+}
+@mixin bg-c($val) {
+	background-color: $val;
+}
+//     shadow mixin
+@mixin shadow($val...) {
+	-webkit-box-shadow: $val;
+	box-shadow: $val;
+}
+//     v-align mixin
+@mixin v-al($val) {
+	vertical-align: $val;
+}
+//     border mixin
+@mixin b($val,$type:"") {
+	@if($type==""){
+		border:$val;
+	}@else{
+		border-#{$type}:$val;
+	}
+}
+// 	   event mixin
+@mixin transition($val...) {
+	-webkit-transition: $val;
+	-moz-transition: $val;
+	-ms-transition: $val;
+	transition: $val;
+}
+@mixin animation($val...) {
+	-webkit-animation: $val;
+	-moz-animation: $val;
+	-ms-animation: $val;
+	animation: $val;
+}
+@mixin transform($val...) {
+	-webkit-transform: $val;
+	-moz-transform: $val;
+	-ms-transform: $val;
+	transform: $val;
+}
+@mixin k-frames($name) {
+	@-webkit-keyframes #{$name} {
+        @content;
+    }
+	@keyframes #{$name} {
+        @content;
+    }
+}

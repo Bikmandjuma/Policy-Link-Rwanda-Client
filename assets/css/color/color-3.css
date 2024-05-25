@@ -1,0 +1,316 @@
+nav,
+.main-header-top,
+.color-picker .settings-header,
+.color-picker a.handle:hover,
+.sidebar-menu>li.active>a,
+.bg-spark-chart,
+.double-bounce1,
+.circle-5,
+.loader .circle:after,
+.slider-handle,
+#BC .slider-selection,
+.br-theme-bars-1to10 .br-widget a.br-selected,
+.br-theme-bars-1to10 .br-widget a.br-active,
+.br-theme-bars-movie .br-widget a.br-active,
+.br-theme-bars-movie .br-widget a.br-selected,
+.br-theme-bars-pill .br-widget a.br-active,
+.br-theme-bars-pill .br-widget a.br-selected,
+.br-theme-bars-reversed .br-widget a.br-active,
+.br-theme-bars-reversed .br-widget a.br-selected,
+.br-theme-bars-horizontal .br-widget a.br-active,
+.br-theme-bars-horizontal .br-widget a.br-selected,
+.nav-tabs .slide,
+.bg-primary,
+#breadcrumb-triangle li a,
+.error-500,
+.error-503,
+.error-404,
+.error-400,
+.error-403,
+.login,
+.md-content h3,
+.portlets-primary .card-header,
+.custom-control-input:checked~.custom-control-indicator,
+.md-form-control:focus ~ .md-line:before,
+.md-form-control:focus ~ .md-line:after,
+.md-input-wrapper .md-line:after,
+.md-form-control:focus ~ .md-line:before,
+.md-input-wrapper .md-line:before,
+.sign-in-up,
+.pricing-new,
+.join-us,
+.footer-gallery li .footer-hvr-effect,
+.ourpro-icon-effect-8 .ourpro-icon,
+.ourpro-icon-effect-8 .ourpro-icon:hover,
+.footer-news button,
+.blog-hover-detail,
+.invoice-box,
+.blog-section h2,.custom-header,.select2-container--default .select2-results__option--highlighted[aria-selected],
+.ms-container .ms-selectable li.ms-hover, .ms-container .ms-selection li.ms-hover,
+.badge-primary, .label-primary,
+.dtp div.dtp-date, .dtp div.dtp-time,.dtp table.dtp-picker-days tr > td > a.selected,
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover,
+.daterangepicker td.active, .daterangepicker td.active:hover,.bootstrap-datetimepicker-widget table td span.active,
+.dtp .dtp-actual-meridien a.selected,.wizard > .steps .current a,
+.wizard > .steps .current a:hover, .wizard > .steps .current a:active,
+.wizard > .actions a, .wizard > .actions a:hover, .wizard > .actions a:active,
+.dropdown-item.active, .dropdown-item.active:focus, .dropdown-item.active:hover,.dropdown-primary a:hover,
+#main-chat .chat-single-box.active .chat-header,.morris-hover-row-label, .morris-hover-point,
+.card-questioning .ui-state-active,
+.card-member .ui-state-active,.cd-pricing-switcher .cd-switch,
+.fc-state-active,.b-menu-left,.b-menu-right,#b-menu a.b-menu-icon:hover,.b-menu-icon,
+.chat-menu-reply,.slimScrollBar,.dynamic-list-two .new-item,.dynamic-list-three .new-item,.dynamic-list-one .new-item{
+    background-color: #ff5252 !important;
+}
+.br-theme-bars-square .br-widget a.br-active,
+.br-theme-bars-square .br-widget a.br-selected,.form-control:focus ~ .input-group-btn .btn-secondary {
+    border-color: #ff5252;
+    color: #ff5252;
+}
+#breadcrumb-triangle li:nth-child(even) a:before {
+    border-color: #ff5252;
+    border-left-color: transparent;
+}
+#breadcrumb-triangle li a:after,.color-picker .section {
+    border-left-color: #ff5252;
+}
+#breadcrumb-triangle li:nth-child(even) a:after,.chat-menu-reply:before {
+    border-left-color: #ff5252;
+}
+.double-bounce2 {
+    background-color: #ff5252 !important;
+    opacity: 0.6;
+}
+#BC .slider-handle,.bootstrap-datetimepicker-widget table td.today:before {
+    border-bottom-color: #ff5252;
+}
+.custom-control-input:checked~.custom-control-indicator {
+    box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #ff5252;
+}
+.cd-popular .cd-pricing-wrapper > li{
+box-shadow: inset 0 0 0 3px #ff5252;
+}
+.ms-container .ms-list.ms-focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 82, 82, 0.6);
+    border-color: rgba(255, 82, 82, 0.8);
+}
+.min-slider-handle.triangle,
+.min-slider-handle.custom,
+.md-effect-12 h3,.media-left .btn-primary {
+    background-color: transparent !important;
+}
+.color-picker a.handle i,
+.main-header .breadcrumb-title a,
+.sidebar-menu .treeview-menu>li.active>a,
+.color-picker a.handle i,
+.dashboard-page-view .counter-txt,
+.slider-handle.custom::before,
+.br-theme-fontawesome-stars .br-widget a.br-active:after,
+.br-theme-fontawesome-stars .br-widget a.br-selected:after,
+.br-theme-css-stars .br-widget a.br-selected:after,
+.br-theme-css-stars .br-widget a.br-active:after,
+.br-theme-fontawesome-stars-o .br-widget a.br-selected:after,
+.br-theme-fontawesome-stars-o .br-widget a.br-fractional:after,
+.br-theme-fontawesome-stars-o .br-widget a.br-active:after,
+.md-tabs .nav-item.open .nav-link,
+.md-tabs .nav-item.open .nav-link:focus,
+.md-tabs .nav-item.open .nav-link:hover,
+.md-tabs .nav-link.active,
+.md-tabs .nav-link.active:focus,
+.md-tabs .nav-link.active:hover,
+.md-tabs .nav-link,
+.md-form-control:focus ~ label,
+.md-valid ~ label,
+.nav-pills .nav-link.active,
+.nav-pills .nav-link.active:focus,
+.nav-pills .nav-link.active:hover,
+.btn-inverse-primary,
+a:hover,
+a {
+    color: #ff5252;
+}
+.txt-primary,
+.icon-list-demo i:hover,
+.login-card h1,
+span.logo,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link:hover,
+#home-header span,
+.socials-icon li a:hover,
+h2.title-sec,
+h2.title-center,
+.about-sec li i,
+.portfolioFilter li button:hover,
+.portfolioFilter li button.current,
+.pricing-table-header .price,
+.pricing-table-items li i.icofont-check,
+.blog-details h6,
+.blog-details .read-more a,
+.testimonial-thumbs h5,
+.slick-dots li.slick-active button:before,
+.footer-about i,
+.footer-menu h5:hover,
+.slick-dots li button:before,
+.blog-section h5,
+.read-more a,
+.blog-block a:hover,
+.blog-single h4,
+.blog-big-user h4,
+.blog-s-reply h6,
+.blog-article .articles a,.radio label:hover .helper,.radio input:checked ~ .helper::before,.ranges li,
+.inline-editable label,.ourCountdownContainer, .yourCountdownContainer p,
+.cd-pricing-header,.cd-currency, .cd-duration,
+.mega-card h6,ul.mega-list li > a:hover,
+#b-menu .dropup .dropdown-menu li:hover,.dummy-media-object:hover h3,
+.main-header-top .top-nav .settings-menu li a:hover,.coming-social a:hover,.faq-expi li i{
+    color: #ff5252 !important;
+}
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.page-item.active .page-link,
+.page-item.active .page-link:focus,
+.page-item.active .page-link:hover,
+.bootpag>.active>a,
+.bootpag>.active>a:focus,
+.bootpag>.active>a:hover,
+.bootpag>.active>span,
+.bootpag>.active>span:focus,
+.bootpag>.active>span:hover,
+.btn-inverse-primary:hover,
+.radio .helper::after,
+.select2-container--default .select2-selection--multiple .select2-selection__choice,
+.select2-container--classic .select2-results__option--highlighted[aria-selected],
+.datepicker table tr td.active.active.focus, .datepicker table tr td.active.active:focus,
+.datepicker table tr td.active.active:hover, .datepicker table tr td.active.highlighted.active.focus,
+.datepicker table tr td.active.highlighted.active:focus, .datepicker table tr td.active.highlighted.active:hover,
+.datepicker table tr td.active.highlighted:active.focus, .datepicker table tr td.active.highlighted:active:focus,
+.datepicker table tr td.active.highlighted:active:hover, .datepicker table tr td.active:active.focus,
+.datepicker table tr td.active:active:focus, .datepicker table tr td.active:active:hover,
+.ranges li.active,.ranges li:hover,.checkbox-primary input[type="checkbox"]:checked + label::before,
+.footable .pagination>.active>a, .footable .pagination>.active>a:focus,
+.footable .pagination>.active>a:hover, .footable .pagination>.active>span,
+.footable .pagination>.active>span:focus, .footable .pagination>.active>span:hover,
+.fc th
+{
+    background-color: #ff5252 !important;
+    border-color: #ff5252 !important;
+}
+.color-picker a.handle,
+.btn-inverse-primary,
+.form-control:focus,
+.rkmd-checkbox.checkbox-rotate .checkbox-primary input[type="checkbox"]:checked + .checkbox:before,
+.fade-in-primary .cr,
+.lg-outer .lg-thumb-item.active,
+.lg-outer .lg-thumb-item:hover,
+.slick-dots li button,.radio.radiofill .helper::after,
+.select2-container--default.select2-container--focus .select2-selection--multiple,
+.select2-container--classic.select2-container--open .select2-dropdown,
+.select2-container--classic.select2-container--open .select2-selection--single,
+.daterangepicker .input-mini.active,.media-list .media a.border-primary,.fade-in-primary .cr,
+.chat-footer, .chat-link,.new-msg:focus ~ .input-group-addon,.md-input-primary .md-form-control,
+.horizontal-fixed .main-sidebar .sidebar-menu li:hover ul.mega-menu,.panels-wells .panel-primary{
+    border-color: #ff5252 !important;
+}
+#circle-loader2 {
+    stroke: #ff5252;
+}
+.nav-pills .nav-link.active,
+.nav-pills .nav-link.active:focus,
+.nav-pills .nav-link.active:hover {
+    border-bottom-color: #ff5252;
+}
+.color-picker .section:last-child {
+    border-bottom-color: rgb(255, 82, 82);
+}
+.color-picker .section {
+    border-right-color: rgb(255, 82, 82);
+}
+.pricing-table:hover {
+    border-top-color: #ff5252;
+}
+
+.filter-bar > .navbar{
+    background-color: #fff !important;
+}
+.item:hover .blog-hover-detail,.wizard > .actions .disabled a,.cd-pricing-switcher .fieldset {
+    background-color: rgba(255, 82, 82, 0.68);
+    color: #fff;
+}
+.blog-single .qutoe-text,.fc-event {
+    border-left-color: #ff5252 !important;
+    color: #ff5252;
+}
+
+button.dt-button, div.dt-button, a.dt-button{
+    background-image: linear-gradient(to bottom, #ff5252 0%,#ff5252 100%) !important;
+    border-color: #ff5252 !important;
+}
+.checkbox-color input[type="checkbox"]:focus + label::before{
+    outline: none;
+}
+.hour-hand,.minute-hand{
+    stroke:#ff5252 ;
+}
+.dtp-select-hour[fill="#2196F3"],.dtp-select-minute[fill="#2196F3"] {
+    fill:#ff5252  !important;
+}
+
+.dtp > .dtp-content > .dtp-date-view > header.dtp-header{
+    background-color: #ff5f5d;
+}
+.invoice-box tr td a,a.dt-button:hover {
+    color: #fff;
+}
+.signup-btn .btn-primary:hover {
+    background-color: #fff !important;
+    border-color: #ff5252;
+}
+.dashboard-primary.bg-primary,.bg-spark-chart{
+    background-color:#2196F3 !important;
+}
+.bg-spark-chart{
+    background-color:#3f51b5 !important;
+}
+@-webkit-keyframes sonarEffect {
+    0% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.5;
+        box-shadow: 0 0 0 2px #ff5252, 0 0 10px 10px #ff7c76, 0 0 0 10px #ff727f;
+    }
+    100% {
+        box-shadow: 0 0 0 2px #ff5252, 0 0 10px 10px #ff7c76, 0 0 0 10px #ff727f;
+        -webkit-transform: scale(1.5);
+        opacity: 0;
+    }
+}
+@-moz-keyframes sonarEffect {
+    0% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.5;
+        box-shadow: 0 0 0 2px #ff5252, 0 0 10px 10px #ff7c76, 0 0 0 10px #ff727f;
+    }
+    100% {
+        box-shadow: 0 0 0 2px #ff5252, 0 0 10px 10px #ff7c76, 0 0 0 10px #ff727f;
+        -moz-transform: scale(1.5);
+        opacity: 0;
+    }
+}
+@keyframes sonarEffect {
+    0% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.5;
+        box-shadow: 0 0 0 2px #ff5252, 0 0 10px 10px #ff7c76, 0 0 0 10px #ff727f;
+    }
+    100% {
+        box-shadow: 0 0 0 2px #ff5252, 0 0 10px 10px #ff7c76, 0 0 0 10px #ff727f;
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}

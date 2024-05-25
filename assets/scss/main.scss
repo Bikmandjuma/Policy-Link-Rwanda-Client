@@ -1,0 +1,5859 @@
+/**
+
+Template Name: Able Pro Responsive Bootstrap 4 Admin Template
+Author: Codedthemes
+Email: support@phopenixcoded.net
+File: main.css
+**/
+/* =============
+  == Table of Contents==
+
+	- Custom Css
+	- Generic classes
+		-	Margin, Padding, Font class, text align, position, floating, overflow, background class, text color, display class, boarder class
+	- Theme Elements
+		-	Icons, Accordion, Button, Redial, floating actions, FAB, tabs, typography, buttons, box shadow, slider page, error page, Breadcrumb, pagination, Basic card, Login card
+	- General Elements
+		-	Modal, Nestable, Lable & Badges, List, Portlates, Preloader, Calender, To-Do, Materialize general elements, Lables
+	- Advance Form Elements
+	- Pages
+		-	Loader page, Invoice, Tasklist, Task detail, Range-slider, Counter, Maintenance, Color, FAQ, Progress, Panels & wells, Contact card, Auth pages, Flag
+		-	Gallery, Products pages, Widget, Email, Social timeline, Datatable, Chat, Blog, Wizard, CRM dashboard, Task board, Issue list, Chartlist, X-editable
+		-	Home chat, Dashboard 1-2-3-4
+	- Responsive media class
+
+============= */
+@import url( '../plugins/waves/waves.min.css');
+@import url( '../plugins/notification/css/animate.min.css');
+@import url( '../plugins/notification/css/notification.css');
+@import url("../plugins/search/css/component.css");
+@import url( 'generic-class.css');
+@import url( 'svg-weather.css');
+@import url( 'menu.css');
+@import "genral";
+
+body {
+    @include f-s(15px);
+    overflow-x: hidden;
+    @include bg-c(#E5E5E5);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+* a {
+    @include c(#00b9f5);
+    @include f-s(15px);
+    @include f-w(400);
+    cursor: pointer;
+    @include transition(all 0.3s 0s);
+
+    &:focus,
+    &:hover {
+        @include t-d(none);
+    }
+}
+
+*:focus {
+    outline: none !important;
+}
+
+p {
+    @include f-s(13px);
+    @include f-w(400);
+    line-height: 1.6;
+    @include c(#666);
+    @include m(0);
+}
+
+i {
+    cursor: pointer;
+}
+
+.card_main {
+    @include mb(30px);
+    @include b(none);
+    @include shadow(0 2px 2px 0 rgba(0, 0, 0, .05), 0 3px 1px -2px rgba(0, 0, 0, .08), 0 1px 5px 0 rgba(0, 0, 0, .08));
+}
+
+.sub-title {
+    @include b(1px solid rgba(204, 204, 204, 0.35),bottom);
+    @include pb(10px);
+    @include mb(20px);
+    text-transform: capitalize;
+    @include mb(40px);
+}
+
+label {
+    @include c(rgba(43, 61, 81, 0.8));
+    text-transform: capitalize;
+}
+
+h6 {
+    @include c(#757575);
+    @include f-w(500);
+}
+
+ul {
+    list-style: none;
+    @include p(0);
+    @include mb(0);
+}
+
+.slimScrollBar{
+   width: 4px !important;
+}
+
+.counter-txt {
+    @include f-s(1.5rem);
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.c-both {
+    clear: both;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.breadcrumb-block {
+    .breadcrumb:last-child {
+        @include mb(0);
+    }
+}
+
+.breadcrumb-title {
+    @include bg(rgba(0, 0, 0, 0) none repeat scroll 0 0);
+    @include p(0);
+}
+
+.card-header-text {
+    @include mb(0);
+    @include f-s(1rem);
+    @include mb(rgba(51, 51, 51, 0.85));
+    text-transform: uppercase;
+    @include f-w(500);
+    @include disp(inline-block);
+    @include v-al(middle);
+}
+
+.card-header {
+    @include p(20px);
+    @include bg-c(transparent);
+    @include c(#757575);
+    @include b(none,bottom);
+    p{
+      @include mt(10px);
+      @include c(#8e8e8e);
+      @include f-s(14px);
+   }
+}
+
+.card {
+    @include mb(30px);
+    @include b(none);
+    @include shadow(0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02));
+}
+
+textarea {
+    resize: none;
+}
+
+.txt-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 120px;
+    overflow: hidden;
+}
+
+.form-inline {
+    label {
+        @include mb(5px !important);
+    }
+}
+
+.able-logo {
+    @include disp(inline-block);
+    @include mr(10px);
+    width: 130px;
+}
+
+.nav-pills {
+    .nav-link {
+        &.active,
+        &.active:focus,
+        &.active:hover {
+            @include bg(transparent);
+            @include c(#0275d8);
+            @include t-a(center);
+            box-shadow: 0px 0px 2px 1px #ddd;
+        }
+    }
+}
+
+.generic-card-body {
+    strong {
+        @include disp(block);
+    }
+
+    code {
+        cursor: pointer;
+        @include disp(inline-block);
+        @include mr(10px);
+        @include mb(10px);
+    }
+}
+
+.block {
+    @include disp(block);
+}
+
+.btn.shadow-none {
+    @include shadow(none);
+}
+/**====== Custom css end ======**/
+/**  =====================
+      icon css start
+==========================  **/
+/*========== font awesome icone ===========*/
+.data_table_main.icon-list-demo [class*=col-] {
+    @include mb(10px);
+}
+
+.icon-list-demo {
+    i {
+        @include b(1px solid #eceeef);
+        @include b(3px,radius);
+        @include c(rgba(43, 61, 81, 0.7));
+        @include disp(inline-block);
+        @include f-s(24px);
+        height: 50px;
+        line-height: 50px;
+        @include m(0 12px 0 0);
+        @include t-a(center);
+        @include v-al(middle);
+        width: 50px;
+
+        &:hover {
+            @include c(#64b0f2);
+        }
+    }
+
+    div {
+        cursor: pointer;
+        white-space: nowrap;
+        @include mb(10px);
+    }
+}
+
+.main-header {
+    @include p(20px 0 20px 20px);
+
+    h4 {
+        @include disp(inline-block);
+        @include mb(0);
+        @include f-w(500);
+    }
+
+    .breadcrumb-title {
+        @include mt(10px);
+        @include mb(0);
+
+        a {
+            @include f-s(16px);
+            @include c(#1b8bf9);
+        }
+
+        .breadcrumb-item:last-child a {
+            @include c(#7e7e7e);
+        }
+    }
+}
+/*========== Material Design Icons ===========*/
+/**====== icon css end ======**/
+/**  =====================
+      Accordion css start
+==========================  **/
+.accordion-msg {
+    @include disp(block);
+    @include c(#222222);
+    @include p(14px 20px);
+    @include b(1px solid #ddd,top);
+    @include f-w(600);
+
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.faq-accordion .accordion-desc {
+    @include p(20px);
+}
+
+.accordion-desc {
+    @include c(#222222);
+    @include p(0 20px 20px);
+}
+
+#color-accordion .accordion-desc {
+    @include mt(14px);
+}
+
+.ui-accordion-header-icon {
+    @include flt(right);
+    @include f-s(20px);
+}
+
+.accordion-title {
+    @include mb(0);
+}
+
+.accordion-block {
+    @include p(0);
+}
+/*dropdown*/
+.drop.animate {
+    @include animation(drop 1s ease-out);
+}
+@include k-frames(drop) {
+    100% {
+        opacity: 0;
+        @include transform(scale(2.5));
+    }
+}
+
+.materialSelect {
+    height: 48px;
+    @include pos(relative);
+    @include t-a(center);
+    @include mb(10px);
+
+    &.error {
+        .md-select:not(.isOpen) {
+            @include b(1px solid #DD2C00 !important);
+        }
+
+        .message {
+            @include disp(block);
+        }
+    }
+
+    &.inline {
+        @include flt(none !important);
+        @include disp(inline-block);
+        z-index: 0;
+        min-width: 100px;
+
+        .md-select {
+            @include transform(translate(0, 0));
+            top: 0;
+            left: 0;
+            @include m(0);
+            @include transition(all 0.2s !important);
+            width: 100%;
+            @include bg-c(#f7f7f7);
+            @include b(1px solid #CDCDCD,bottom);
+
+            &.isOpen {
+                @include transform(translate(0, -50%));
+                top: 50%;
+            }
+        }
+    }
+
+    &:not(.inline) {
+        width: 100%;
+
+        .md-select {
+            width: 100%;
+            @include ml(50%);
+            @include transform(translate(-50%, 0));
+        }
+    }
+
+    .md-select {
+        @include pos(absolute);
+        @include p(0);
+        top: -1px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        width: 250px;
+        @include t-a(center);
+        @include m(0 0 0 auto);
+        z-index: 9999;
+        height: 48px;
+        @include o-f(hidden);
+        @include b(1px solid transparent);
+        @include shadow(0 0 0 0 transparent);
+        @include bg-c(#fff);
+        @include transform(none);
+
+        &:after {
+            @include b(5px solid transparent,left);
+            @include b(5px solid transparent,right);
+            @include b(5px solid #bbbbbb,top);
+            content: '';
+            @include disp(block);
+            height: 0;
+            @include pos(absolute);
+            pointer-events: none;
+            top: 19px;
+            right: 10px;
+            width: 0;
+        }
+
+        li {
+            cursor: pointer;
+            @include f-s(15px);
+            list-style: none;
+            line-height: 48px;
+            @include p(0 48px 0 24px);
+            @include pos(relative);
+            @include o-f(hidden);
+            @include t-a(left);
+
+            &[data-selected] {
+                height: 48px;
+            }
+
+            &:not([data-selected]) {
+                height: 0;
+                opacity: 0;
+            }
+        }
+
+        &.isOpen {
+            @include bg-c(#fafafa);
+            @include b(2px,radius);
+            @include shadow(1px 2px 3px 1px rgba(0, 0, 0, 0.3));
+            top: -96px;
+            height: auto;
+            z-index: 99999;
+
+            &:after {
+                @include disp(none);
+            }
+
+            &:before {
+                @include b(transparent !important,color);
+            }
+
+            li {
+                height: 48px;
+                opacity: 1;
+
+                &[data-selected] {
+                    @include c(#1b8bf9);
+                }
+
+                &:hover {
+                    @include bg-c(#eeeeee);
+                }
+
+                &:active {
+                    @include bg-c(#dbdbdb);
+                }
+            }
+        }
+
+        &:not(.isOpen) {
+            &:hover {
+                @include bg-c(#f7f7f7);
+                @include b(1px solid #ccc,bottom);
+            }
+
+            &:active {
+                @include shadow(1px 2px 1px 0 rgba(0, 0, 0, 0.3));
+            }
+        }
+
+        & + .md-select:before {
+            @include b(thin solid #c8c8c8,left);
+            content: '';
+            height: 32px;
+            left: 0;
+            @include pos(absolute);
+            top: 8px;
+        }
+    }
+
+    .message {
+        @include pos(absolute);
+        top: 50px;
+        width: 100%;
+        @include c(#DD2C00);
+        @include disp(none);
+    }
+}
+/**====== Accordion css ends ======**/
+
+/**  =====================
+      Typography css start
+==========================  **/
+
+@each $value in $txt-color-v{
+    $i: index($txt-color-v, $value);
+
+    .#{nth($txt-color-n, $i)}{
+        @include c($value);
+    }
+}
+
+/**====== Typography css end ======**/
+/**  =====================
+      Tabs css start
+==========================  **/
+.tab-list p {
+    @include p(10px);
+}
+
+.tab-with-img i {
+    @include pos(absolute);
+    @include p(5px);
+}
+
+.tab-icon {
+    @include mb(30px);
+
+    i {
+        @include pr(10px);
+    }
+}
+
+.tab-below {
+    @include b(1px solid #ddd,top);
+    @include b(none,bottom);
+
+    .nav-item {
+        @include mt(-2px);
+    }
+
+    &.nav-tabs .nav-link {
+        @include b(0.25rem,bottom-right-radius);
+        @include b(0.25rem,bottom-left-radius);
+
+        &.active {
+            @include b(transparent #ddd #ddd #ddd,color);
+        }
+    }
+}
+.img-tabs img{
+    width: 100px;
+    margin: 0 auto;
+}
+.img-tabs a img{
+    border: 3px solid;
+}
+.img-tabs a.active {
+    opacity:1;
+    transition: all ease-in-out 0.3s;
+}
+.img-tabs a {
+    opacity:0.5;
+    transition: all ease-in-out 0.3s;
+}
+.img-tabs a span i{
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    bottom: 10px;
+    right: 70px;
+}
+.card-header ~ .tab-icon .tab-with-img .sub-title i {
+    right: 10px;
+}
+
+.tab-with-img .nav-link {
+    @include pos(relative);
+}
+
+.tabs-left,
+.tabs-right {
+    min-width: 120px;
+    @include v-al(top);
+    width: 150px;
+}
+
+.tabs-left,
+.tabs-left-content,
+.tabs-right,
+.tabs-right-content {
+    @include disp(table-cell);
+}
+
+.nav-tabs {
+    .slide {
+        @include bg(#1b8bf9);
+        width: calc(100% / 4);
+        height: 4px;
+        @include pos(absolute);
+        @include transition(left 0.3s ease-out);
+        bottom: 0;
+    }
+
+    &.tabs-left .slide {
+        height: 35px;
+        width: 4px;
+        bottom: 15px;
+    }
+
+    &.tabs-right .slide {
+        height: 35px;
+        width: 4px;
+        bottom: 15px;
+        right: 0;
+    }
+}
+
+.md-tabs {
+    @include pos(relative);
+
+    .nav-link {
+        @include b(none);
+        @include c(#1b8bf9);
+
+        &:focus,
+        &:hover {
+            @include b(none);
+        }
+    }
+
+    .nav-item {
+        @include bg-c(#fff);
+        width: calc(100% / 4);
+        @include t-a(center);
+
+        a {
+            @include p(20px 0 !important);
+        }
+
+        &+.nav-item {
+            @include m(0);
+        }
+
+        .nav-link {
+            &.active, &.active:focus, &.active:hover {
+                @include c(#1b8bf9);
+                @include b(none);
+                @include bg-c(transparent);
+                @include b(0,radius);
+            }
+            &.active ~.slide {
+                opacity: 1;
+                @include transition(all 0.3s ease-out);
+            }
+            ~.slide {
+                opacity: 0;
+                @include transition(all 0.3s ease-out);
+            }
+        }
+        &.open{
+            .nav-link,&:focus,&:hover{
+                @include c(#1b8bf9);
+                @include b(none);
+                @include bg-c(transparent);
+                @include b(0,radius);
+            }
+        }
+    }
+}
+
+.product-edit .md-tabs .nav-item a {
+    @include p(0 0 20px !important);
+}
+.tab-n{
+    width: 100%;
+    @include pos(relative);
+}
+.tabs-left .nav-item, .tabs-right .nav-item {
+    @extend .tab-n;
+}
+.md-tabs{
+    &.tabs-left .nav-item,&.tabs-right .nav-item{
+        @extend .tab-n;
+    }
+}
+.img-tabs img {
+    width: 100px;
+    margin: 0 auto;
+
+    a {
+        opacity: 0.5;
+        @include transition(all 0.3s ease-out);
+
+        img {
+            @include b(3px solid);
+        }
+
+        &.active {
+            opacity: 1;
+            @include transition(all 0.3s ease-out);
+        }
+
+        span i {
+            height: 25px;
+            width: 25px;
+            @include b(100%,radius);
+            bottom: 10px;
+            right: 70px;
+        }
+    }
+}
+
+#pc-left-panel-menu {
+    @include b(20px,bottom);
+}
+/**====== Tabs css end ======**/
+/**  =====================
+      Button css start
+==========================  **/
+/* Raised Button css*/
+.btn {
+    text-transform: uppercase;
+    @include b(2px,radius);
+    @include shadow(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+    @include f-s(13px);
+    @include f-w(600);
+    @include transition(box-shadow linear 0.4s);
+    &:hover {
+        @include shadow(none);
+    }
+}
+
+.button-list {
+    @include pb(10px);
+    .btn {
+        @include mb(10px);
+        @include mr(30px);
+        &:last-child {
+            @include mr(0);
+        }
+    }
+}
+
+.btn-page [class*=btn-]:last-child,
+.btn-group [class*=btn-],
+.dropdown-split [class*=btn-] {
+    @include mr(0);
+}
+
+.animation-model button {
+    @include mb(10px);
+}
+/*Alter Bootstrap Button */
+.btn-default{
+    @include bg-c(#FFFFFF);
+    @include c(#757575);
+    &:focus,
+    &:hover,
+    &:active {
+        @extend .btn-default;
+    }
+}
+
+.btn-info{
+    @include bg-c(#40c4ff !important);
+    @include b(#40c4ff !important,color);
+    &:focus,
+    &:hover,
+    &:active{
+        @extend .btn-info;
+    }
+}
+.btn-primary{
+    @include bg-c(#2196F3 !important);
+    @include b(#2196F3 !important,color);
+    &:focus,
+    &:hover,
+    &:active {
+        @extend .btn-primary;
+    }
+}
+.btn-success{
+    @include bg-c(#4CAF50 !important);
+    @include b(#4CAF50 !important,color);
+    &:focus,
+    &:hover,
+    &:active {
+        @extend .btn-success;
+    }
+}
+.btn-danger{
+    @include bg-c(#ff5252 !important);
+    @include b(#ff5252 !important,color);
+    &:focus,
+    &:hover,
+    &:active {
+        @extend .btn-danger;
+    }
+}
+.btn-warning{
+    @include bg-c(#f57c00 !important);
+    @include b(#f57c00 !important,color);
+    &:active,
+    &:focus,
+    &:hover {
+        @extend .btn-warning;
+    }
+}
+
+/*flat button css*/
+.btn-flat {
+    @include bg(rgba(0, 0, 0, 0) none repeat scroll 0 0);
+    @include bg-c(transparent);
+    @include f-w(600);
+}
+
+.flat-primary:focus {
+    @include bg-c(#81d4fa);
+}
+
+.flat-success:focus {
+    @include bg-c(#a5d6a7);
+}
+
+.flat-warning:focus {
+    @include bg-c(#ffe0b2);
+}
+
+.flat-danger:focus {
+    @include bg-c(#ffcdd2);
+}
+
+.flat-info:focus {
+    @include bg-c(#b3e5fc);
+}
+
+.flat-default:focus {
+    @include bg-c(#f5f5f5);
+}
+/*inverse button css*/
+.btn-inverse-default {
+    @include bg-c(#FFFFFF);
+    @include b(#757575,color);
+    @include c(#757575);
+    @include shadow(none);
+    @include transition(border-color linear 0.4s);
+    &:hover {
+        @include b(#757575,color);
+        @include c(#757575);
+    }
+}
+.btn-inverse-primary {
+    @include bg-c(#fff);
+    @include b(#2196F3,color);
+    @include c(#2196F3);
+    @include shadow(none);
+    @include transition(all ease-in 0.3s);
+    &:hover {
+        @include b(#2196F3,color);
+        @include bg-c(#2196F3);
+        @include c(#fff);
+    }
+}
+
+.btn-inverse-success {
+    @include bg-c(#fff);
+    @include b(#4CAF50,color);
+    @include c(#4CAF50);
+    @include shadow(none);
+    @include transition(all ease-in 0.3s);
+    &:hover {
+        @include b(#4CAF50,color);
+        @include bg-c(#4CAF50);
+        @include c(#fff);
+    }
+}
+
+.btn-inverse-warning {
+    @include bg-c(#fff);
+    @include b(#f57c00,color);
+    @include c(#f57c00);
+    @include shadow(none);
+    @include transition(all ease-in 0.3s);
+    &:hover {
+        @include b(#f57c00,color);
+        @include bg-c(#f57c00);
+        @include c(#fff);
+    }
+}
+
+.btn-inverse-danger {
+    @include bg-c(#fff);
+    @include b(#ff5252,color);
+    @include c(#ff5252);
+    @include shadow(none);
+    @include transition(all ease-in 0.3s);
+    &:hover {
+        @include b(#ff5252,color);
+        @include bg-c(#ff5252);
+        @include c(#fff);
+    }
+}
+
+.btn-inverse-info {
+    @include bg-c(#fff);
+    @include b(#40c4ff,color);
+    @include c(#40c4ff);
+    @include shadow(none);
+    @include transition(all ease-in 0.3s);
+    &:hover {
+        @include b(#40c4ff,color);
+        @include bg-c(#40c4ff);
+        @include c(#fff);
+    }
+}
+
+.btn-inverse-disable {
+    @include bg-c(#fff);
+    @include b(#757575,color);
+    @include c(#757575);
+    @include shadow(none);
+    @include transition(all ease-in 0.3s);
+    &:hover {
+        @include b(#e0e0e0,color);
+        @include bg-c(#e0e0e0);
+        @include c(#fff);
+    }
+}
+/*button size css*/
+.btn-xlg {
+    @include p(14px 20px);
+    @include f-s(21px);
+    line-height: 40px;
+}
+
+.btn-lg {
+    @include p(12px 18px);
+    @include f-s(18px);
+    line-height: 32px;
+}
+
+.btn-md {
+    @include p(10px 16px);
+    @include f-s(15px);
+    line-height: 23px;
+}
+
+.btn-sm {
+    @include p(8px 14px);
+    line-height: 16px;
+    @include f-s(11px);
+}
+
+.btn-mini {
+    @include p(5px 10px);
+    line-height: 14px;
+    @include f-s(10px);
+}
+/*social button*/
+.btn-dribbble,
+.btn-dropbox,
+.btn-facebook,
+.btn-flickr,
+.btn-github,
+.btn-google-plus,
+.btn-instagram,
+.btn-linkedin,
+.btn-pinterest,
+.btn-skype,
+.btn-tumblr,
+.btn-twitter,
+.btn-youtube {
+    @include c(#fff);
+}
+
+.btn-dribbble i,
+.btn-dropbox i,
+.btn-facebook i,
+.btn-flickr i,
+.btn-github i,
+.btn-google-plus i,
+.btn-instagram i,
+.btn-linkedin i,
+.btn-pinterest i,
+.btn-skype i,
+.btn-tumblr i,
+.btn-twitter i,
+.btn-youtube i {
+    @include disp(inline-block);
+    @include p(5px 15px);
+    @include b(3px 0 0 3px,radius);
+    @include m(-7px 0 -7px -13px);
+}
+
+.btn-facebook {
+    @include bg-c(#3b5998);
+}
+
+.btn-twitter {
+    @include bg-c(#00ACED);
+}
+
+.btn-linkedin {
+    @include bg-c(#007BB6)
+}
+
+.btn-dribbble {
+    @include bg-c(#EA4C89)
+}
+
+.btn-google-plus {
+    @include bg-c(#DD4B39);
+}
+
+.btn-instagram {
+    @include bg-c(#517FA4);
+}
+
+.btn-pinterest {
+    @include bg-c(#CB2027);
+}
+
+.btn-dropbox {
+    @include bg-c(#007EE5);
+}
+
+.btn-flickr {
+    @include bg-c(#FF0084);
+}
+
+.btn-tumblr {
+    @include bg-c(#32506D);
+}
+
+.btn-skype {
+    @include bg-c(#00AFF0);
+}
+
+.btn-youtube {
+    @include bg-c(#BB0000);
+}
+
+.btn-github {
+    @include bg-c(#171515);
+}
+/*button round css*/
+.btn-icon {
+    @include b(50%,radius);
+    width: 40px;
+    line-height: 30px;
+    height: 40px;
+    @include p(3px);
+    @include t-a(center);
+}
+
+.btn-group .btn {
+    @include shadow(none);
+}
+/*dropdown button css*/
+.dropdown-content {
+    @include bg-c(#fff);
+    @include m(0);
+    @include disp(none);
+    min-width: 100px;
+    max-height: 650px;
+    overflow-y: auto;
+    opacity: 0;
+    @include pos(absolute);
+    z-index: 999;
+    will-change: width, height;
+}
+
+.dropdown-danger,
+.dropdown-info,
+.dropdown-primary,
+.dropdown-success,
+.dropdown-warning,
+.dropdown-warning {
+    @include disp(inline-block);
+    @include v-al(center);
+    @include pos(relative);
+}
+
+.dropdown-primary a:hover {
+    @include bg-c(#2196F3);
+    @include c(#fff);
+}
+
+.dropdown-danger a:hover {
+    @include bg-c(#ff5252);
+    @include c(#fff);
+}
+
+.dropdown-warning a:hover {
+    @include bg-c(#f57c00);
+    @include c(#fff);
+}
+
+.dropdown-success a:hover {
+    @include bg-c(#4CAF50);
+    @include c(#fff);
+}
+
+.dropdown-info a:hover {
+    @include bg-c(#40c4ff);
+    @include c(#fff);
+}
+
+.dropdown-split-primary a:hover {
+    @include bg-c(#2196F3);
+    @include c(#fff);
+}
+
+.dropdown-split-success a:hover {
+    @include bg-c(#4CAF50);
+    @include c(#fff);
+}
+
+.dropdown-split-danger a:hover {
+    @include bg-c(#ff5252);
+    @include c(#fff);
+}
+
+.dropdown-split-warning a:hover {
+    @include bg-c(#f57c00);
+    @include c(#fff);
+}
+
+.dropdown-split-info a:hover {
+    @include bg-c(#40c4ff);
+    @include c(#fff);
+}
+/* ========================
+    Start Box Shadow Css
+=========================== */
+/* css for z-depth for top only */
+$depth-val:-5;
+@for $i from 0 through 5 {
+   .z-depth-top-#{$i}{
+        @include shadow(0 #{$depth-val}px 25px -5px #ccc,0 1px 5px 0 rgba(0, 0, 0, 0.1),0 0 0 0 rgba(0, 0, 0, 0));
+        @if($depth-val > -8){
+            $depth-val: $depth-val - 2;
+        }@else{
+            $depth-val: $depth-val - 1;
+        }
+   }
+}
+/* css for z-depth for bottom only */
+$depth-val:5;
+@for $i from 0 through 5 {
+   .z-depth-bottom-#{$i}{
+        @include shadow(0 #{$depth-val}px 25px -5px #ccc,0 1px 5px 0 rgba(0, 0, 0, 0.1),0 0 0 0 rgba(0, 0, 0, 0));
+        @if($depth-val < 8){
+            $depth-val: $depth-val + 2;
+        }@else{
+            $depth-val: $depth-val + 1;
+        }
+   }
+}
+/* css for z-depth left only */
+$depth-val:-5;
+@for $i from 0 through 5 {
+   .z-depth-left-#{$i}{
+        @include shadow(#{$depth-val}px 0 25px -5px #ccc,0 1px 5px 0 rgba(0, 0, 0, 0.1),0 0 0 0 rgba(0, 0, 0, 0));
+        @if($depth-val > -8){
+            $depth-val: $depth-val - 2;
+        }@else{
+            $depth-val: $depth-val - 1;
+        }
+   }
+}
+/* css for z-depth right only */
+$depth-val:5;
+@for $i from 0 through 5 {
+   .z-depth-right-#{$i}{
+        @include shadow(#{$depth-val}px 0 25px -5px #ccc,0 1px 5px 0 rgba(0, 0, 0, 0.1),0 0 0 0 rgba(0, 0, 0, 0));
+        @if($depth-val < 8){
+            $depth-val: $depth-val + 2;
+        }@else{
+            $depth-val: $depth-val + 1;
+        }
+   }
+}
+/* css for z-depth all side */
+$depth-val:5;
+@for $i from 0 through 5 {
+   .z-depth-right-#{$i}{
+        @include shadow(0 0 25px #{$depth-val}px #ccc,0 1px 5px 0 rgba(0, 0, 0, 0.1),0 0 0 0 rgba(0, 0, 0, 0));
+        @if($depth-val < 8){
+            $depth-val: $depth-val + 2;
+        }@else{
+            $depth-val: $depth-val + 1;
+        }
+   }
+}
+
+.box-list {
+    @include mb(0);
+    div{
+        div{
+            @include mb(20px);
+        }
+    }
+}
+
+
+/* ============================
+    start error page css
+========================== */
+/* error page css */
+.error-400,
+.error-403,
+.error-404,
+.error-500,
+.error-503{
+    @include pos(fixed);
+    height: 100%;
+    width: 100%;
+    @include disp(flex);
+    align-items: center;
+    @include t-a(center);
+    @include bg-c(#2196F3);
+    h1{
+        text-shadow:6px 6px 7px rgba(0, 0, 0, 0.32);
+        @include p(70px 0);
+        @include c(#fff);
+        @include f-s(150px);
+        @include mb(40px);
+    }
+    h5 {
+        @include f-s(40px);
+        @include mb(40px);
+        @include f-w(600);
+        @include c(#fff);
+    }
+    p {
+        @include f-s(24px);
+        @include mb(40px);
+        @include f-w(400);
+        @include c(#fff);
+    }
+}
+
+.btn-error {
+    @include bg-c(#fff);
+    @include b(#fff,color);
+    @include p(10px 20px);
+    @include c(#777);
+    &:hover {
+        @include c(#777);
+    }
+}
+
+$error-n:500, 503, 404, 400, 403;
+@each $value in $error-n {
+    .error-#{$value} h1{
+        @include bg(url("../images/#{$value}@2x.png") no-repeat center);
+    }
+}
+/*======================
+  Breadcrumb
+===================== */
+/* css for breadcrumb */
+.breadcrumb-arrow .breadcrumb-item+.breadcrumb-item::before {
+    content: "/";
+}
+
+.breadcrumb{
+    .breadcrumb-item .home::before {
+        content: "\f124";
+    }
+    > li {
+        @include disp(inline-block);
+    }
+}
+
+.breadcrumb-3 {
+    @include b(solid 1px #ddd);
+    @include bg-c(transparent);
+}
+
+.icon-folder::before {
+    content: "\f124";
+}
+
+
+/* breadcrumbs */
+#breadcrumb-triangle {
+    list-style: none;
+    @include disp(inline-block);
+    .icon {
+        @include f-s(14px);
+    }
+    li {
+        @include flt(left);
+        @include mt(5px);
+        &:nth-child(even) a {
+            @include bg-c(#2196F3);
+            &:before {
+                @include b(#2196F3,color);
+                @include b(transparent,left-color);
+            }
+            &:after {
+                @include b(#2196F3,left-color);
+            }
+        }
+        &:first-child a {
+            @include pl(15px);
+            @include b(4px 0 0 4px,radius);
+            &:before {
+                @include b(none);
+            }
+        }
+        &:last-child a {
+            @include pr(15px);
+            @include b(0 4px 4px 0, radius);
+            &:after {
+                @include b(none);
+            }
+        }
+        a {
+            @include c(#fff);
+            @include disp(block);
+            @include bg(#2196F3);
+            @include t-d(none);
+            @include pos(relative);
+            height: 40px;
+            line-height: 40px;
+            @include p(0 10px 0 5px);
+            @include t-a(center);
+            @include mr(23px);
+            @include transition(all 0.3s ease-in-out);
+            &:after,&:before {
+                content: "";
+                @include pos(absolute);
+                top: 0;
+                @include b(solid #2196F3);
+                @include b(20px 10px,width);
+                width: 0;
+                height: 0;
+                @include transition(all 0.3s ease-in-out);
+            }
+            &:before {
+                left: -20px;
+                @include b(transparent,left-color);
+            }
+            &:after {
+                left: 100%;
+                @include b(transparent, color);
+                @include b(#2196F3,left-color);
+            }
+            &:hover {
+                @include bg-c(#40c4ff);
+                &:before {
+                    @include b(#40c4ff,color);
+                    @include b(transparent,left-color);
+                }
+
+                &:after {
+                    @include b(#40c4ff,left-color);
+                }
+            }
+            &:active {
+                @include bg-c(#16a085);
+                &:before {
+                    @include b(#16a085,color);
+                    @include b(transparent,left-color);
+                }
+
+                &:after {
+                    @include b(#16a085,left-color);
+                }
+            }
+        }
+    }
+}
+
+.breadcrumb-icon-block {
+    @include pt(15px);
+}
+
+/* pagination */
+.pager {
+    @include mb(1rem);
+    a.prev {
+        @include b(50px 0 0 50px, radius);
+    }
+    a.next {
+        @include b(0 50px 50px 0, radius);
+    }
+    li {
+        @include disp(inline);
+    }
+}
+
+ul.margin-pagination {
+    @include disp(inline-block);
+    @include p(0);
+    @include m(0);
+    li {
+        @include disp(inline);
+        a {
+            @include c(#000);
+            @include flt(left);
+            @include p(8px 16px);
+            @include t-d(none);
+            @include transition(background-color 0.3s);
+            @include b(1px solid #ddd);
+            @include m(0 4px);
+            &.active {
+                @include bg-c(#4CAF50);
+                @include c(#fff);
+                @include b(1px solid #4CAF50);
+            }
+            &:hover:not(.active) {
+                @include bg-c(#ddd);
+            }
+        }
+    }
+}
+
+
+/*======================
+Basic card CSS
+======================= */
+.card-img-bottom,
+.card-img-top {
+    width: 100%;
+}
+
+.global-cards .card-text {
+    @include mb(10px);
+}
+.color-card{
+    footer,p {
+        @include c(#fff);
+    }
+    .color-default{
+        footer,p {
+            @include c(#222);
+        }
+    }
+}
+
+/* =======================
+      Login Card css
+ ======================= */
+.common-img-bg {
+    height: 100%;
+    background-size: cover;
+    @include bg(url('../images/authentication-bg.jpg')no-repeat);
+}
+
+.login {
+    @include pos(fixed);
+    height: 100%;
+    width: 100%;
+    @include disp(flex);
+    align-items: center;
+    @include t-a(left);
+    @include bg-c(#2196F3);
+    h3 {
+        @include c(#666666);
+        @include f-s(20px);
+        @include m(25px);
+    }
+    ul li label {
+        @include c(#757575);
+        letter-spacing: 1px;
+        @include f-w(600);
+    }
+}
+
+.social-login {
+    @include b(1px solid #ccc,bottom);
+    @include mb(20px);
+    @include pb(30px);
+    .btn {
+        @include ml(5px);
+        @include mr(5px);
+    }
+}
+
+.login-card {
+    @include p(30px 20px);
+    width: 500px;
+    @include pos(relative);
+    @include disp(block);
+    @include bg-c(#fff);
+    @include shadow(0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3));
+    h1 {
+        @include mb(20px);
+        @include f-s(25px);
+        @include f-w(400);
+        @include f-s(center);
+        @include c(#1b8bf9);
+    }
+    i {
+        @include c(#777);
+    }
+    .md-input-wrapper {
+        @include mb(30px);
+    }
+    .card-footer {
+        @include bg(#fff);
+    }
+    .forget {
+        @include b(1px solid #fff,bottom);
+        @include f-s(24px);
+        line-height: 0.6;
+    }
+    .btn-forgot, .unlock {
+        @include t-a(center);
+    }
+}
+
+.btn-signup .btn-md,
+.btn-singin1 .btn-md,
+.btn-singin2 .btn-md {
+    @include f-s(22px);
+    @include f-w(400);
+    width: 400px;
+}
+
+.form-group-main .form-group {
+    @include m(30px 0);
+}
+
+.imgs-screen .img-circle {
+    @include p(4px);
+    @include b(1px solid #E6E6E4);
+}
+
+.sign-in-with {
+    @include m(24px auto 16px);
+    @include t-a(center);
+    @include f-w(600);
+    @include pos(relative);
+    .text {
+        @include disp(inline-block);
+        @include v-al(baseline);
+        @include pos(relative);
+        @include p(0 8px);
+        z-index: 9999;
+        &:after {
+            left: 100%;
+        }
+        &:before {
+            right: 100%;
+        }
+        &:after,&:before {
+            content: '';
+            @include disp(block);
+            width: 60px;
+            @include pos(absolute);
+            top: 8px;
+            @include b(1px solid rgba(0,0,0,.28),top);
+        }
+    }
+}
+/**  =====================
+      General Elements start
+==========================  **/
+.multiple-select ,.select2-multiple-select {
+    overflow-y: scroll;
+}
+
+.input-success,
+.input-success:focus {
+    @include b(1px solid #4CAF50);
+    @include shadow(none);
+}
+
+.input-warning,
+.input-warning:focus {
+    @include b(1px solid #f57c00);
+    @include shadow(none);
+}
+
+.input-danger,
+.input-danger:focus {
+    @include b(1px solid #ff5b5b !important);
+    @include shadow(none);
+}
+
+.input-icon {
+    @include pos(absolute);
+    top: 10px;
+    right: 30px;
+}
+
+.addon-btn {
+    @include p(8px 0.75rem);
+    @include f-s(14px);
+    line-height: 1.25;
+}
+
+.form-control-label {
+    @include f-w(700);
+}
+
+.form-control,
+.form-group label {
+    @include f-s(14px);
+}
+
+.input-group-addon {
+    @include p(8px 0.75rem);
+    @include f-s(14px);
+    line-height: 1.25;
+}
+
+.form-control-lg,
+.input-group-lg .form-control,
+.input-group-lg .input-group-addon,
+.input-group-lg .input-group-btn .btn,
+.md-input-lg {
+    @include f-s(1.25rem);
+}
+
+.form-control-sm,
+.input-group-sm .form-control,
+.input-group-sm .input-group-addon,
+.input-group-sm .input-group-btn .btn,
+.md-input-sm {
+    @include f-s(0.875rem);
+}
+
+.inline-forms .card-block .inline-form-style {
+    @include mb(0);
+}
+/**  =====================
+      Input Types End
+==========================  **/
+/**  =====================
+      Modal page start
+==========================  **/
+.sign-in-up {
+    @include disp(flex);
+    @include bg-c(#1b8bf9);
+}
+
+.sign-in-up-left {
+    width: 40%;
+    @include disp(flex);
+    align-items: center;
+    justify-content: center;
+    @include c(#fff);
+}
+
+.sign-in-up-right {
+    width: 60%;
+    @include bg-c(#fff);
+    @include p(20px);
+    .md-tabs {
+        @include b(none);
+        @include mb(40px);
+        .nav-item a {
+            @include p(0 0 20px !important);
+        }
+    }
+}
+
+.login-up button.close {
+    @include pos(absolute);
+    right: 15px;
+    top: 10px;
+    z-index: 999;
+}
+/**====== Modal css end ======**/
+
+/**  =====================
+      Label And badges start
+==========================  **/
+/*badge on button*/
+.btn .badge {
+    @include ml(8px);
+}
+
+.btn-danger .badge,
+.btn-default .badge,
+.btn-info .badge,
+.btn-primary .badge,
+.btn-success .badge,
+.btn-warning .badge {
+    @include bg-c(#fff);
+    @include p(4px 5px);
+    @include b(50%,radius);
+}
+
+.btn-primary .badge {
+    @include c(#2196F3);
+}
+
+.btn-success .badge {
+    @include c(#4CAF50);
+}
+
+.btn-warning .badge {
+    @include c(#f57c00);
+}
+
+.btn-danger .badge {
+    @include c(#ff5252);
+}
+
+.btn-info .badge {
+    @include c(#40c4ff);
+}
+
+.btn-default .badge {
+    @include bg-c(#757575);
+    @include c(#fff);
+}
+
+.badge {
+    @include c(#fff);
+    @include disp(inline-block);
+    min-width: 10px;
+    @include p(3px 7px);
+    @include f-s(12px);
+    @include f-w(700);
+    line-height: 1;
+    @include t-a(center);
+    white-space: nowrap;
+    @include v-al(middle);
+    @include b(10px,radius);
+}
+
+.badge-md {
+    @include p(4px 8px);
+    @include f-s(14px);
+}
+
+.badge-lg {
+    @include p(5px 9px);
+    @include f-s(14px);
+}
+
+.label {
+    @include disp(inline);
+    @include p(2px 7px);
+    @include f-s(75%);
+    @include f-w(700);
+    line-height: 1.1;
+    @include c(#fff);
+    @include t-a(center);
+    white-space: nowrap;
+    @include v-al(baseline);
+    @include b(0.25em,radius);
+    @include mr(10px);
+}
+
+.label-bagdes .label-icon {
+    @include pos(relative);
+    @include f-s(20px)
+}
+
+.label-bagdes .badge {
+    @include mb(0);
+}
+
+.label-lg {
+    @include p(6px 21px);
+}
+
+.label-md {
+    @include p(4px 14px);
+}
+
+.badge-default,
+.label-default {
+    @include c(#fff);
+    @include bg-c(#757575);
+}
+
+.badge-primary,
+.label-primary {
+    @include bg-c(#2196F3);
+}
+
+.badge-success,
+.label-success {
+    @include bg-c(#4CAF50);
+}
+
+.badge-warning,
+.label-warning {
+    @include bg-c(#f57c00);
+}
+
+.badge-danger,
+.label-danger {
+    @include bg-c(#ff5252);
+}
+
+.badge-info,
+.label-info {
+    @include bg-c(#40c4ff);
+}
+
+.badge-inverse-default,
+.label-inverse-default {
+    @include c(#757575);
+    @include b(1px solid #757575);
+    @include p(2px 7px);
+}
+
+.label-bagdes .card .card-block p {
+    @include mb(20px);
+}
+
+.group-label {
+    @include disp(inline-block);
+}
+
+.label-icon label {
+    @include pos(absolute);
+}
+/**====== Label And badges css end ======**/
+.badge-inverse-primary,
+.label-inverse-primary {
+    @include c(#2196F3);
+    @include b(1px solid #2196F3);
+    @include p(2px 7px);
+}
+
+.badge-inverse-success,
+.label-inverse-success {
+    @include c(#4CAF50);
+    @include b(1px solid #4CAF50);
+    @include p(2px 7px);
+}
+
+.badge-inverse-warning,
+.label-inverse-warning {
+    @include c(#f57c00);
+    @include b(1px solid #f57c00);
+    @include p(2px 7px);
+}
+
+.badge-inverse-danger,
+.label-inverse-danger {
+    @include c(#ff5252);
+    @include b(1px solid #ff5252);
+    @include p(2px 7px);
+}
+
+.badge-inverse-info,
+.label-inverse-info {
+    @include c(#40c4ff);
+    @include b(1px solid #40c4ff);
+    @include p(2px 7px);
+}
+
+.badge-top-left {
+    @include mr(-10px);
+    right: 100%;
+    top: -3px;
+}
+
+.badge-top-right {
+    @include ml(-10px);
+    top: -3px;
+}
+
+.badge-bottom-left {
+    @include ml(-33px);
+    bottom: -4px;
+    right: 97%;
+}
+
+.badge-bottom-right {
+    @include ml(-7px);
+    bottom: -3px;
+}
+
+.label-bagdes .label-main {
+    @include mb(10px);
+    @include disp(inline-block)
+}
+/**====== Label And badges End ======**/
+
+
+/* 21. Preloader CSS Starts*/
+.btry-loader{
+    .btry {
+        @include pos(absolute);
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 40px;
+        @include m(-10px 0 0 -20px);
+        @include b(1px solid #ff3366);
+        @include b(3px,radius);
+        &:after {
+            @include disp(block);
+            content: "";
+            @include pos(absolute);
+            top: -3px;
+            height: 2px;
+            width: 8px;
+            @include bg(#ff3366);
+            @include b(0 2px 20px 0,radius);
+            left: 5px;
+        }
+        .btry-charge {
+            @include pos(absolute);
+            z-index: 100;
+            height: 16px;
+            width: 16px;
+            bottom: 1px;
+            left: 1px;
+            @include bg(#ff3366);
+            @include b(1px,radius);
+            @include animation(red-btry 2s linear 0s infinite)
+        }
+    }
+    .radius {
+        @include pos(absolute);
+        top: 50%;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        @include m(-20px 0 0 -20px);
+        @include b(1px solid #ddd);
+        @include b(50%,radius);
+        .btry-charge {
+            @include pos(absolute);
+            z-index: 100;
+            height: 20px;
+            width: 4px;
+            top: 50%;
+            left: 50%;
+            @include m(-20px 0 0 -2px);
+            @include b(4px solid #ff3366,top);
+            @include animation(rotation 1s linear 0s infinite);
+            transform-origin: center bottom;
+        }
+    }
+}
+@include k-frames(red-btry) {
+    0% {height: 20px;}
+    100% {height: 36px;}
+}
+@include k-frames(rotation) {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(60deg);}
+}
+/* bar loader */
+.loader-bg {
+    @include pos(fixed);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include bg-c(rgba(255, 255, 255, 0.5));
+    z-index: 9999;
+    .loader-bar {
+        @include pos(fixed);
+        height: 5px;
+        width: 80%;
+        top: 0;
+        left: 0;
+        @include bg(rgba(33, 150, 243, 1));
+        @include animation(barfiller 2.0s);
+    }
+}
+@include k-frames(barfiller){
+    0% {width: 0;}
+    25% {width: 20%;}
+    50% {width: 40%;}
+    70% {width: 60%;}
+    100% {width: 80%;}
+}
+/*Preloader CSS Ends*/
+/*full screen start*/
+:-webkit-full-screen #myObject {
+    @include f-s(20px);
+    width: 100%;
+}
+
+:-moz-full-screen #myObject {
+    @include f-s(20px);
+    width: 100%;
+}
+/*full screen end*/
+/**====== Portals css end ======**/
+/**  =====================
+      Full Calender css start
+==========================  **/
+.fc-left {
+    @include mb(10px);
+}
+
+#external-events{
+    h4 {
+        @include f-s(16px);
+        @include mt(0);
+        @include pt(1em);
+    }
+    .fc-event {
+        @include bg(#f3f3f3);
+        @include c(#000);
+        cursor: move;
+        @include b(none,left);
+        @include p(5px 18px);
+        @include mb(5px);
+    }
+    p {
+        @include m(1.5em 0);
+        @include f-s(11px);
+        @include c(#666);
+        input {
+            @include m(0);
+            @include v-al(middle);
+        }
+    }
+    .rkmd-checkbox {
+        @include mt(10px);
+        @include mb(10px);
+    }
+}
+
+.fc{
+    td,th {
+        line-height: 2.5;
+    }
+    button {
+        height: auto;
+        @include p(10px);
+    }
+    .fc-toolbar > * > * {
+        @include ml(0);
+    }
+}
+
+.fc-state-default {
+    @include bg-c(#fff);
+    @include c(#272727);
+}
+
+tr:first-child > td > .fc-day-grid-event {
+    @include c(#ccc);
+    @include pl(10px);
+    @include bg(#f3f3f3);
+}
+
+.fc-nonbusiness {
+    @include bg-c(#fff);
+}
+
+.fc-state-active {
+    @include bg-c(#1b8bf9);
+    @include c(#fff);
+
+}
+
+.fc-toolbar {
+    @include mb(8px);
+    .fc-center {
+        @include disp(block);
+        h2 {
+            @include f-w(300);
+            @include f-s(25px);
+            @include mt(10px);
+        }
+    }
+    .fc-left {
+        @include flt(left);
+    }
+}
+
+.fc-button-group {
+    @include mr(10px);
+}
+.fc-toolbar .fc-left {
+    float: right;
+}
+.fc button {
+    height: auto;
+    padding: 10px;
+}
+.fc-event,
+.fc-event-dot {
+    @include bg-c(transparent);
+}
+
+.fc-day-grid-event:hover {
+    @include c(#000 !important);
+    opacity: 0.8;
+}
+
+.fc-time-grid-event{
+    .fc-content {
+        @include c(#fff);
+    }
+}
+/**====== Full Calender css end ======**/
+
+/**  =====================
+      Materialize General elements css start
+==========================  **/
+.md-input-wrapper {
+    @include pos(relative);
+    @include pt(4px);
+    width: 100%;
+    @include disp(block);
+    @include mb(20px);
+    > label {
+        text-transform: initial;
+        @include c(#727272);
+        @include pos(absolute);
+        top: 16px;
+        left: 4px;
+        right: 0;
+        pointer-events: none;
+        @include transition(all 150ms ease-out);
+    }
+    .md-line {
+        @include disp(block);
+        @include pos(absolute);
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .md-check {
+        @include pl(0);
+        top: 0;
+    }
+}
+
+
+.md-input-wrapper select,
+.md-input-wrapper textarea,
+input[type=email].md-form-control,
+input[type=file].md-form-control,
+input[type=number].md-form-control,
+input[type=password].md-form-control,
+input[type=text].md-form-control {
+    @include b(0,radius);
+    @include b(0 0 1px,width);
+    @include b(solid,style);
+    @include b(rgba(0,0,0,.12),color);
+    @include shadow(inset 0 -1px 0 transparent);
+    box-sizing: border-box;
+    @include p(12px 4px);
+    @include bg(0 0);
+    width: 100%;
+    @include disp(block);
+    max-height: 100px;
+}
+
+.md-disable {
+    opacity: 0.7;
+}
+
+.md-disable input {
+    cursor: not-allowed;
+}
+
+.checkbox-ripple {
+    cursor: pointer;
+}
+
+.checkbox-default label,
+.checkbox-disable,
+.fade-in-default label,
+.radio-disable label {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.md-form-control:focus ~ .md-line:before,
+.md-input-wrapper .md-line:after,
+.md-input-wrapper .md-line:before {
+    content: '';
+    @include disp(block);
+    @include pos(absolute);
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    @include bg(#1976d2);
+    @include transition(width 0.4s cubic-bezier(.4,0,.2,1));
+}
+
+.md-form-control:focus ~ .md-line:after,
+.md-form-control:focus ~ .md-line:before {
+    width: 100%;
+    @include bg(#1b8bf9);
+}
+
+.md-form-control .md-line:before {
+    left: 50%;
+}
+
+.md-form-control .md-line:after {
+    right: 50%;
+}
+
+.md-static ~ label {
+    top: -6px;
+    @include f-s(13px);
+}
+
+.md-form-control:focus ~ label,
+.md-form-control:valid ~ label,
+.md-valid ~ label {
+    top: -6px;
+    @include f-s(13px);
+    @include c(#1b8bf9);
+}
+
+.md-label-file {
+    @include pos(absolute);
+    top: 12px;
+}
+
+.md-add-on {
+    @include pr(20px);
+    @include v-al(middle);
+    @include pl(5px);
+    @include disp(table-cell);
+}
+.md-group-add-on {
+    @include disp(block);
+    @include pos(relative);
+    @include mb(20px);
+    .md-input-wrapper {
+        @include mb(0);
+        @include disp(table-cell);
+    }
+    .md-add-on {
+        @include v-al(middle);
+        @include disp(inline-block);
+        width: 35px;
+        @include flt(left);
+        height: 3rem;
+        line-height: 3rem;
+        @include pt(2px);
+        ~ .md-input-wrapper {
+            @include disp(inline-block);
+            width: calc(100% - 40px);
+        }
+    }
+}
+
+.md-input-file {
+    @include o-f(hidden);
+    @include pl(10px);
+    input[type=file] {
+        @include pos(absolute);
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        @include m(0);
+        @include p(0);
+        @include f-s(20px);
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+}
+
+.md-add-on-file {
+    @include flt(left);
+    height: 3rem;
+    line-height: 3rem;
+}
+
+.md-form-file ~ .md-form-control {
+    opacity: 0;
+    @include pos(absolute);
+    top: 0;
+}
+
+/*Primary labels*/
+.md-input-primary .md-form-control {
+    @include b(#1b8bf9 !important,color);
+}
+
+.md-form-control:focus ~ .md-line:before,
+.md-input-primary .md-form-control:focus ~ .md-line:after,
+.md-input-primary .md-form-control:focus ~ .md-line:before,
+.md-input-primary .md-line:after,
+.md-input-primary .md-line:before {
+    @include bg(#1b8bf9);
+}
+
+.md-input-primary .md-form-control:focus ~ label,
+.md-input-primary > label,
+.md-valid ~ label {
+    @include c(#1b8bf9);
+}
+/*Success labels*/
+.md-input-success .md-form-control {
+    @include b(#4CAF50 !important,color);
+}
+
+.md-form-control:focus ~ .md-line:before,
+.md-input-success .md-form-control:focus ~ .md-line:after,
+.md-input-success .md-form-control:focus ~ .md-line:before,
+.md-input-success .md-line:after,
+.md-input-success .md-line:before {
+    @include bg(#4CAF50);
+}
+
+.md-input-success .md-form-control:focus ~ label,
+.md-input-success > label,
+.md-valid ~ label {
+    @include c(#4CAF50);
+}
+/*Warning inputs*/
+.md-input-warning .md-form-control {
+    @include b(#f57c00 !important,color);
+}
+
+.md-form-control:focus ~ .md-line:before,
+.md-input-warning .md-form-control:focus ~ .md-line:after,
+.md-input-warning .md-form-control:focus ~ .md-line:before,
+.md-input-warning .md-line:after,
+.md-input-warning .md-line:before {
+    @include bg(#f57c00);
+}
+
+.md-input-warning .md-form-control:focus ~ label,
+.md-input-warning > label,
+.md-valid ~ label {
+    @include c(#f57c00);
+}
+/*Danger inputs*/
+.md-input-danger .md-form-control {
+    @include b(#ff5252 !important,color);
+}
+
+.md-form-control:focus ~ .md-line:before,
+.md-input-danger .md-form-control:focus ~ .md-line:after,
+.md-input-danger .md-form-control:focus ~ .md-line:before,
+.md-input-danger .md-line:after,
+.md-input-danger .md-line:before {
+    @include bg(#ff5252);
+}
+
+.md-input-danger .md-form-control:focus ~ label,
+.md-input-danger > label,
+.md-valid ~ label {
+    @include c(#ff5252);
+}
+/*Info inputs*/
+.md-input-info .md-form-control {
+    @include b(#40c4ff !important,color);
+}
+
+.md-form-control:focus ~ .md-line:before,
+.md-input-info .md-form-control:focus ~ .md-line:after,
+.md-input-info .md-form-control:focus ~ .md-line:before,
+.md-input-info .md-line:after,
+.md-input-info .md-line:before {
+    @include bg(#40c4ff);
+}
+
+.md-input-info .md-form-control:focus ~ label,
+.md-input-info > label,
+.md-valid ~ label {
+    @include c(#40c4ff);
+}
+/* BOTTOM BARS ================================= */
+.bar {
+    @include pos(relative);
+    @include disp(block);
+    width: 100%;
+    &:after,&:before {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 0;
+        @include pos(absolute);
+        @include bg(#1b8bf9);
+        @include transition(0.2s ease all);
+    }
+    &:before {
+        left: 50%;
+    }
+    &:after {
+        right: 50%;
+    }
+}
+
+.bar-focus {
+    @include b(2px solid #1b8bf9,bottom);
+    &:after,&:before {
+        @include disp(none);
+    }
+}
+
+.bar-warning {
+    @include b(2px solid #f57c00,bottom);
+}
+
+.bar-success {
+    @include b(2px solid #4CAF50,bottom);
+}
+
+.bar-info {
+    @include b(2px solid #40c4ff,bottom);
+}
+
+.bar-danger {
+    @include b(2px solid #ff5252,bottom);
+}
+
+/**====== Materialize General elements css end ======**/
+/**  =====================
+      Advance Form Elements css start
+==========================  **/
+/**  ======= Swiches css start =========  **/
+/*========== iO7 ===========*/
+.ios-switch {
+    opacity: 0;
+    @include pos(absolute);
+}
+/* Normal Track */
+input[type="checkbox"].ios-switch + div {
+    @include v-al(middle);
+    width: 40px;
+    height: 22px;
+    @include b(1px solid #ccc);
+    @include b(999px,radius);
+    @include bg-c(#fff);
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-property: background-color, box-shadow;
+    @include shadow(inset 0 0 0 0 rgba(0, 0, 0, 0.4));
+    @include mr(20px);
+}
+/* Checked Track (Blue) */
+input[type="checkbox"].ios-switch:checked + div {
+    width: 40px;
+    background-position: 0 0;
+    @include bg-c(#3b89ec);
+    @include b(1px solid #0e62cd);
+    @include shadow(inset 0 0 0 10px rgba(59, 137, 259, 1));
+}
+/* Tiny Track */
+input[type="checkbox"].tinyswitch.ios-switch + div {
+    width: 34px;
+    height: 18px;
+}
+/* Big Track */
+input[type="checkbox"].bigswitch.ios-switch + div {
+    width: 50px;
+    height: 27px;
+}
+/* Color Switch Track */
+input[type="checkbox"].primary.ios-switch:checked + div {
+    @include bg-c(#2196F3);
+    @include b(1px solid rgba(0, 162, 63, 1));
+    @include shadow(inset 0 0 0 10px #2196F3);
+}
+
+input[type="checkbox"].warning.ios-switch:checked + div {
+    @include bg-c(#f57c00);
+    @include b(1px solid rgba(0, 162, 63, 1));
+    @include shadow(inset 0 0 0 10px #f57c00);
+}
+
+input[type="checkbox"].success.ios-switch:checked + div {
+    @include bg-c(#4CAF50);
+    @include b(1px solid rgba(0, 162, 63, 1));
+    @include shadow(inset 0 0 0 10px #4CAF50);
+}
+
+input[type="checkbox"].info.ios-switch:checked + div {
+    @include bg-c(#40c4ff);
+    @include b(1px solid rgba(0, 162, 63, 1));
+    @include shadow(inset 0 0 0 10px #40c4ff);
+}
+
+input[type="checkbox"].danger.ios-switch:checked + div {
+    @include bg-c(#ff5252);
+    @include b(1px solid rgba(0, 162, 63, 1));
+    @include shadow(inset 0 0 0 10px #ff5252);
+}
+/* Normal Knob */
+input[type="checkbox"].ios-switch + div > div {
+    @include flt(left);
+    width: 18px;
+    height: 18px;
+    @include b(inherit,radius);
+    @include bg(#EEEDED);
+    -webkit-transition-timing-function: cubic-bezier(.54, 1.85, .5, 1);
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-property: transform, background-color, box-shadow;
+    -moz-transition-timing-function: cubic-bezier(.54, 1.85, .5, 1);
+    -moz-transition-duration: 0.4s;
+    -moz-transition-property: transform, background-color;
+    pointer-events: none;
+    @include mt(1px);
+    @include ml(1px);
+    @include b(1px solid #EEEDED);
+}
+/* Checked Knob (Blue Style) */
+input[type="checkbox"].ios-switch:checked + div > div {
+    -webkit-transform: translate3d(20px, 0, 0);
+    -moz-transform: translate3d(20px, 0, 0);
+    @include bg-c(#fff);
+    @include b(1px solid #EEEDED);
+}
+/* Green Knob */
+input[type="checkbox"].green.ios-switch:checked + div > div {
+    @include shadow(0 2px 5px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 162, 63, 1));
+}
+/**  =====================
+      Checkbox css start
+==========================  **/
+.rkmd-checkbox {
+    @include c(#818181);
+    @include f-s(15px);
+    @include f-w(bold);
+    letter-spacing: 0.5px;
+    @include disp(inline-block);
+    @include mr(20px);
+    @include pos(relative);
+    .captions {
+        @include disp(inline-block);
+        @include v-al(middle);
+        @include f-w(300);
+        @include pos(relative);
+        @include pl(40px);
+    }
+    .input-checkbox {
+        @include pos(absolute);
+        @include disp(inline-block);
+        width: 32px;
+        height: 32px;
+        @include t-a(center);
+        @include v-al(middle);
+        @include mb(0);
+        top: -5px;
+        input[type="checkbox"] {
+            visibility: hidden;
+            @include pos(absolute);
+            left: 7px;
+            bottom: 7px;
+            @include m(0);
+            @include p(0);
+            outline: none;
+            cursor: pointer;
+            opacity: 0;
+            + .checkbox:before {
+                content: "\f14a";
+                @include c(#717171);
+                @include pos(absolute);
+                left: 4px;
+                bottom: 8px;
+                width: 18px;
+                height: 18px;
+                font:{
+                    family: 'FontAwesome';
+                    weight: normal;
+                    style: normal;
+                    size: 24px;
+                }
+                line-height: 1;
+                text-transform: none;
+                letter-spacing: normal;
+                word-wrap: normal;
+                white-space: nowrap;
+                direction: ltr;
+                @include v-al(-6px);
+                /* Support for all WebKit browsers. */
+                -webkit-font-smoothing: antialiased;
+                /* Support for Safari and Chrome. */
+                text-rendering: optimizeLegibility;
+                /* Support for Firefox. */
+                -moz-osx-font-smoothing: grayscale;
+                /* Support for IE. */
+                -webkit-font-feature-settings: 'liga';
+                font-feature-settings: 'liga';
+                @include transition(all 0.2s ease);
+                z-index: 1;
+            }
+            &:checked + .checkbox:before {
+                content: "\f00c";
+            }
+            &:active:not(:disabled) + .checkbox:before {
+                @include transform(scale3d(0.88, 0.88, 1));
+            }
+            &:disabled + .checkbox:before {
+                @include c(rgba(0, 0, 0, 0.157) !important);
+            }
+        }
+    }
+    &.checkbox-light{
+        .label,input[type="checkbox"] + .checkbox:before,label{
+            @include c(#fff);
+        }
+        input[type="checkbox"]:disabled + .checkbox:before {
+            @include c(#5d5d5d !important);
+        }
+        &.checkbox-rotate input[type="checkbox"] + .checkbox:before {
+            @include b(#fff,color);
+        }
+        &.checkbox-rotate input[type="checkbox"]:disabled + .checkbox:before {
+            @include b(#5d5d5d !important,color);
+        }
+    }
+    .label, label {
+        cursor: pointer;
+    }
+    &.checkbox-rotate{
+        .input-checkbox input[type="checkbox"]{
+            + .checkbox {
+                cursor: pointer;
+                &:before {
+                    content: "";
+                    @include pos(absolute);
+                    left: 7px;
+                    bottom: 7px;
+                    width: 18px;
+                    height: 18px;
+                    @include b(2px solid #717171);
+                    @include b(2px,radius);
+                    @include transition(all 0.2s ease);
+                    z-index: 1;
+                }
+            }
+            &:checked + .checkbox:before {
+                left: 11px;
+                width: 12px;
+                height: 20px;
+                @include b(2px,width);
+                @include b(solid,style);
+                @include b(transparent,top);
+                @include b(transparent,left);
+                @include transform(rotate(40deg));
+                @include b(1px,radius);
+            }
+            &:disabled + .checkbox:before {
+                @include b(rgba(0, 0, 0, 0.157) !important, color);
+            }
+            &.checkbox-ripple{
+                .ripple {
+                    @include pos(absolute);
+                    top: 0;
+                    left: 0;
+                    width: 32px;
+                    height: 32px;
+                    @include b(50%,radius);
+                    @include transform(scale(0));
+                }
+                .ripple.animated {
+                    @include disp(block);
+                    @include transition(checkbox-ripple 400ms ease-out);
+                }
+            }
+        }
+        .checkbox-primary input[type="checkbox"]:checked + .checkbox:before {
+            @include b(#2196F3,color);
+        }
+        .checkbox-warning input[type="checkbox"]:checked + .checkbox:before {
+            @include b(#f57c00,color);
+        }
+        .checkbox-success input[type="checkbox"]:checked + .checkbox:before {
+            @include b(#4CAF50,color);
+        }
+        .checkbox-info input[type="checkbox"]:checked + .checkbox:before {
+            @include b(#40c4ff,color);
+        }
+        .checkbox-danger input[type="checkbox"]:checked + .checkbox:before {
+            @include b(#ff5252,color);
+        }
+    }
+}
+
+.widget-to-do-list .rkmd-checkbox .input-checkbox {
+    left: 0;
+}
+
+@include k-frames(checkbox-ripple){
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1.6);
+        transform: scale(1.6);
+    }
+}
+
+/**========= Fade-In Checkbox =========**/
+.fade-in-danger,
+.fade-in-default,
+.fade-in-info,
+.fade-in-primary,
+.fade-in-success,
+.fade-in-warning {
+    cursor: pointer;
+    @include disp(inline-block);
+    @include mr(20px);
+}
+
+.checkbox-fade{
+    label {
+        @include disp(flex);
+        align-items: center;
+    }
+}
+.checkbox-fade, .radio{
+    label{
+        input[type="checkbox"],input[type="radio"] {
+            @include disp(none);
+            &:checked + .cr > .cr-icon {
+                @include transform(scale(1) rotateZ(0deg));
+                opacity: 1;
+            }
+            &:disabled + .cr {
+                opacity: 0.5;
+            }
+            + .cr > .cr-icon {
+                @include transform(scale(3) rotateZ(-20deg));
+                opacity: 0;
+                @include transition(all 0.3s ease-in);
+            }
+        }
+        &:after {
+            content: '';
+            @include disp(table);
+            clear: both;
+        }
+    }
+    .cr {
+        @include pos(relative);
+        @include disp(inline-block);
+        @include b(1px solid #ccc);
+        @include b(0.25em,radius);
+        width: 1.3em;
+        height: 1.3em;
+        @include flt(left);
+        @include mr(0.5em);
+        cursor: pointer;
+        .cr-icon {
+            @include pos(absolute);
+            @include f-s(0.8em);
+            line-height: 0;
+            top: 50%;
+            left: 20%;
+        }
+    }
+}
+.radio .cr {
+    @include b(50%,radius);
+}
+
+.radio .cr .cr-icon {
+    @include ml(0.04em);
+}
+
+.fade-in-primary .cr {
+    @include b(1px solid #2196f3);
+}
+
+.fade-in-warning .cr {
+    @include b(1px solid #f57c00);
+}
+
+.fade-in-success .cr {
+    @include b(1px solid #4CAF50);
+}
+
+.fade-in-info .cr {
+    @include b(1px solid #40c4ff);
+}
+
+.fade-in-danger .cr {
+    @include b(1px solid #ff5252);
+}
+/**========= Color Check-box css ======**/
+.checkbox-color {
+    @include disp(inline-block);
+    @include mr(20px);
+    cursor: pointer;
+    label {
+        @include disp(inline-block);
+        @include pos(relative);
+        @include pl(5px);
+        &::before {
+            content: "";
+            @include disp(inline-block);
+            @include pos(absolute);
+            top: 3px;
+            width: 17px;
+            height: 17px;
+            left: 0;
+            @include ml(-20px);
+            @include b(1px solid #ccc);
+            @include b(3px, radius);
+            @include bg-c(#fff);
+            @include transition(border 0.15s ease-in-out, color 0.15s ease-in-out);
+        }
+        &::after {
+            @include disp(inline-block);
+            @include pos(absolute);
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 3px;
+            @include ml(-20px);
+            @include pl(3px);
+            @include pt(1px);
+            @include f-s(11px);
+            @include c(#555);
+        }
+    }
+    input[type="checkbox"] {
+        opacity: 0;
+        &:focus + label::before {
+            outline: thin dotted;
+            outline: 5px auto -webkit-focus-ring-color;
+            outline-offset: -2px;
+        }
+        &:checked + label::after {
+            font-family: 'FontAwesome';
+            content: "\f00c";
+        }
+        &:disabled + label {
+            opacity: 0.65;
+            &::before {
+                @include bg-c(#eee);
+                cursor: not-allowed;
+            }
+        }
+    }
+    &.checkbox-circle label::before {
+        @include b(50%,radius);
+    }
+    &.checkbox-inline {
+        @include mt(0);
+    }
+}
+
+.checkbox-primary, .checkbox-danger, .checkbox-info, .checkbox-warning, .checkbox-success{
+    input[type="checkbox"]:checked + label::after {
+        @include c(#fff);
+    }
+}
+
+.checkbox-primary input[type="checkbox"]:checked + label::before {
+    @include bg-c(#2196f3);
+    @include b(#2196f3,color);
+}
+.checkbox-danger input[type="checkbox"]:checked + label::before {
+    @include bg-c(#ff5252);
+    @include b(#ff5252,color);
+}
+
+.checkbox-info input[type="checkbox"]:checked + label::before {
+    @include bg-c(#40c4ff);
+    @include b(#40c4ff,color);
+}
+
+.checkbox-warning input[type="checkbox"]:checked + label::before {
+    @include bg-c(#f57c00);
+    @include b(#f57c00,color);
+}
+
+.checkbox-success input[type="checkbox"]:checked + label::before {
+    @include bg-c(#4caf50);
+    @include b(#4caf50,color);
+}
+
+/**  =====================
+      Radio-Button css start
+==========================  **/
+.form-radio {
+    @include pos(relative);
+    .form-help {
+        @include pos(absolute);
+        width: 100%;
+    }
+    label {
+        @include pos(relative);
+        @include pl(1.5rem);
+        @include t-a(left);
+        @include c(#333);
+        @include disp(block);
+    }
+    input {
+        width: auto;
+        opacity: 0.00000001;
+        @include pos(absolute);
+        left: 0;
+    }
+}
+
+.radio{
+    .helper {
+        @include pos(absolute);
+        top: -0.15rem;
+        left: -0.25rem;
+        cursor: pointer;
+        @include disp(block);
+        @include f-s(1rem);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        @include c(#999);
+        &::after {
+            @include transform(scale(0));
+            @include bg-c(#1b8bf9);
+            @include b(#337ab7,color);
+        }
+        &::after,&::before {
+            content: '';
+            @include pos(absolute);
+            left: 0;
+            top: 0;
+            @include m(0.25rem);
+            width: 1rem;
+            height: 1rem;
+            -webkit-transition: -webkit-transform 0.28s ease;
+            transition: -webkit-transform 0.28s ease;
+            transition: transform 0.28s ease, -webkit-transform 0.28s ease;
+            @include b(50%,radius);
+            @include b(0.125rem solid currentColor);
+        }
+    }
+    label:hover .helper {
+        @include c(#1b8bf9);
+    }
+    input{
+        &:checked ~ .helper::after {
+            @include transform(scale(0.5));
+        }
+        &:checked ~ .helper::before {
+            @include c(#1b8bf9);
+        }
+    }
+    &.radiofill{
+        input:checked ~ .helper::after {
+            @include transform(scale(1));
+        }
+        .helper::after {
+            @include bg-c(#1b8bf9);
+        }
+    }
+}
+.radio-inline {
+    @include disp(inline-block);
+    @include mr(20px);
+}
+.form-help {
+    @include mt(0.125rem);
+    @include ml(0.125rem);
+    @include c(#b3b3b3);
+    @include f-s(0.8rem);
+}
+/**  =====================
+      Multi-Select css start
+==========================  **/
+.multiselect-native-select .btn-default,
+.multiselect-native-select .btn-default:active,
+.multiselect-native-select .btn-default:focus,
+.multiselect-native-select .btn-default:hover {
+    @include b(rgba(0,0,0,.15),color);
+    @include f-w(300);
+}
+.multiselect .caret {
+    @include disp(none);
+}
+.caret {
+    @include c(#666);
+    @include disp(inline-block);
+    width: 0;
+    height: 0;
+    @include ml(0.3em);
+    @include v-al(middle);
+    content: "";
+    @include b(0.3em solid,top);
+    @include b(0.3em solid transparent,right);
+    @include b(0.3em solid transparent,left);
+}
+
+.custom-header {
+    @include t-a(center);
+    @include p(3px);
+    @include bg(#2196f3);
+    @include c(#fff);
+}
+/**====== Advance Form Elements css end ======**/
+
+/**  =====================
+      Animation css start
+==========================  **/
+#animationSandbox {
+    @include disp(block);
+}
+/**====== Animation css end ======**/
+/**  =====================
+      Sortable css start
+==========================  **/
+.sortable-moves {
+    @include f-s(14px);
+    line-height: 1.55556em;
+    list-style-type: none;
+    @include mb(15px);
+    min-height: 3.55556em;
+    @include pl(5.11111em);
+    @include pos(relative);
+    cursor: move;
+    @include flt(left);
+    width: 300px;
+    img {
+        @include pos(absolute);
+        height: 40px;
+        left: 0;
+        @include b(50px,radius);
+        top: -10px;
+    }
+}
+
+#draggablePanelList .card {
+    cursor: move;
+}
+
+#draggableMultiple .sortable-moves {
+    cursor: move;
+    @include mb(0);
+}
+
+#draggableWithoutImg .card {
+    @include mb(0);
+}
+/**====== Sortable css end ======**/
+/**  =====================
+      Search css start
+==========================  **/
+.seacrh-header {
+    @include mt(20px);
+    @include disp(flex);
+    align-items: center;
+}
+
+.search-content {
+    @include disp(flex);
+    align-items: center;
+    @include b(1px solid #ccc,bottom);
+    @include mb(20px);
+    @include pb(20px);
+    img {
+        width: 120px;
+    }
+    &:last-child {
+        @include b(none,bottom);
+        @include mb(0);
+        @include pb(0);
+    }
+}
+
+/**====== Search css end ======**/
+/**  =====================
+      Invoice css start
+==========================  **/
+.invoice-contact {
+    @include disp(flex);
+    @include mb(30px);
+    @include pt(30px);
+    align-items: center;
+}
+
+.invoice-box {
+    @include bg(#1b8bf9);
+    @include c(#fff);
+    @include p(20px 0);
+    @include disp(flex);
+    align-items: center;
+    h1 {
+        @include f-s(7rem);
+    }
+}
+
+.invoice-table {
+    @include b(1px solid #fff,left);
+    @include pl(20px);
+    td,th {
+        @include b(none,top);
+        @include p(3px 0);
+    }
+    > tbody > tr:last-child > td, > tfoot > tr:last-child > td {
+        @include pb(0);
+    }
+}
+
+.invoice-order {
+    @include pl(0);
+    th:first-child {
+        @include pl(0);
+        width: 80px;
+    }
+}
+
+.invoice-detail-table{
+    td {
+        @include v-al(middle);
+        @include t-a(center);
+        &:first-child {
+            text-align: left;
+        }
+    }
+    thead th {
+        @include t-a(center);
+        &:first-child {
+            width: 450px;
+            @include t-a(left);
+        }
+    }
+}
+
+.invoice-total {
+    @include bg(#f3f3f3);
+    @include p(30px 0);
+    td,th {
+        @include t-a(right);
+    }
+    td {
+        @include pl(30px);
+    }
+    tbody {
+        @include pr(20px);
+        @include flt(right);
+    }
+}
+
+.invoive-info {
+    @include disp(flex);
+    @include mb(30px);
+    h6 {
+        @include mb(20px);
+        text-transform: uppercase;
+    }
+}
+
+/**====== Invoice css end ======**/
+/* ====================
+    Coming soon page css start
+======================= */
+.coming {
+    @include bg(url('../images/masterhome.jpg')no-repeat);
+    background-size: cover;
+    @include pos(fixed);
+    height: 100%;
+    width: 100%;
+    @include disp(flex);
+    align-items: center;
+}
+/**====== Comming soon css end ======**/
+/**  =====================
+      Task list css start
+==========================  **/
+.min-date {
+    @include bg(transparent);
+}
+
+.task-list-table{
+    td,th {
+        @include v-al(middle);
+    }
+    img {
+        width: 40px;
+    }
+    i {
+        @include c(#333);
+        @include mr(5px);
+    }
+}
+
+.btn-add-task #add-btn {
+    @include mt(20px);
+}
+/* add task list css */
+.task-list{
+    .table-content {
+        @include pl(20px);
+        @include pr(20px);
+    }
+    input {
+        cursor: pointer;
+        @include f-w(600);
+    }
+    img {
+        @include mr(5px);
+        @include disp(inline-block);
+    }
+}
+
+.to-list{
+    .to-do-list {
+        @include p(15px);
+        @include mb(0);
+        @include b(1px solid #ccc,bottom);
+        &:last-child {
+            @include b(none);
+        }
+    }
+}
+
+/* end of task list css  */
+/**====== Task List css end ======**/
+/**  =====================
+      Task Detailed css start
+==========================  **/
+.task-detail-right{
+    .counter {
+        @include t-a(center);
+        @include c(#777);
+    }
+    .card-block table i,.card-header h5 i {
+        @include mr(5px);
+    }
+}
+
+.requid-table {
+    @include b(1px solid #eceeef);
+}
+
+.thumb-block {
+    @include shadow(0 1px 1px rgba(0,0,0,.05));
+    @include p(3px);
+    @include bg-c(#fff);
+    @include b(1px solid #ddd);
+    @include b(3px,radius);
+    @include transition(border 0.2s ease-in-out);
+}
+
+.thumb-img {
+    @include pos(relative);
+    @include disp(block);
+    &:hover .caption-hover {
+        @include bg-c(rgba(0,0,0,.7));
+        visibility: visible;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        @include pos(absolute);
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.caption-hover {
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    @include transition(all 0.15s ease-in-out);
+    > span {
+        top: 46%;
+        width: 100%;
+        @include pos(absolute);
+        @include t-a(center);
+    }
+}
+
+.media .b-2-primary {
+    @include b(2px solid #1b8bf9);
+}
+/**====== Task Detailed css end ======**/
+/**  =====================
+      Wells css start
+==========================  **/
+.well {
+    min-height: 20px;
+    @include p(19px);
+    @include mb(20px);
+    @include bg-c(#f5f5f5);
+    @include b(1px solid #e3e3e3);
+    @include b(4px,radius);
+    @include shadow(inset 0 1px 1px rgba(0,0,0,.05));
+}
+
+.well-sm {
+    @include p(9px);
+    @include b(3px,radius);
+}
+
+.well-lg {
+    @include p(24px);
+    @include b(6px,radius);
+}
+/**====== Wells css end ======**/
+/**  =====================
+      Range slider css start
+==========================  **/
+#ex1Slider .slider-selection {
+    @include bg(#BABABA);
+}
+
+#RGB {
+    height: 10px;
+    @include bg(rgb(128, 128, 128));
+    @include m(10px 0);
+}
+
+#RC{
+    .slider-selection {
+        @include bg(#FF8282);
+    }
+    .slider-handle {
+        @include bg(red);
+    }
+}
+#GC{
+    .slider-selection {
+        @include bg(#428041);
+    }
+    .slider-handle {
+        @include bg(green);
+    }
+}
+#BC{
+    .slider-selection {
+        @include bg(#8283FF);
+    }
+    .slider-handle {
+        @include b(blue,bottom-color);
+    }
+}
+#B,
+#G,
+#R {
+    width: 300px;
+}
+
+#ex6SliderVal {
+    @include c(green);
+}
+
+#slider12a .slider-track-high,
+#slider12c .slider-track-high {
+    @include bg(green);
+}
+
+#slider12b .slider-track-low,
+#slider12c .slider-track-low {
+    @include bg(#ff5252);
+}
+
+#slider12c .slider-selection {
+    @include bg(#f57c00);
+}
+
+#slider22{
+    .slider-selection {
+        @include bg(#2196F3);
+    }
+    .slider-rangeHighlight {
+        @include bg(#f70616);
+    }
+}
+.range-slider {
+    min-height: 200px;
+    @include disp(flex);
+    align-items: center;
+    @include ml(15px);
+}
+
+.range-slider-contain {
+    @include pos(absolute);
+    bottom: 15%;
+}
+
+.range-well {
+    @include bg-c(#fff);
+    @include b(none);
+    @include shadow(none);
+}
+/**====== Range slider css end ======**/
+.card-footer {
+    @include bg-c(transparent);
+}
+/* ====================
+    Counter css start
+======================= */
+.counter p {
+    @include c(#1b8bf9);
+}
+
+.comming-soon-from{
+    input {
+        width: 50%;
+    }
+    button {
+        width: 20%;
+    }
+}
+.comming-soon {
+    @include t-a(center);
+    @include c(#fff);
+    h2 {
+        @include f-s(90px);
+        @include f-w(400);
+    }
+    .counter p {
+        @include f-s(24px);
+        @include f-w(400);
+    }
+    h1 {
+        @include f-w(600);
+        @include f-s(64px);
+    }
+    > p {
+        @include c(#fff);
+        @include f-s(28px);
+    }
+    .md-input-wrapper {
+        @include t-a(left);
+    }
+}
+
+.coming-social {
+    @include pt(50px);
+    @include t-a(center);
+    a {
+        @include mr(20px);
+        @include c(#fff);
+        @include f-s(30px);
+        &:hover {
+            @include c(#2196F3);
+            @include transition(color 0.3s ease-in-out);
+        }
+    }
+}
+
+/* =======================
+    maintance page css start
+========================== */
+#maintance {
+    @include pos(fixed);
+    height: 100%;
+    width: 100%;
+    @include disp(flex);
+    align-items: center;
+    @include t-a(center);
+}
+
+.maintainance-subtitle {
+    @include t-a(center);
+    @include f-w(600);
+    text-transform: capitalize;
+    ~ h6 {
+        line-height: 1.5;
+    }
+}
+/* ========  maintance page css End ========== */
+/* =======================
+   Start Color Css
+=========================== */
+.amber-colors ul li p,
+.bg-danger li p,
+.bg-default li p,
+.bg-info li p,
+.bg-primary li p,
+.bg-success li p,
+.bg-warning li p,
+.blue-colors ul li p,
+.blue-grey-colors ul li p,
+.brown-colors ul li p,
+.cyan-colors ul li p,
+.deep-orange-colors ul li p,
+.deep-purple-colors ul li p,
+.green-colors ul li p,
+.grey-colors ul li p,
+.indigo-colors ul li p,
+.light-blue-colors ul li p,
+.light-green-colors ul li p,
+.lime-colors ul li p,
+.orange-colors ul li p,
+.pink-colors ul li p,
+.purple-colors ul li p,
+.red-colors ul li p,
+.teal-colors ul li p,
+.yellow-colors ul li p {
+    @include f-s(18px);
+    @include p(10px 0);
+    @include t-a(center);
+    text-transform: uppercase;
+    @include c(#fff);
+}
+
+.color-block ul {
+    margin-bottom: 20px;
+}
+/* start accent red color css */
+$m-val:14;
+$or:#d50505;
+@while $m-val >= 1 {
+    .red-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 3%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of accent red color css */
+/* start accent pink colors css*/
+$m-val:14;
+$or:#c61565;
+@while $m-val >= 1 {
+    .pink-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 3%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of accent pink color css */
+/* start accent purple color css */
+$m-val:14;
+$or:#ab05ff;
+@while $m-val >= 1 {
+    .purple-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 3%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of accent purple color css */
+/* start css of deep purple color */
+$m-val:14;
+$or:#6505ea;
+@while $m-val >= 1 {
+    .deep-purple-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 3%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of deep purple color css */
+/* start indigo colors css */
+$m-val:14;
+$or:#3452fe;
+@while $m-val >= 1 {
+    .indigo-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 2.5%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of indigo colors */
+/* start blue accent color css */
+$m-val:14;
+$or:#2d65ff;
+@while $m-val >= 1 {
+    .blue-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 2.5%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of blue accent color css */
+/* start light blue color css */
+$m-val:14;
+$or:#0593ea;
+@while $m-val >= 1 {
+    .light-blue-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 3%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of light blue color css */
+/* cyan color css start */
+$m-val:14;
+$or:#05b9d4;
+@while $m-val >= 1 {
+    .cyan-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 3%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of cyan color css start */
+/* start teal color css */
+$m-val:14;
+$or:#05c0a6;
+@while $m-val >= 1 {
+    .teal-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 3%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of teal color css */
+/* start a green color css */
+$m-val:14;
+$or:#05c956;
+@while $m-val >= 1 {
+    .green-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 3%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of green color css */
+/* start a light green color css */
+$m-val:14;
+$or:#67dd1b;
+@while $m-val >= 1 {
+    .light-green-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 3%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of light green color css */
+/* start lime color css */
+$m-val:14;
+$or:#afea05;
+@while $m-val >= 1 {
+    .lime-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 3%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of lime color css */
+/* start yellow color css */
+$m-val:14;
+$or:#ffd605;
+@while $m-val >= 1 {
+    .yellow-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 3%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of yellow color css */
+/* start amber color css */
+$m-val:14;
+$or:#ffac05;
+@while $m-val >= 1 {
+    .amber-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 3%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of amber color css */
+/* start orange color css */
+$m-val:14;
+$or:#ff6f05;
+@while $m-val >= 1 {
+    .orange-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 3%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of orange color css */
+/* start deep orange color css */
+$m-val:14;
+$or:#dd3005;
+@while $m-val >= 1 {
+    .deep-orange-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 3%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of deep orange color css */
+/* start brown color css */
+$m-val:14;
+$or:#412b27;
+@while $m-val >= 1 {
+    .brown-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 5%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of brown color css */
+/* start grey color css */
+$m-val:14;
+$or:#252525;
+@while $m-val >= 1 {
+    .grey-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 5%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of grey color css */
+/* start blue grey color css */
+$m-val:14;
+$or:#2a363b;
+@while $m-val >= 1 {
+    .blue-grey-colors ul li:nth-child(#{$m-val}) {
+        $or:lighten($or, 5%);
+        background-color:$or;
+        p:before{
+            content: "#{$or}";
+        }
+        $m-val: $m-val - 1;
+    }
+}
+/* end of blue grey color css */
+/*!*===========================*/
+/*FAQ Page Css Start*/
+/*======================= *!*/
+
+.faq-contact-card {
+    @include mb(15px);
+    i {
+        @include mr(10px);
+    }
+}
+
+.faq-profile-btn {
+    @include t-a(center);
+    button:first-child {
+        @include mr(20px);
+    }
+}
+
+.tab-header {
+    @include mb(20px);
+}
+
+.faq-expi {
+    @include m(0);
+    i {
+        top: -7px;
+    }
+    li {
+        @include mt(10px);
+        @include mb(10px);
+        @include pos(relative);
+        @include ml(50px);
+        i {
+            @include pos(absolute);
+            @include t-a(center);
+            @include disp(block);
+            @include c(#2196F3);
+        }
+        h6:last-child {
+            @include f-s(12px);
+            @include f-st(italic);
+            @include f-w(400);
+        }
+    }
+}
+.faq-chart {
+    @include t-a(center);
+    @include b(none);
+    button {
+        @include mr(5px);
+        &:last-child {
+            @include mr(0)
+        }
+    }
+}
+
+.card-member,
+.card-questioning {
+    @include mb(0);
+    @include c(#777);
+}
+
+.faq-accordion {
+    @include mb(10px);
+    @include bg-c(#fff);
+}
+
+
+/*===========================
+    FAQ Page Css Start
+======================= */
+.contact-user .users {
+    left: 0;
+    width: inherit;
+}
+
+.taskboard-right-progress .progress,
+.technical-skill .progress {
+    height: 9px;
+    width: 90%;
+    @include mb(20px);
+}
+
+.technical-skill span {
+    @include flt(right);
+    @include mt(-10px);
+}
+
+.general-info .table td,
+.general-info .table th,
+.project-table .table td,
+.project-table .table th {
+    @include b(0,top);
+    @include b(0,bottom);
+}
+
+.general-info .form-radio .md-add-on {
+    line-height: 0;
+    height: 0;
+}
+
+.general-info .form-radio .md-group-add-on {
+    @include mb(0);
+}
+
+.chart-percent {
+    @include f-s(24px);
+    @include pos(absolute);
+    width: 100%;
+    @include t-a(center);
+    left: 5px;
+    top: 58px;
+    @include f-w(400);
+}
+
+.faq-btn {
+    @include t-a(center);
+}
+
+.project-table{
+    img {
+        height: 50px;
+        width: 50px;
+    }
+    .label {
+        @include p(5px 20px);
+    }
+}
+.card-member,
+.card-questioning{
+    .ui-accordion-header-icon {
+        @include flt(left);
+        @include mr(15px);
+        @include mt(17px);
+        @include ml(17px);
+    }
+    .accordion-msg {
+        @include f-w(400);
+    }
+    .acc-msg {
+        @include mb(10px);
+    }
+    .acc-desc {
+        @include disp(block);
+        @include mb(10px);
+    }
+    .ui-state-active {
+        @include bg-c(#1b8bf9);
+        @include c(#fff);
+    }
+}
+
+
+#placeholder3 .legend {
+    @include pos(relative);
+    top: -80px;
+}
+/* faq progress bar css */
+.faq-progress .progress {
+    @include pos(relative);
+    @include bg-c(#eeeded);
+    height: 10px;
+    .faq-text1,.faq-text2,.faq-text3,.faq-text4,.faq-text5 {
+        @include f-w(600);
+        @include mr(-37px);
+    }
+    .faq-bar1,.faq-bar2,.faq-bar3,.faq-bar4,.faq-bar5 {
+        @include bg(#29aecc);
+        height: 10px;
+        @include b(0,radius);
+        @include pos(absolute);
+        top: 0;
+    }
+    .faq-bar1 {
+        @include bg-c(#2196F3);
+    }
+    .faq-text1 {
+        @include c(#2196F3);
+    }
+    .faq-bar2,.faq-bar5 {
+        @include bg-c(#4CAF50);
+    }
+    .faq-text2,.faq-text5 {
+        @include c(#4CAF50);
+    }
+    .faq-bar3 {
+        @include bg-c(#ff5252);
+    }
+    .faq-text3 {
+        @include c(#ff5252);
+    }
+    .faq-bar4 {
+        @include bg-c(#f57c00);
+    }
+    .faq-text4 {
+        @include c(#f57c00);
+    }
+}
+.card-faq h4 {
+    @include c(#2196F3);
+}
+/* ======================
+    Panels and wells css start
+========================= */
+.panel {
+    @include bg-c(#fff);
+    @include b(1px solid transparent);
+    @include b(4px,radius);
+    @include shadow(0 1px 1px rgba(0,0,0,.05));
+}
+
+.panel-body p {
+    @include o-f(hidden);
+}
+
+.panels-wells{
+    .panel-default {
+        @include b(#ddd,color);
+    }
+    .panel-success {
+        @include b(#4CAF50,color);
+    }
+    .panel-primary {
+        @include b(#2196F3,color);
+    }
+    .panel-danger {
+        @include b(#ff5252,color);
+    }
+    .panel-info {
+        @include b(#40c4ff,color);
+    }
+    .panel-warning {
+        @include b(#f57c00,color);
+    }
+    .panel {
+        @include mb(20px);
+        .panel-body {
+            @include p(15px);
+        }
+    }
+}
+
+.panel-heading {
+    @include p(10px 15px);
+    @include b(3px,top-left-radius);
+    @include b(3px,top-right-radius);
+}
+
+.panel-footer {
+    @include p(10px 15px);
+    @include b(3px,bottom-left-radius);
+    @include b(3px,bottom-right-radius);
+    @include bg-c(#fafafa);
+    @include b(1px solid #eee,top);
+}
+/* ==============================
+    Start Contact card css
+================================= */
+.contact-mobile {
+    @include pos(relative);
+    @include disp(block);
+    @include bg-c(#fff);
+    cursor: pointer;
+}
+
+.contact-card-info {
+    @include pos(relative);
+    @include b(1px solid #ccc,bottom);
+    a {
+        @include f-s(14px);
+    }
+}
+
+.contact-mobi-front{
+    @include pos(relative);
+    a {
+        @include c(#fff);
+    }
+    .front-img img {
+        @include mr(10px);
+        height: 50px;
+        width: 50px;
+    }
+    .img-circle {
+        width: 150px;
+        height: 150px;
+        @include p(2px);
+        @include b(1px solid #757575);
+    }
+}
+
+
+.contact-card-button {
+    @include t-a(center);
+    @include p(15px 0);
+    i {
+        @include mr(5px)
+    }
+}
+
+.contact-details-front-img {
+    @include t-a(center);
+    @include p(20px 0);
+    h4 {
+        @include mt(10px);
+    }
+}
+
+.front-img {
+    @include pos(absolute);
+    bottom: 15px;
+    > img {
+        @include ml(17px);
+    }
+}
+
+.contact-card-info {
+    @include p(10px 10px 10px 40px);
+    i {
+        @include p(10px);
+        @include pos(absolute);
+        left: 5px;
+        top: 5px;
+    }
+}
+/* =========================
+    Start Signup and Signin Page css
+============================ */
+.login-profile {
+    @include t-a(center);
+    @include bg(#2196F3 none repeat scroll 0 0);
+    @include c(#fff);
+    @include disp(flex);
+    height: 400px;
+    i {
+        @include m(0 auto);
+    }
+}
+
+.login-up {
+    @include disp(flex);
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+    @include t-a(center);
+    z-index: -1;
+}
+
+.md-float-group label {
+    @include b(0,bottom);
+}
+
+.modal-header ul {
+    @include b(0,bottom);
+}
+
+.login-profile .fa {
+    @include f-s(80px);
+    @include m(0 auto);
+}
+
+.nav-pills > li.active{
+    > a,> a:focus,> a:hover {
+        @include bg-c(transparent);
+        @include b(2px solid #00b9f5,bottom);
+        @include b(0,radius);
+        @include c(#666);
+        @include f-s(18px);
+    }
+}
+
+.nav.nav-pills.log_btn a {
+    @include b(0,radius);
+    @include f-s(18px);
+    &:hover {
+        @include bg(transparent none repeat scroll 0 0);
+    }
+}
+
+.f-password {
+    @include pos(absolute);
+    right: 0;
+    top: -18px;
+}
+/* ======================
+    Flag Page css
+======================== */
+.flags{
+    .f-item {
+        @include p(12px);
+        @include b(1px solid #ddd);
+        @include mr(15px);
+        @include disp(inline-block);
+        .capital,.name {
+            @include o-f(hidden);
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            @include pb(0);
+        }
+        .code {
+            @include disp(block);
+            @include f-s(90%);
+            @include c(#999);
+            @include pb(0);
+        }
+    }
+}
+
+.data_table_main.flags [class*=col-] {
+    @include disp(flex);
+    align-items: center;
+    @include mb(10px);
+}
+
+.content-flag label {
+    @include mb(0);
+    cursor: pointer;
+}
+
+
+/* ==========================
+    Gallery Css
+============================== */
+.demo-gallery{
+    > ul {
+        @include mb(0);
+        > li a {
+            @include b(3px,radius);
+            @include disp(block);
+            @include o-f(hidden);
+            @include pos(relative);
+            @include flt(left);
+            width: 100%;
+            > img {
+                @include transition(transform 0.15s ease 0s);
+                @include transform(scale3d(1, 1, 1));
+                height: 100%;
+                width: 100%;
+            }
+            .demo-gallery-poster {
+                @include bg-c(rgba(0, 0, 0, 0.1));
+                bottom: 0;
+                left: 0;
+                @include pos(absolute);
+                right: 0;
+                top: 0;
+                @include transition(background-color 0.15s ease 0s);
+                > img {
+                    left: 50%;
+                    @include ml(-10px);
+                    @include mt(-10px);
+                    opacity: 0;
+                    @include pos(absolute);
+                    top: 50%;
+                    @include transition(opacity 0.3s ease 0s);
+                }
+            }
+            &:hover{
+                > img {
+                    @include transform(scale3d(1.1, 1.1, 1.1));
+                }
+                .demo-gallery-poster {
+                    @include bg-c(rgba(0, 0, 0, 0.5));
+                    > img {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .justified-gallery > a{
+        > img {
+            @include transition(transform 0.15s ease 0s);
+            @include transform(scale3d(1, 1, 1));
+            height: 100%;
+            width: 100%;
+        }
+        .demo-gallery-poster {
+            @include bg-c(rgba(0, 0, 0, 0.1));
+            bottom: 0;
+            left: 0;
+            @include pos(absolute);
+            right: 0;
+            top: 0;
+            @include transition(background-color 0.15s ease 0s);
+            > img {
+                left: 50%;
+                @include ml(-10px);
+                @include mt(-10px);
+                opacity: 0;
+                @include pos(absolute);
+                top: 50%;
+                @include transition(opacity 0.3s ease 0s);
+            }
+        }
+        &:hover{
+            > img {
+                @include transform(scale3d(1.1, 1.1, 1.1));
+            }
+            .demo-gallery-poster {
+                @include bg-c(rgba(0, 0, 0, 0.5));
+                > img {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .video .demo-gallery-poster img {
+        height: 48px;
+        @include ml(-24px);
+        @include mt(-24px);
+        opacity: 0.8;
+        width: 48px;
+    }
+    &.dark > ul > li a {
+        @include b(3px solid #04070a);
+    }
+}
+.home .demo-gallery {
+    @include pb(80px);
+}
+.thumbnail {
+    @include b(5px solid #fff);
+    @include shadow(7px 7px 7px -7px #ccc);
+}
+#lightgallery li,
+#lightgallery1 {
+    @include mb(15px);
+}
+/* Gallery css end */
+
+/**  =====================
+      Widget css start
+==========================  **/
+
+/*====== Basic widget css ======*/
+.basic-widget {
+    @include bg(#3f51b5);
+    @include c(#fff);
+    @include t-a(center);
+    @include mb(30px);
+    i {
+        @include bg(#fff);
+        height: 25px;
+        width: 25px;
+        @include c(#3f51b5);
+        @include b(50%,radius);
+        @include f-s(20px);
+        line-height: 81px;
+        @include m(30px 0);
+        @include p(17px 19px);
+    }
+}
+
+.basic-widget-green {
+    @include bg(#4caf50);
+    i{
+        @include c(#4caf50);
+    }
+}
+
+.basic-widget-orange {
+    @include bg(#f57c00);
+    i{
+        @include c(#f57c00);
+    }
+}
+
+.basic-widget-pink {
+    @include bg(#ff5252);
+    i{
+        @include c(#ff5252);
+    }
+}
+
+.img-full {
+    width: 100%;
+}
+
+.user-block-1 {
+    bottom: 75px;
+    @include mb(-60px);
+    @include t-a(center);
+    @include pos(relative);
+}
+
+.user-block-1 img,
+.user-block-2 img {
+    @include disp(inline-block);
+    @include b(5px solid rgba(251, 137, 101, 0.43));
+    @include b(50%,radius);
+}
+
+.user-block-2 {
+    background-image: url("../images/widget/user-block-2.jpg");
+    background-size: cover;
+    @include p(20px 0);
+    @include c(#fff);
+    @include mb(10px);
+    @include t-a(center);
+}
+
+.user-block-2-activities {
+    @include p(0 20px);
+}
+
+.user-block-2-active {
+    @include mb(20px);
+    @include b(1px solid #ccc,bottom);
+    @include pb(10px);
+}
+
+.widget-income-footer {
+    @include bg(#eceaea);
+    @include p(20px 15px);
+}
+
+#widget-product-list_filter {
+    @include flt(right);
+    label {
+        @include disp(flex);
+        align-items: center;
+    }
+}
+
+
+
+
+/*Clock css*/
+#clock {
+    background-image: url("../images/widget/clock-bg.png");
+    height: 160px;
+    @include pos(relative);
+    width: 160px;
+    @include m(25px auto -95px);
+    background-size: cover;
+    bottom: 100px;
+    div {
+        @include pos(absolute);
+        left: 24%;
+        top: 20%;
+    }
+    img[src*="second"] {
+        @include transition(transform 600000s linear 0s);
+    }
+    img[src*="minute"] {
+        @include transition(transform 360000s linear 0s);
+    }
+    img[src*="hour"] {
+        @include transition(transform 216000s linear 0s);
+    }
+    &:target{
+        img[src*="second"] {
+            @include transform(rotate(3600000deg));
+        }
+        img[src*="minute"] {
+            @include transform(rotate(36000deg));
+        }
+        img[src*="hour"] {
+            @include transform(rotate(360deg));
+        }
+    }
+}
+
+/*Weather widget*/
+.cloud-date{
+    @include c(#fff);
+}
+.weather-temp{
+    @extend .cloud-date;
+    @include mb(0);
+    li {
+        @include p(5px 10px);
+        @include b(1px solid #fff,right);
+        @include disp(inline-block);
+        @include t-a(center);
+        h6{
+            @extend .cloud-date;
+        }
+        h4{
+            @include mb(0);
+        }
+        &:last-child {
+            @include b(none,right);
+        }
+    }
+}
+
+.weather-table{
+    tr td:first-child {
+        width: 25%;
+    }
+    .svg-icon svg {
+        width: 21px !important;
+        height: 21px !important;
+    }
+}
+
+.weather-live{
+    .svg-icon.d-flex{
+        .climacon_component-stroke {
+            fill: rgba(255, 255, 255, 0.82);
+        }
+        svg {
+            width: 80px !important;
+            height: 80px !important;
+        }
+    }
+}
+
+.day-widget .svg-icon .climacon_component-stroke {
+    fill: rgb(79, 176, 83);
+}
+
+.svg-cloud {
+    @include disp(flex);
+    @include mb(10px);
+    align-items: center;
+    .cloud-temp {
+        @include disp(inline-block);
+        @include ml(15px);
+    }
+}
+
+.table{
+    th,
+    tr:first-child td {
+        @include b(none,top);
+    }
+}
+
+.table-inverse{
+    td,th,thead th {
+        @include b(#fff,color);
+    }
+}
+
+.last-activity-table,.weather-table{
+    tr{
+        td{
+            &:last-child{
+                @include t-a(right);
+            }
+        }
+    }
+}
+
+.weather-table > tbody > tr:last-child > td {
+    @include mb(0)
+}
+
+.svg-icon{
+    svg {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .climacon_component-stroke {
+        fill: rgba(43, 61, 81, 0.7);
+    }
+    .climacon_component-fill {
+        fill: #bbbbbb;
+    }
+}
+
+
+.icon-list-demo svg {
+    @include b(1px solid #eceeef);
+    @include b(3px,radius);
+    @include c(rgba(43, 61, 81, 0.7));
+    @include disp(inline-block);
+    @include f-s(24px);
+    height: 50px;
+    line-height: 50px;
+    @include m(0 12px 0 0);
+    @include t-a(center);
+    @include v-al(middle);
+    width: 50px;
+}
+
+.weather-card{
+    .weather-bg {
+        @include p(40px);
+        @include t-a(center);
+        h1 {
+            @include disp(inline-block);
+            @include f-s(52px);
+            @include v-al(bottom);
+        }
+        h6 {
+            @include f-w(300);
+            @include c(#fff);
+        }
+    }
+}
+
+/*widget horizontal cards css*/
+.rotate-txt {
+    @include flt(right);
+    bottom: -5;
+    @include pos(absolute);
+    @include transform(rotateZ(90deg));
+    right: -20px;
+}
+
+.horizontal-card-img{
+    position: relative;
+    img {
+        width: 60px;
+        height: 60px;
+        @include disp(inline-block);
+      //   @include mb(20px);
+    }
+    h2 {
+        @include mb(30px);
+        @include f-w(400);
+    }
+    ol li {
+        @include c(#777);
+        @include f-w(600);
+        @include flt(none);
+    }
+}
+
+.label-primary.menu-arrow-caption {
+    @include pos(absolute);
+    right: 25px;
+}
+
+
+/* user list widget */
+.widget-user-list{
+    .media {
+        @include p(10px 0);
+        @include b(1px solid #ccc,bottom);
+        &:last-child,
+        &:nth-child(4) {
+            @include b(none,bottom);
+        }
+    }
+    .media-body h6 {
+        @include disp(inline-block);
+        @include f-s(14px);
+        @include mr(5px);
+    }
+}
+
+/*Last activity widget*/
+.last-activity-table{
+    tr td:first-child {
+        width: auto;
+    }
+    .btn {
+        @include mb(5px);
+    }
+}
+
+
+
+/*Photo table */
+.photo-table img {
+    width: 50px;
+    @include mb(5px);
+}
+
+
+/*Online status css*/
+.online-dot {
+    top: 80%;
+    height: 20px;
+    width: 20px;
+    @include disp(inline-block);
+    @include pos(absolute);
+    @include b(50%,radius);
+    @include b(2px solid #fff);
+    @include shadow(0 0 2px 2px rgba(128, 128, 128, 0.33));
+    left: 50%;
+    @include ml(35px);
+}
+.user-borders-right {
+    @include b(1px solid #ccc,right);
+    @include b(1px solid #ccc,top);
+    @include p(20px);
+    &:nth-child(even) {
+        @include b(none,right);
+    }
+    .user-detail {
+        @include disp(inline-block);
+        @include ml(20px);
+        h6 {
+            @include mb(10px);
+            @include f-w(400);
+        }
+    }
+}
+.weather-cloud {
+    @include f-s(92px);
+    @include pos(absolute);
+    bottom: -10px;
+    right: 20px;
+}
+/*Messages css*/
+.message-label {
+    @include flt(right);
+    height: 40px;
+    width: 40px;
+    @include t-a(center);
+    @include mt(-5px);
+    line-height: 22px;
+    @include b(50%,radius);
+    @include mb(0)
+}
+
+.unread-msg {
+    @include bg(#fcffe8);
+    h6, i, p, span {
+        @include c(#000 !important);
+        @include f-w(600);
+    }
+}
+
+.messages .media .media-body {
+    @include pt(6px);
+}
+
+.messages-content {
+    @include p(25px);
+    @include b(1px solid #ccc,right);
+    @include pb(0);
+    .media {
+        @include mb(40px);
+    }
+}
+
+.messages-content .media{
+    .msg-reply,.msg-send {
+        @include p(15px);
+        @include f-s(12px);
+        @include disp(inline-block);
+        @include mb(10px);
+    }
+    .media-left {
+        @include pr(25px);
+    }
+}
+
+.messages-send{
+    .form-control {
+        @include p(20px);
+        @include b(0,radius);
+    }
+    span {
+        @include p(20px);
+        @include b(0,radius);
+    }
+}
+.msg-img-h{
+   width: 50px;
+}
+/*Weather block css*/
+.weather-bg {
+    background-image: url("../images/widget/weather-bg.jpg");
+    background-size: cover;
+    @include p(20px 0);
+    @include c(#fff);
+    i {
+        @include f-s(100px);
+    }
+    span {
+        @include f-s(55px);
+    }
+    svg#cloudDrizzleSun {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+svg#sun {
+    height: 180px;
+    width: 180px;
+}
+
+.weather-detail{
+    .climacon_component-stroke {
+        fill: #666;
+    }
+    .climacon_component-fill {
+        fill: #fff;
+    }
+    li {
+        @include p(0 12px);
+        @include disp(inline-block);
+        @include t-a(center);
+        &:last-child {
+            @include pr(0);
+        }
+        &:first-child {
+            @include pl(0);
+        }
+    }
+}
+.dashboard-total-income{
+    .counter-txt {
+        font:{
+            weight: 300;
+            size: 35px;
+        }
+        @include c(#2196F3);
+    }
+    i {
+        @include flt(right);
+        @include f-s(30px);
+        @include c(#2196f0);
+    }
+}
+.widget-timeline{
+    i {
+        @include pos(absolute);
+        top: 40px;
+        left: 80%;
+    }
+    .media {
+        @include p(20px);
+        @include f-s(14px);
+        h6 {
+            @include disp(inline-block);
+            @include f-s(14px);
+        }
+    }
+}
+
+/*Checkbox table css*/
+.check-table th{
+    &:first-child {
+        width: 1%;
+    }
+    .fade-in-primary {
+        @include mr(0);
+    }
+}
+
+/**  =====================
+      Social Timeline css start
+==========================  **/
+.tab-pane form .md-add-on i {
+    @include f-s(20px);
+}
+.wall-elips {
+    @include pos(absolute);
+    right: 15px;
+}
+.social-wallpaper {
+    @include pos(relative);
+}
+
+.social-profile {
+    @include pos(relative);
+    @include pt(15px);
+}
+
+.timeline-btn {
+    @include pos(absolute);
+    bottom: 0;
+    right: 30px;
+}
+
+.nav-tabs.md-tabs.tab-timeline li a {
+    @include p(20px 0 10px);
+    @include c(#666);
+    @include f-s(18px);
+}
+
+.social-timeline-left {
+    @include pos(absolute);
+    top: -200px;
+    @include mr(15px);
+}
+
+.post-input {
+    @include p(10px 10px 10px 5px);
+    @include disp(block);
+    width: 100%;
+    @include b(none);
+    resize: none;
+}
+
+.friend-box .media-object,
+.user-box .media-object {
+    height: 45px;
+    width: 45px;
+    @include disp(inline-block);
+}
+
+.friend-box img {
+    @include mr(10px);
+    @include mb(10px);
+}
+
+.user-box .media-left {
+    @include pos(relative);
+}
+
+.chat-header {
+    @include c(#222);
+}
+
+.live-status {
+    height: 7px;
+    width: 7px;
+    @include pos(absolute);
+    bottom: 0;
+    right: 17px;
+    @include b(50%,radius);
+    @include b(1px solid);
+}
+
+.tab-timeline .slide {
+    bottom: -1px;
+}
+
+.image-upload input {
+    visibility: hidden;
+    max-width: 0;
+    max-height: 0;
+}
+
+.file-upload-lbl {
+    max-width: 15px;
+    @include p(5px 0 0);
+}
+
+.ellipsis::after {
+    top: 15px;
+    @include b(none);
+    @include pos(absolute);
+    content: '\f142';
+    font-family: FontAwesome;
+}
+
+.elipsis-box {
+    @include shadow(0 0 5px 1px rgba(0, 0, 0, 0.11));
+    top: 40px;
+    right: -10px;
+    &:after {
+        content: '';
+        height: 13px;
+        width: 13px;
+        @include bg(#fff);
+        @include pos(absolute);
+        top: -5px;
+        right: 10px;
+        @include transform(rotate(45deg));
+        @include shadow(-3px -3px 11px 1px rgba(170, 170, 170, 0.22));
+    }
+}
+
+.friend-elipsis {
+    left: -10px;
+    top: -10px;
+}
+
+.social-profile:hover .profile-hvr,
+.social-wallpaper:hover .profile-hvr {
+    opacity: 1;
+}
+
+
+.profile-hvr {
+    opacity: 0;
+    @include pos(absolute);
+    @include t-a(center);
+    width: 100%;
+    @include f-s(20px);
+    @include p(10px);
+    top: 0;
+    @include c(#fff);
+    @include bg-c(rgba(0, 0, 0, 0.61));
+    @include transition(all ease-in-out 0.3s);
+}
+
+.social-profile {
+    @include m(0 15px);
+}
+
+.social-follower {
+    @include t-a(center);
+    h4 {
+        @include f-s(18px);
+        @include mb(10px);
+        @include f-st(normal);
+    }
+    h5 {
+        @include f-s(14px);
+    }
+    .follower-counter {
+        @include t-a(center);
+        @include mt(25px);
+        @include mb(25px);
+        @include f-s(13px);
+        .txt-primary {
+            @include f-s(24px);
+        }
+    }
+}
+
+.timeline-icon {
+    height: 45px;
+    width: 45px;
+    @include disp(block);
+    @include m(0 auto);
+    @include b(4px #fff solid);
+}
+
+.social-timelines-left:after {
+    height: 3px;
+    width: 25%;
+    @include pos(absolute);
+    @include bg(#ccc);
+    top: 20px;
+    content: "";
+    right: 0;
+    z-index: 0;
+}
+
+.social-timelines:before {
+    @include pos(absolute);
+    content: ' ';
+    width: 3px;
+    @include bg(#ccc);
+    left: 4%;
+    z-index: 0;
+    height: 100%;
+    top: 0;
+}
+
+.timeline-dot:after,
+.timeline-dot:before {
+    content: "";
+    @include pos(absolute);
+    height: 9px;
+    width: 9px;
+    @include bg-c(#ccc);
+    left: 3.8%;
+    @include b(50%,radius);
+}
+
+.post-timelines .social-time,
+.user-box .social-designation {
+    @include f-s(13px);
+}
+
+.social-msg span {
+    @include c(#666);
+    @include pl(10px);
+    @include pr(10px);
+    @include mr(10px);
+}
+
+.contact-info, .view-info, .work-info{
+    .social-label {
+        @include f-s(15px);
+        @include pl(0);
+        @include pt(0);
+    }
+
+    .social-user-name {
+        @include f-s(14px);
+        @include pl(0);
+    }
+}
+
+
+.friend-elipsis .social-designation {
+    @include f-s(13px);
+}
+
+.social-client-description {
+    @include pb(20px);
+}
+
+.user-box .media-body {
+    @include pt(6px);
+}
+
+.timeline-details p {
+    @include pt(10px);
+}
+
+.post-timelines .chat-header,
+.timeline-details .chat-header {
+    @include f-s(15px);
+}
+
+.social-client-description {
+    @include pb(20px);
+    p {
+        @include mt(5px);
+    }
+    span {
+        @include f-s(12px);
+        @include ml(10px);
+    }
+    .chat-header {
+        @include f-s(13px);
+    }
+}
+.social-tabs a {
+    @include f-s(18px);
+}
+
+.timeline-btn a {
+    @include mb(20px);
+}
+
+.profile-hvr i {
+    cursor: pointer;
+}
+/*====== Social Timeline css End ======*/
+
+/**  =====================
+      Message css start
+==========================  **/
+.messages-content {
+    width: calc(100% - 305px);
+}
+.message-left {
+    width: 300px;
+    @include flt(right);
+}
+.msg-box {
+    @include m(-30px -15px);
+}
+.msg-send {
+    @include bg-c(#f3f3f3);
+}
+.new-msg {
+    @include b(0,right);
+    &:focus ~ .input-group-addon {
+        @include bg-c(#fff);
+        @include b(#66afe9,color);
+    }
+}
+
+.msg-ellipsis {
+    right: 10px;
+    top: 0;
+    @include pos(absolute);
+    span {
+        @include mt(10px);
+        @include mr(14px);
+        @include flt(right);
+        @include f-s(26px);
+    }
+}
+
+.msg-nav {
+    top: 18px;
+    right: 40px;
+    @include pos(absolute);
+    @include f-s(24px);
+}
+
+.msg-elipsis-box a {
+        @include f-s(15px);
+}
+/*====== Message css End ======*/
+/**  =====================
+      chat css start
+==========================  **/
+#main-chat{
+    .chat-single-box{
+        .chat-header a {
+            @include c(#666 !important);
+        }
+        &.active{
+            .chat-header {
+                @include bg-c(#2196F3 !important);
+                a {
+                    @include c(#fff !important);
+                }
+            }
+        }
+    }
+    .minimized {
+        @include bg-c(#1e2730 !important);
+    }
+    .chat-box ul.boxs{
+        li{
+            &.chat-single-box .chat-header.custom-collapsed {
+                @include pos(absolute);
+                bottom: 0;
+                width: 300px;
+            }
+            &.minimized {
+                height: 30px;
+                width: 30px;
+                bottom: 0;
+                @include pos(absolute);
+                left: -50px;
+                @include b(5px 5px 0 0,radius);
+                cursor: pointer;
+                .count {
+                    @include c(#fff);
+                    @include t-a(center);
+                    @include m(5px);
+                }
+                .chat-dropdown {
+                    list-style: none;
+                    @include disp(none);
+                    @include pos(absolute);
+                    @include bg-c(#f5f5f5);
+                    @include shadow(0 1px 8px 0 rgba(5, 5, 5, 0.5));
+                    width: 150px;
+                    z-index: 100;
+                    @include b(5px,radius);
+                    @include p(5px 0);
+                    li {
+                        @include p(2px 5px);
+                        div {
+                            @include disp(inline-block);
+                        }
+                        .username {
+                            width: 85%;
+                            height: 22px;
+                        }
+                        .remove {
+                            width: 13%;
+                            @include p(2px 4px);
+                            @include flt(right);
+                            &:hover {
+                                @include bg-c(#c0c0c0 !important);
+                            }
+                        }
+                        &:hover {
+                            @include c(#000);
+                        }
+                    }
+                }
+            }
+            .hidden {
+                @include disp(none);
+            }
+        }
+    }
+}
+
+.user-box {
+    height: 100%;
+}
+
+.close {
+    opacity: 1;
+}
+
+.write-msg {
+    @include p(12px);
+}
+
+.chat-box .secondary:active:hover {
+    @include bg-c(#fff);
+}
+
+.chat-single-box {
+    height: 440px;
+    @include flt(right);
+    width: 300px;
+    @include mr(15px);
+    direction: ltr;
+    z-index: 999;
+    bottom: 0;
+}
+
+.box-live-status {
+    height: 10px;
+    width: 10px;
+    @include b(50%,radius);
+    @include b(1px solid);
+}
+
+.chat-msg-img {
+    height: 50px;
+    width: 50px;
+}
+
+.header-users {
+    right: 0;
+    top: 103px;
+    width: 300px;
+    height: 100%;
+}
+
+.users {
+    right: 0;
+    top: 103px;
+    width: 300px;
+    height: 100%;
+}
+
+.p-chat-user {
+    top: 50px;
+}
+
+.users-main {
+    height: 100%;
+    width: 300px;
+    @include pos(fixed);
+    @include b(0,radius);
+}
+
+.friendlist-main {
+    @include pl(20px);
+    h6 {
+        @include f-s(14px);
+        text-transform: uppercase;
+    }
+}
+
+.friendlist-box{
+    .media-body{
+        .friend-header {
+            @include f-s(13px);
+        }
+        span {
+            @include f-s(12px);
+        }
+    }
+}
+
+.userlist-box {
+    @include pl(20px);
+    cursor: pointer;
+    @include b(1px solid #efefef,bottom)
+}
+
+.users-main .media {
+    @include disp(flex);
+    align-items: center;
+    @include pt(0);
+    @include pb(10px);
+    @include mb(10px);
+}
+
+.chat-menu-content,
+.chat-menu-reply {
+    @include bg(#f3f3f3);
+    @include pos(relative);
+    @include o-f(visible);
+    @include b(4px,radius);
+}
+
+.chat-menu-content:before {
+    @include pos(absolute);
+    top: 20px;
+    left: -14px;
+    width: 0;
+    height: 0;
+    content: '';
+    @include b(8px solid transparent);
+    @include b(#f3f3f3,right-color)
+}
+
+.chat-menu-reply {
+    @include bg(#2196f3);
+    .chat-cont, .chat-time {
+        @include c(#fff);
+    }
+    &:before {
+        @include pos(absolute);
+        top: 20px;
+        right: -14px;
+        width: 0;
+        height: 0;
+        content: '';
+        @include b(8px solid transparent);
+        @include b(#2196f3,left-color)
+    }
+}
+
+.chat-reply-box {
+    @include bg-c(#fff);
+    @include pos(absolute);
+    bottom: 43px;
+    width: 100%;
+    @include p(15px 20px 10px);
+    @include b(1px solid #ccc,top);
+    .md-input-wrapper {
+        @include mb(30px);
+    }
+}
+
+.chat-inner-header {
+    @include t-a(center);
+    @include mb(20px);
+    @include b(1px solid #ccc,bottom);
+    @include p(20px);
+}
+
+.showChat_inner .chat-messages {
+    @include pb(20px);
+    @include pl(15px);
+    @include pr(15px);
+}
+
+.chat-send {
+    @include pos(absolute);
+    bottom: 5px;
+    right: 0;
+    @include b(none);
+    @include bg-c(transparent);
+    @include c(#2196f3);
+    @include transform(rotate(45deg));
+}
+
+.chat-menu-content, .chat-menu-reply{
+    .chat-cont {
+        @include p(10px);
+    }
+    .chat-time {
+        @include pl(10px);
+        @include pb(10px);
+    }
+}
+
+.back_chatBox i {
+    @include flt(left);
+    @include mt(5px);
+}
+
+.designation {
+    cursor: pointer;
+}
+
+.extra-profile-list {
+    @include disp(none);
+}
+
+
+.users-main{
+    .media .chat-header {
+        font:{
+            size:14px;
+            weight:600;
+        }
+    }
+    .media-body div + div {
+        @include f-s(12px);
+    }
+}
+
+.chat-body {
+    overflow-y: auto;
+    height: 340px;
+}
+
+.users-main-fix {
+    height: auto;
+    @include pos(fixed);
+    bottom: 0;
+    top: 151px;
+}
+
+.chat-footer,
+.chat-link {
+    @include b(#2196F3,color);
+}
+
+.chat-footer .input-group-addon {
+    @include p(7px 0.75rem);
+}
+
+.form-control:focus ~ .chat-send {
+    @include b(#2196F3,color);
+}
+
+.minimized-box {
+    @include p(5px 10px);
+}
+
+.write-msg{
+    input {
+        @include b(0,radius);
+        @include b(0,right);
+    }
+    .btn {
+        @include shadow(none);
+        @include b(0,left);
+        @include f-s(14px);
+    }
+    .btn-secondary:hover {
+        @include bg-c(#fff);
+        @include b(1px solid rgba(0, 0, 0, .15));
+        @include b(0,left);
+    }
+}
+
+.form-control:focus ~ .input-group-btn .btn-secondary {
+    @include b(#66afe9,color);
+    @include c(#2196F3);
+}
+
+.img-chat-profile {
+    height: 45px;
+    width: 45px;
+}
+
+.chat-minimize{
+    .chat-body, .chat-footer {
+        @include disp(none);
+    }
+}
+
+.chat-box {
+    @include mr(290px);
+    height: 440px;
+    @include pos(fixed);
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+}
+/*====== chat css End ======*/
+/*====== Product-Edit css End ======*/
+
+
+/**  =====================
+      Bootstrap UI css start
+==========================  **/
+.boot-ui [class*=bg-],
+.boot-ui [class*=col-] {
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+}
+/*====== Bootstrap UI css End ======*/
+
+
+/* ======================================
+       Dashboard-1 css start
+=========================================== */
+.row-table {
+    @include disp(table);
+    height: 100%;
+    width: 100%;
+    > [class*=col-] {
+        @include disp(table-cell);
+        table-layout: fixed;
+        @include v-al(middle);
+        &:first-child {
+            @include b(1px solid #fff,right);
+        }
+    }
+}
+
+#system-clock {
+    opacity: 0.6;
+}
+
+.b-t-none {
+    @include b(none,top);
+    @include b(1px solid #ccc);
+}
+
+.side-box {
+    @include pos(absolute);
+    right: 0;
+    top: 0;
+    height: 50px;
+    width: 60px;
+    @include c(#fff);
+    @include f-s(26px);
+    @include b(0 0 0 100px,radius);
+    @include t-a(center);
+    i {
+        @include pos(relative);
+        top: 10px;
+        left: 5px;
+    }
+}
+
+.resource-barchart canvas {
+    width: 60% !important;
+}
+
+.dashboard-facebook,
+.dashboard-primary,
+.dashboard-success,
+.dashboard-warning,
+.weather-temp h6 {
+    @include c(#fff);
+}
+
+.sales-facebook,
+.sales-primary,
+.sales-success,
+.sales-warning {
+    @include p(20px);
+    @include mb(10px);
+    i {
+        @include f-s(40px);
+    }
+    h2 {
+        @include f-w(600);
+        @include flt(right);
+        @include mb(5px);
+    }
+    span {
+        @include disp(block);
+        @include t-a(right);
+    }
+}
+
+.bg-dark-facebook,
+.bg-dark-primary,
+.bg-dark-success,
+.bg-dark-warning{
+    .week-sales {
+        @include c(#fff);
+        @include pt(5px);
+        @include pb(5px);
+        @include pl(10px);
+        @include disp(inline-block);
+    }
+    .total-sales {
+        @include c(#fff);
+        @include flt(right);
+        @include pr(20px);
+        @include pt(5px);
+        @include pb(5px);
+        @include f-w(600);
+    }
+}
+
+.dashboard-product {
+    @include bg-c(#fff);
+   //  @include pt(21px);
+   //  @include pb(25px);
+    @include c(#777);
+    @include p(15px);
+}
+
+.dashboard-total-products {
+    @include f-w(600);
+    @include mt(10px);
+    @include mb(10px);
+}
+
+.dashboard-resource{
+    .counter {
+        @include c(#fff);
+        @include disp(inline-block);
+    }
+    .resource-used {
+        @include t-a(right);
+        @include c(#fff);
+        @include flt(right);
+    }
+}
+
+
+.dashboard-city {
+    @include disp(inline-block);
+}
+
+.city-cloud {
+    @include t-a(right);
+    @include flt(right);
+}
+
+.cloud-date {
+    @include c(#fff);
+    @include f-w(300);
+}
+
+.cloud-speed {
+    @include t-a(right);
+    @include c(#fff);
+    @include flt(right);
+    @include f-s(16px);
+    i {
+        @include mr(5px);
+        @include f-s(20px);
+    }
+}
+
+.svg-cloud {
+    @include mb(10px);
+    @include disp(flex);
+    align-items: center;
+}
+
+.cloud-temp {
+    @include disp(inline-block);
+    @include ml(15px);
+    h5 {
+        @include c(#fff);
+        @include f-w(400);
+    }
+}
+
+.weather-temp li {
+    @include c(#fff);
+    @include disp(inline-block);
+    @include t-a(center);
+}
+
+.weather-table i {
+    @include c(#777);
+}
+
+.photo-table{
+    img {
+        @include disp(inline-block);
+    }
+    td {
+        @include v-al(middle);
+    }
+    i {
+        @include mr(5px);
+    }
+}
+
+.user-block-2{
+    h5,img {
+        @include mb(20px);
+    }
+    h6 {
+        @include c(#fff);
+        @include f-w(300);
+    }
+}
+
+.user-block-2-active{
+    i {
+        @include mr(10px);
+    }
+    label {
+        @include flt(right);
+        @include mb(0);
+    }
+}
+
+
+
+/* home chat css start */
+.showChat {
+    @include disp(none);
+    @include mt(-50px);
+    z-index: 999;
+}
+
+.showChat_inner {
+    @include pos(fixed);
+    top: 50px;
+    @include bg-c(#fff);
+    right: 0;
+    @include disp(none);
+    width: 300px;
+    height: 100%;
+    z-index: 999;
+}
+/* home chat css end */
+.income-per-day{
+    p {
+        line-height: 1.6em;
+        @include t-a(left);
+    }
+    h6 {
+        @include disp(inline-block);
+        @include c(#666);
+        @include f-st(italic);
+        &:first-child {
+            @include mr(20px);
+        }
+    }
+}
+
+.fixed-button {
+    position: fixed;
+    bottom: -50px;
+    right: 30px; 
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    opacity: 0;
+    transition:all 0.5s ease;
+}
+.fixed-button.active {
+    bottom:50px;
+    opacity: 1;
+}
+
+/* === color css starts=== */
+
+$th-col:#1b8bf9,#f57c00,#ff5252,#8B4DA5,#40c4ff;
+@for $i from 1 through 5{
+    .color-#{$i} {
+        @include bg(nth($th-col,$i));
+    }
+}
+.color-inverse{
+    @include bg(#000);
+    img{
+        @include shadow(0px 0px 10px 1px rgba(129, 129, 129, 0.27));
+    }
+}
+.color-picker {
+    @include pos(fixed);
+    right: 0;
+    top: 150px;
+    width: 239px;
+    @include bg(#fff);
+    z-index: 999999;
+    @include transition(all .3s ease);
+    a.handle {
+        @include b(1px solid #0e7ae8);
+        @include b(transperant,right-color);
+        @include b(none,left-color);
+        @include pos(absolute);
+        top: 0;
+        right: 239px;
+        width: 50px;
+        height: 50px;
+        @include t-a(center);
+        @include bg(#fff);
+        z-index: 9999;
+        @include transition(all ease-in 0.3s);
+        &:hover {
+            @include bg(#1b8bf9);
+            @include transition(all ease-in 0.3s);
+            i{
+                @include c(#fff);
+                @include transition(all ease-in 0.3s);
+            }
+        }
+        i {
+            @include c(#1b8bf9);
+            @include f-s(25px);
+            line-height: 50px;
+        }
+    }
+    .settings-header {
+        @include bg(#1b8bf9);
+        height: 50px;
+        @include p(15px 34px 0 34px);
+        h3 {
+            @include c(#fff);
+            @include f-s(16px);
+            line-height: 16px;
+            @include mb(0);
+            @include p(0 0 5px);
+            @include mt(0);
+        }
+    }
+    .section {
+        @include p(20px 20px);
+        @include b(1px dotted rgba(14, 122, 232, 0.55),bottom);
+        @include b(1px solid rgba(14, 122, 232, 0.55),left);
+        @include o-f(hidden);
+        &:last-child {
+            @include b(1px solid rgba(14, 122, 232, 0.55),bottom);
+        }
+        h3 {
+            @include f-s(16px);
+            text-transform: none;
+            @include c(#3c3c3c);
+            line-height: 16px;
+            @include p(0);
+            @include mb(20px);
+            @include t-a(left);
+        }
+        i {
+            @include f-s(16px);
+            @include mr(10px);
+        }
+    }
+    span {
+        @include f-s(13px);
+        @include c(#9a9a9a);
+    }
+    .colors a {
+        @include disp(block);
+        @include b(10px,radius);
+        width: 30px;
+        height: 30px;
+        @include ml(0);
+        @include mb(10px);
+        @include mr(5px);
+        @include flt(left);
+        @include transition(all ease-in 0.3s);
+        &:hover {
+            @include shadow(0 0 2px 1px rgba(247, 54, 121, 0.58));
+            @include transition(all ease-in 0.3s);
+        }
+    }
+    .skin a {
+        @include disp(block);
+        width: 70px;
+        height: 30px;
+        @include ml(0);
+        @include mt(0);
+        @include mr(5px);
+        @include flt(left);
+        @include t-a(center);
+        line-height: 30px;
+        @include b(2px transparent solid);
+        &.actt {
+            @include b(2px #FFF solid);
+        }
+    }
+}
+/* color css Ends */

@@ -1,0 +1,13 @@
+{
+  "name": "jscolor",
+  "version": "1.4.2",
+  "main": [
+    "jscolor.js"
+  ],
+  "ignore": [
+
+  ],
+  "dependencies": {
+
+  }
+}

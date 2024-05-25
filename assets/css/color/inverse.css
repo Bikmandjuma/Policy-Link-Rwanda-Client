@@ -1,0 +1,393 @@
+.main-header-top .top-nav .settings-menu li a{
+    color: #666 !important;
+}
+.sidebar-menu>li>a:hover{
+    background-color: #1b1b1b;
+}
+a {
+    color: #fff !important;
+}
+a:hover,.faq-expi li i,.not-footer a,.dropdown-item,.wizard > .steps .done a {
+    color: #a3a3a3 !important;
+}
+nav,
+textarea,
+.main-header-top,
+.sidebar-menu>li.active>a,
+.scroll-list li,
+.dd-handle,
+.jstree-default .jstree-clicked,
+.breadcrumb,
+.pager li>a:focus,
+.pager li>a:hover,
+.pager li a,
+.grid-stack-item-content,
+.form-control,
+.bootstrap-tagsinput,
+.wizard > .steps .current a,
+.wizard > .steps .current a:hover,
+.wizard > .steps .current a:active,
+.dotted-line-theme .no_edit:hover,
+.dropzone,
+.error-500,
+.error-503,
+.error-404,
+.error-400,
+.error-403,
+.login,
+.ourpro-icon-effect-8 .ourpro-icon,
+.color-picker .settings-header,
+.wizard > .steps .disabled a,
+.wizard > .steps .disabled a:hover,
+.wizard > .steps .disabled a:active,
+.color-picker a.handle:hover,
+.showChat_inner,
+.chat-reply-box,
+.main-timeline,
+.card-questioning .ui-state-active,
+.card-member .ui-state-active,
+.cd-pricing-wrapper > li,
+.cd-pricing-switcher .cd-switch,
+.fc-state-active,
+.fc th,
+tr:first-child > td > .fc-day-grid-event,
+#external-events .fc-event,
+.dtp div.dtp-date,
+.dtp div.dtp-time,
+.ms-container .ms-list,
+.select2-container--default .select2-selection--multiple,
+.select2-container--default .select2-selection--single,
+.select2-container--classic .select2-selection--single .select2-selection__rendered,
+.page-item.disabled .page-link, .page-item.disabled .page-link:focus, .page-item.disabled .page-link:hover,
+.page-link,
+.custom-header,
+.join-us,.blog-section .blog-left,.dropdown-item.active, .dropdown-item.active:focus, .dropdown-item.active:hover,
+.dropdown-primary a:hover,#main-chat .chat-single-box.active .chat-header,.md-content h3,
+.prod-item .prod-info,.messages .bg-primary,
+.invoice-box,.list-group-item-action:focus,
+.note-editor .note-editing-area .note-editable,
+.horizontal-fixed .main-sidebar .sidebar-menu li:hover ul.mega-menu,
+#reportrange,.dynamic-list-two .new-item,.dynamic-list-three .new-item,.dynamic-list-one .new-item,.dynamic-list-three .new-item,.dynamic-list-one .new-item {
+    background-color: #1b1b1b !important;
+}
+
+.sidebar .user-panel{
+background-color: rgba(0, 0, 0, 0.45);
+}
+
+.cd-popular .cd-pricing-wrapper > li {
+    box-shadow: inset 0 0 0 3px #a3a3a3;
+}
+.color-picker a.handle:hover,
+.color-picker a.handle,
+.page-item.disabled .page-link,
+.page-item.disabled .page-link:focus,
+.page-item.disabled .page-link:hover,
+.page-link:focus, .page-link:hover,
+.page-link {
+    border-color: #1b1b1b;
+}
+.color-picker a.handle i {
+    color: #1b1b1b;
+}
+.color-picker .section:last-child {
+    border-bottom-color: #1b1b1b;
+}
+.color-picker .section {
+    border-left-color: #1b1b1b;
+}
+.main-sidebar,
+.sidebar-menu>li>a,
+.sidebar-menu .treeview-menu{
+    background-color: #242424;
+}
+.sidebar-mini.sidebar-collapse .sidebar-menu>li:hover>a>span:not(.pull-right),
+.sidebar-mini.sidebar-collapse .sidebar-menu>li:hover>.treeview-menu {
+    box-shadow: 2px 1px 5px 1px rgba(128, 128, 128, 0.03);
+}
+body,
+.cw-widget .place,
+.sidebar-menu .treeview-menu>li>a,
+.sidebar-menu>li>a,
+.main-header h4,
+.main-header .breadcrumb-title a,
+.card-header-text,
+.txt-primary,
+.table td,
+.table th,
+.user-block-2-active,
+.rkmd-checkbox label,
+.unread-msg i,
+.unread-msg h6,
+.unread-msg span,
+.unread-msg p,
+.md-add-on i,
+.dashboard-page-view .counter-txt,
+.close,
+.dd-handle,
+.dd-item > button:before,
+.txt-ellipsis,
+.icon-list-demo i,
+.icon-list-demo i:hover,
+.form-control,
+.form-control-label,
+.form-check-label,
+.checkbox label,
+.col-form-label,
+.checkbox-color label,
+.form-radio label,
+.dataTables_length label,
+.dataTables_filter label,
+h2.title-sec,
+h2.title-center,
+.about-sec li i,
+span.logo,
+#home-header span,
+.portfolioFilter li button:hover,
+.portfolioFilter li button.current,
+.pricing-table-header .price,
+.signup-btn .btn-primary:hover,
+.cd-pricing-header,
+.cd-currency,
+.cd-duration,
+#external-events .fc-event,
+tr:first-child > td > .fc-day-grid-event,
+.fc-day-grid-event:hover,
+.fc-state-active,
+.fc-state-active,
+.md-label-file,
+.bootstrap-tagsinput input,
+.custom-header,
+.select2-container--default .select2-search--inline .select2-search__field,
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.page-link:focus, .page-link:hover,
+.footer-about i,.footer-menu  h5:hover,.product-detail .btn-number,.msg-send,
+.note-editor .note-editing-area .note-editable,
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before,
+.testimonial-thumbs h5,.blog-details .read-more a,
+.pricing-table-items li i.icofont-check,.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link:hover,.socials-icon li a,.login-card h1,
+.read-more a,.task-list-table i,.task-detail-right label,.email-table .unread td a,
+.email-table td a,.chat-header,
+.blog-single .qutoe-text,
+.dtp table.dtp-picker-days tr > td > a, .dtp .dtp-picker-time > a,
+.mega-card h6,
+.chat-header,.bootpag>li>a,.br-theme-bars-square .br-widget a,.btn-inverse-danger {
+    color: #a3a3a3 !important;
+}
+.fc-state-default{
+  border-color: #fff;
+}
+.sidebar-menu .treeview-menu>li.active>a,
+.socials-icon li a,
+.md-tabs .nav-item.open .nav-link,
+.md-tabs .nav-item.open .nav-link:focus,
+.md-tabs .nav-item.open .nav-link:hover,
+.md-tabs .nav-link.active,
+.md-tabs .nav-link.active:focus,
+.md-tabs .nav-link.active:hover,
+.blog-details h6,.blog-section h5,.blog-block a:hover,.blog-big-user h4,
+.blog-block a:hover,.blog-single h4,.blog-s-reply h6,
+.blog-article .articles a,
+.task-timer-text {
+    color: #fff !important;
+}
+.item:hover .blog-hover-detail,
+.wizard > .actions .disabled a
+{
+    background-color: rgba(27, 27, 27, 0.68);
+}
+.sidebar-menu .treeview-menu>li>a,
+.pricing-table:hover,
+.nav-level {
+    border-top-color: #1b1b1b;
+}
+.nav-level {
+    color: #525252;
+}
+body,
+.content-wrapper,
+.main-header .breadcrumb-title,
+.dtp .dtp-buttons,
+.dtp > .dtp-content > .dtp-date-view > header.dtp-header,
+.footer-news button,
+.pricing-new,.blog-section h2,
+.list-group-item-action:hover,
+.msg-send,
+.dtp-picker {
+    background-color: #333 !important;
+}
+.grid-stack-item .grid-stack-item-content {
+    box-shadow: 0 0 30px 0 #1b1b1b, 0 1px 5px 0 rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(0, 0, 0, 0);
+}
+.scroll-list li:nth-child(even),
+.input-group-addon,
+.page-item.active .page-link, .page-item.active .page-link:focus, .page-item.active .page-link:hover,.nav-tabs .slide{
+    background-color: #a3a3a3 !important;
+}
+.fc-state-default,.cd-pricing-switcher .fieldset {
+  background-color: #a3a3a3;
+}
+.card,
+.widget-progress .progress,
+.btn-default,
+.btn-default:focus,
+.btn-default:hover,
+.btn-default:active,
+.btn-inverse-default,
+.modal-header,
+.modal-body,
+.modal-footer,
+.panels-wells .panel .panel-body,
+.panel-footer,
+.well,
+.bg-white,
+.nav-tabs .nav-item.open .nav-link,
+.nav-tabs .nav-item.open .nav-link:focus,
+.nav-tabs .nav-item.open .nav-link:hover,
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link.active:focus,
+.nav-tabs .nav-link.active:hover,
+.md-tabs .nav-item,
+.footer-bg,
+.contact-mobile,
+.bg-white,
+.sign-in-up,
+.login-card,
+.chat-menu-reply,
+.faq-accordion,
+.list-group-item,.panel,.note-editor .note-statusbar,.md-content {
+    background-color: #292929 !important;
+}
+.chat-menu-reply:before {
+    border-left-color: #292929;
+}
+.card-header,
+.user-block-2-active,
+.table thead th,
+.b-b-muted,
+.contact-card-info,
+.modal-header,
+.basic-list li,
+.friendlist-box {
+    border-bottom-color: #545353;
+}
+.table td,
+.table th,
+.accordion-msg,
+.modal-footer,
+.panel-footer,
+.footer-bg,
+.horizontal-fixed .main-sidebar .sidebar-menu li:hover ul.mega-menu {
+    border-top-color: #545353;
+}
+.blog-single .qutoe-text{
+  border-left-color: #545353;
+}
+.well,
+.icon-list-demo i,
+.bootstrap-tagsinput,
+.wizard > .content,
+.dropzone,
+.table-bordered,
+.table-bordered td,
+.table-bordered th,
+.wizard > .content,
+.fc th,
+.fc-unthemed th,
+.fc-unthemed td,
+.fc-unthemed thead,
+.fc-unthemed tbody,
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-row,
+.fc-unthemed .fc-content,
+.fc-unthemed .fc-popover,
+.fc-unthemed .fc-list-view,
+.fc-unthemed .fc-list-heading td,
+.ms-container .ms-list,
+.ms-container .ms-selectable li.ms-elem-selectable,
+.ms-container .ms-selection li.ms-elem-selection,
+.page-item.active .page-link, .page-item.active .page-link:focus, .page-item.active .page-link:hover,
+.slick-dots li button,.lg-outer .lg-thumb-item.active,
+.lg-outer .lg-thumb-item:hover,.media .b-2-primary,.chat-footer, .chat-link,.cd-pricing-switcher .fieldset  {
+    border-color: #a3a3a3;
+}
+input[type=text].md-form-control,
+input[type=file].md-form-control,
+input[type=password].md-form-control,
+input[type=email].md-form-control,
+input[type=number].md-form-control,
+.md-input-wrapper select,
+.md-input-wrapper textarea {
+    border-color: #a3a3a3;
+    color: #a3a3a3;
+}
+.svg-icon .climacon_component-stroke,
+.weather-detail .climacon_component-fill,
+.nv-legend-text {
+    fill: #a3a3a3;
+}
+.hour-hand,.minute-hand{
+  stroke:#1b1b1b;
+}
+.dtp-select-hour[fill="#2196F3"],.dtp-select-minute[fill="#2196F3"] {
+    fill:#1b1b1b  !important;
+}
+
+.item:hover .blog-hover-detail,.footer-gallery li .footer-hvr-effect,
+.blog-hover-detail{
+    background-color: rgba(41, 41, 41, 0.72);
+}
+.dropdown-item:hover{
+    background-color: #1b1b1b;
+    width: 100%;
+}
+.dashboard-primary.bg-primary,.bg-spark-chart{
+    background-color:#2196F3 !important;
+}
+.bg-spark-chart{
+    background-color:#3f51b5 !important;
+}
+@-webkit-keyframes sonarEffect {
+    0% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.5;
+        box-shadow: 0 0 0 2px #1b1b1b, 0 0 10px 10px #a3a3a3, 0 0 0 10px #292929;
+    }
+    100% {
+        box-shadow: 0 0 0 2px #1b1b1b, 0 0 10px 10px #a3a3a3, 0 0 0 10px #292929;
+        -webkit-transform: scale(1.5);
+        opacity: 0;
+    }
+}
+@-moz-keyframes sonarEffect {
+    0% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.5;
+        box-shadow: 0 0 0 2px #1b1b1b, 0 0 10px 10px #a3a3a3, 0 0 0 10px #292929;
+    }
+    100% {
+        box-shadow: 0 0 0 2px #1b1b1b, 0 0 10px 10px #a3a3a3, 0 0 0 10px #292929;
+        -moz-transform: scale(1.5);
+        opacity: 0;
+    }
+}
+@keyframes sonarEffect {
+    0% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.5;
+        box-shadow: 0 0 0 2px #1b1b1b, 0 0 10px 10px #a3a3a3, 0 0 0 10px #292929;
+    }
+    100% {
+        box-shadow: 0 0 0 2px #1b1b1b, 0 0 10px 10px #a3a3a3, 0 0 0 10px #292929;
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}

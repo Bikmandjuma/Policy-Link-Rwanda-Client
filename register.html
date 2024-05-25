@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Policy Link Rwanda Client</title>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="description" content="codedthemes">
+	<meta name="keywords"
+	content=", Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+	<meta name="author" content="codedthemes">
+
+	<!-- Favicon icon -->
+	<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+	<!-- Google font-->
+   <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+
+	<!--ico Fonts-->
+	<link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+	<!-- Style.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+	<!-- Responsive.css-->
+	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+</head>
+<body>
+	<section class="login common-img-bg">
+		<!-- Container-fluid starts -->
+		<div class="container-fluid">
+			<div class="row">
+					<div class="col-sm-12">
+						<div class="login-card card-block bg-white">
+							<div id="output" style="color: red;"></div>
+							<form class="md-float-material" id="registerForm">
+								<div class="text-center">
+									<!-- <img src="assets/images/logo-black.png" alt="logo"> -->
+									<h3 id="project_name_title">Policy Link Rwanda Client</h3> 
+								</div>
+								<h3 class="text-center txt-primary">Create an account </h3>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="md-input-wrapper">
+											<input type="text" class="md-form-control" required="" id="firstname">
+											<label>First Name</label>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="md-input-wrapper">
+											<input type="text" class="md-form-control" required="" id="lastname">
+											<label>Last Name</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="md-input-wrapper">
+											<input type="email" class="md-form-control" required="required" id="email">
+											<label>Email Address</label>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="md-input-wrapper">
+											<input type="text" class="md-form-control" required="required" id="phone">
+											<label>Phone</label>
+										</div>
+									</div>
+								</div>
+								<div class="md-input-wrapper">
+									<input type="text" class="md-form-control" required="required" id="username">
+									<label>Username</label>
+								</div>
+
+								<div class="col-xs-10 offset-xs-1">
+									<button type="submit" class="btn btn-primary btn-md btn-block waves-effect waves-light m-b-20">Sign up
+									</button>
+								</div>
+								<div class="row">
+									<div class="col-xs-12 text-center">
+										<span class="text-muted">Already have an account?</span>
+										<a href="login.html" class="f-w-600 p-l-5"> Sign In Here</a>
+
+									</div>
+								</div>
+							</form>
+							<!-- end of form -->
+						</div>
+						<!-- end of login-card -->
+					</div>
+					<!-- end of col-sm-12 -->
+				</div>
+				<!-- end of row-->
+			</div>
+			<!-- end of container-fluid -->
+	</section>
+	<script>
+		//call registration api end-point
+		document.getElementById("registerForm").addEventListener(submit,function(event){
+			event.preventDefault();
+
+			const fname=document.getElementById('firstname').value;
+			const lname=document.getElementById('lastname').value;
+			const email=document.getElementById('email').value;
+			const phone=document.getElementById('phone').value;
+			const uname=document.getElementById('username').value;
+
+			fetch('https://policy-link-rwanda-client-project-with.onrender.com/account/signup/',{
+				method:'POST',
+				headers:{
+					'content-type':'application/json'
+				},
+				body:JSON.stringify({fname,lname,email,phone,uname})
+			})
+			.then(response =>{
+				if(response.ok){
+					window.location.href='Password_validation.html';
+				}else{
+					// If registration fails, handle different error scenarios
+                    response.json().then(data => {
+                        if (data.error === "Username is already taken") {
+                            document.getElementById('output').innerText = 'Username is already taken. Please choose another.';
+                        } else if (data.error === "Email is already taken") {
+                            document.getElementById('output').innerText = 'Email is already taken. Please use another email address.';
+                        } else if (data.error === "Phone number is already taken") {
+                            document.getElementById('output').innerText = 'Phone number is already taken. Please use another phone number.';
+                        } else {
+                            document.getElementById('output').innerText = 'Registration failed. Please try again later.';
+                        }
+                    }).catch(error => {
+                        console.error('Error parsing response:', error);
+                        document.getElementById('output').innerText = 'An error occurred during registration. Please try again later.';
+                    });
+                }
+			})
+			.catch(error => {
+				console.error("Error durring registration ",error);
+				document.getElementById('output').innerText="An error occurred during registration. Please try again later.";
+			});
+
+		});
+	</script>
+   <!-- Required Jqurey -->
+   <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
+   <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+   <script src="assets/plugins/tether/dist/js/tether.min.js"></script>
+
+   <!-- Required Fremwork -->
+   <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+   <!--text js-->
+   <script type="text/javascript" src="assets/pages/elements.js"></script>
+</body>
+</html>

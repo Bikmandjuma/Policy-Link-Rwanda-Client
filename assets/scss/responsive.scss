@@ -1,0 +1,2605 @@
+@import "genral";
+@media (max-width: 544px) {
+    #admin-nav {
+        @include disp(block);
+        @include flt(none);
+        @include t-a(center);
+        @include mt(20px);
+    }
+
+    #task-form {
+        @include mt(110px);
+
+        button {
+            @include mt(20px);
+        }
+    }
+
+    #task-container li,
+    #task-form button,
+    #task-form input {
+        width: 100%;
+    }
+
+    #controls p {
+        @include f-s(0.8em);
+    }
+
+    .md-group-add-on {
+        @include mb(15px);
+    }
+}
+
+.bg-theme,
+.label-theme {
+    @include bg-c(#68dff0);
+}
+
+.badge.bg-important {
+    @include bg(#ff6c60);
+}
+
+.task-checkbox {
+    @include flt(left);
+}
+
+.login-card .md-input-wrapper {
+    @include mb(20px);
+}
+/* Todo page css end */
+/**  =====================
+      Page Layouts css start
+==========================  **/
+.layouts-link {
+    @include disp(block);
+    opacity: 0.75;
+}
+/**======  Page Layouts css ends ======**/
+/*====== Warning css starts ======= */
+.ie-warning {
+    @include pos(fixed);
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    @include bg(#000);
+    width: 100%;
+    height: 100%;
+    @include t-a(center);
+    @include c(#fff);
+    font-family: "Courier New", Courier, monospace;
+    @include p(50px 0);
+
+    p {
+        @include f-s(17px);
+    }
+
+    .iew-container {
+        min-width: 1024px;
+        width: 100%;
+        height: 200px;
+        @include bg(#fff);
+        @include m(50px 0);
+    }
+
+    .iew-download {
+        list-style: none;
+        @include p(30px 0);
+        @include m(0 auto);
+        width: 720px;
+
+        > li {
+            @include flt(left);
+            @include v-al(top);
+
+            > a {
+                @include disp(block);
+                @include c(#000);
+                width: 140px;
+                @include f-s(15px);
+                @include p(15px 0);
+
+                > div {
+                    @include mt(10px);
+                }
+
+                &:hover {
+                    @include bg-c(#eee);
+                }
+            }
+        }
+    }
+}
+/*====== Warning css ends ======= */
+/**  =====================
+      ACE editor css start
+==========================  **/
+#wrapper {
+    @include p(10px);
+}
+
+.controls {
+    @include mb(1em);
+}
+
+#editor {
+    width: 100% !important;
+    @include pos(relative);
+}
+/*====== ACE editor css End ======= */
+/*Blink css*/
+@include k-frames(blink) {
+    0% {
+        box-shadow: 0 0 8px #ff3b35;
+    }
+
+    50% {
+        box-shadow: none;
+    }
+
+    100% {
+        box-shadow: 0 0 8px #ff3b35;
+    }
+}
+
+.blink {
+    @include animation(blink 1.0s linear infinite);
+    @include b(50%,radius);
+}
+/* responsive css */
+@media only screen and (max-width: 1564px) {
+    .sub-title {
+        line-height: 1.4;
+    }
+
+    .cw-widget {
+        .clock {
+            height: 100px;
+            width: 100px;
+        }
+
+        .hour {
+            height: 25px;
+        }
+
+        .min {
+            height: 40px;
+        }
+
+        .clock {
+            @include shadow(0 0 0 7px #f5f5f5, 0 10px 10px 5px rgba(0,0,0,0.3));
+        }
+
+        .date {
+            @include f-s(20px);
+        }
+
+        .place {
+            @include f-s(22px);
+        }
+
+        .info {
+            @include b(1px solid,bottom);
+
+            span {
+                @include f-s(20px);
+                @include mt(5px);
+                @include mb(5px);
+            }
+
+            &:last-child {
+                @include b(none);
+            }
+        }
+
+        .upper {
+            height: 175px;
+        }
+
+        .info,
+        .weather p {
+            @include m(10px 0);
+        }
+    }
+
+    .user-borders-right .f-30 {
+        @include f-s(20px !important);
+    }
+
+    .info-block {
+        width: 100px;
+    }
+
+    .to-do-list.widget-to-do-list {
+        @include mb(5px);
+    }
+
+    .infos h2 {
+        @include f-s(12px);
+    }
+
+    .cw-widget .info,
+    .user-borders-right {
+        width: 50%;
+        @include pt(10px);
+        @include pb(10px);
+    }
+
+    .dashboard-total-growth .photo-table img {
+        width: 30px;
+    }
+
+    .info.wind {
+        @include b(none !important,bottom);
+    }
+
+    .user-borders-right {
+        @include b(0,right);
+    }
+
+    .infos {
+        @include o-f(auto);
+    }
+
+    .dashboard-total-growth .photo-table img {
+        width: 30px;
+    }
+
+    .weather-detail li {
+        @include p(0 5px);
+    }
+
+    .default-grid-item .row .col-sm-6 {
+        width: 100%;
+    }
+
+    .basic-widget-purple .m-b-30 {
+        @include mb(15px !important);
+    }
+
+    .task-timer-text {
+        @include f-s(16px);
+    }
+
+    .basic-widget {
+        @include mb(20px);
+
+        i {
+            height: 60px;
+            width: 60px;
+            @include f-s(20px);
+            line-height: 20px;
+            @include m(20px 0);
+            @include disp(inline-flex);
+            @include p(20px);
+            @include mb(10px);
+        }
+
+        h4 {
+            @include mb(20px);
+        }
+    }
+
+    .widget-card h6,
+    .widget-card p {
+        @include m(0);
+    }
+
+    h1 {
+        @include f-s(1.5rem);
+    }
+
+    .bg-icon i {
+        @include f-s(50px);
+    }
+
+    .last-activity-table button:first-child {
+        @include mr(0);
+    }
+
+    #system-clock {
+        @include f-s(26px);
+    }
+}
+@media only screen and (max-width: 1564px) and (min-width: 1200px) {
+    .matrics-issue .col-md-6 {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 1199px) {
+    .error-400,
+    .error-403,
+    .error-404,
+    .error-500,
+    .error-503 {
+        h1 {
+            background-size: 270px 270px;
+        }
+    }
+
+    .panels-wells .panel {
+        @include mb(0);
+    }
+
+    .well.well-lg {
+        @include mb(0);
+    }
+}
+@media only screen and (max-width: 1366px) and (min-width: 1200px) {
+    .widget-card .img-full {
+        height: 80px;
+        max-width: 80px !important;
+        width: 80px;
+    }
+
+    .grid-item {
+        .md-tabs {
+            .nav-item {
+                width: calc(100% / 4);
+
+                a {
+                    @include p(10px 0 10px !important);
+                }
+            }
+        }
+
+        .nav-tabs .slide {
+            width: calc(100% / 4);
+            bottom: initial;
+        }
+    }
+
+    .weather-temp li {
+        @include p(5px 5px);
+    }
+
+    .widget-social-list {
+        .col-xl-3,
+        .to-do-with-btn,
+        .widget-contact-card {
+            width: 50%;
+        }
+
+        .p-15 {
+            @include p(12px);
+        }
+    }
+
+    .freelance-card-2 .freelance-2 {
+        @include p(27px);
+
+        .user-name {
+            @include mt(40px);
+        }
+    }
+
+    .widget-user-block {
+        width: 100%;
+        @include t-a(center);
+    }
+
+    .widget-activities .progress {
+        @include m(37px 0);
+    }
+
+    .weather-table {
+        @include mb(0);
+    }
+
+    .owl-theme .owl-controls .owl-nav div {
+        height: 40px;
+        @include p(2px);
+        width: 40px;
+    }
+
+    .cd-timeline-content {
+        @include ml(-15px);
+
+        img {
+            @include m(0 auto);
+        }
+
+        .cd-date {
+            left: 141%;
+        }
+
+        .cd-details {
+            left: 141%;
+        }
+    }
+
+    .dashbored-live-left,
+    .dashbored-live-right {
+        width: 50%;
+    }
+
+    .dashbored-live-right .table td,
+    .dashbored-live-right .table th {
+        @include p(3px 10px);
+    }
+
+    .grid-item .media.p-10 {
+        @include p(0 10px !important);
+    }
+}
+@media only screen and (min-width: 1300px) {
+    .invoice-table {
+        @include disp(block);
+    }
+}
+@media only screen and (min-width: 1300px) and (max-width: 1500px) {
+    .filter-bar [class*=b-l-] a.card-title {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 200px;
+        @include o-f(hidden);
+        @include disp(inline-block);
+    }
+}
+@media only screen and (max-width: 1199px) {
+    /*Generic Class*/
+    .upgrade-button{
+        display:none !important;
+    }
+    p {
+        @include f-s(12px);
+    }
+
+    .m-b-50 {
+        @include mb(40px);
+    }
+
+    .card-block,
+    .card-header {
+        @include p(15px);
+    }
+
+    .card-block.box-list {
+        @include pb(0);
+    }
+
+    .accordion-block {
+        @include p(0);
+    }
+
+    .card {
+        @include mb(20px);
+    }
+
+    .card-header-text,
+    .sub-title {
+        @include f-s(15px);
+    }
+
+    .sub-title {
+        @include pb(8px);
+        @include mb(15px);
+    }
+
+    .m-b-30 {
+        @include mb(25px !important);
+    }
+
+    .m-b-15 {
+        @include mb(10px);
+    }
+
+    .m-r-20 {
+        @include mr(13px);
+    }
+
+    .m-b-20 {
+        @include mb(15px !important);
+    }
+
+    .m-r-15 {
+        @include mr(10px);
+    }
+
+    .p-r-15 {
+        @include pr(10px);
+    }
+
+    .m-b-25 {
+        @include mb(18px);
+    }
+
+    .m-t-25 {
+        @include mt(18px);
+    }
+
+    .m-t-15 {
+        @include mt(10px);
+    }
+
+    .m-b-40 {
+        @include mb(30px);
+    }
+
+    .m-t-40 {
+        @include mt(25px);
+    }
+
+    .p-20 {
+        @include p(15px);
+    }
+
+    .p-b-25 {
+        @include pb(18px);
+    }
+
+    .p-t-25 {
+        @include pt(18px);
+    }
+
+    .m-b-10 {
+        @include mb(5px !important);
+    }
+
+    h2 {
+        @include f-s(28px);
+    }
+
+    h4 {
+        @include f-s(20px);
+    }
+
+    .social-timelines-left {
+        @include ml(-16px);
+    }
+
+    .blog-big-user h5,
+    .blog-big-user h6 {
+        @include m(10px 0);
+    }
+
+    .main-header {
+        @include p(15px);
+    }
+    .common-img-bg{
+        background-image: none;
+    }
+    .login{
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        min-height: 100vh;
+    }
+    /*Error pages*/
+    .error-400,
+    .error-403,
+    .error-404,
+    .error-500,
+    .error-503 {
+        h1 {
+            background-size: 250px 250px;
+            @include f-s(130px);
+        }
+    }
+
+    .f-35 {
+        @include f-s(32px);
+    }
+
+    .md-float-material .md-float-group {
+        @include mb(25px);
+    }
+
+    .task-list-table,
+    .task-list-table ~ .pull-right {
+        @include disp(block !important);
+    }
+
+    .task-list-table ~ .pull-right {
+        @include flt(none);
+    }
+    /*According*/
+    .accordion-msg {
+        @include p(14px 15px);
+    }
+
+    .accordion-desc {
+        @include p(0px 14px 14px 14px);
+    }
+    /*Addvance general elements*/
+    .form-radio {
+        @include m(1.2rem 0);
+    }
+
+    .blog-add-cmnt {
+        @include t-a(center);
+    }
+
+    .table td,
+    .table th {
+        @include p(8px 10px);
+        @include f-s(14px);
+    }
+
+    .page-item .page-link {
+        @include p(5px 14px);
+    }
+
+    .checkbox-fade .cr .cr-icon,
+    .radio .cr .cr-icon {
+        left: 10%;
+    }
+
+    .checkbox-fade .cr,
+    .radio .cr {
+        height: 1em;
+        width: 1em;
+    }
+
+    .tabledit-delete-button,
+    .tabledit-edit-button {
+        @include m(1px !important);
+        @include p(2px 5px !important);
+        @include f-s(13px !important);
+    }
+
+    .m-b-70 {
+        @include mb(55px);
+    }
+
+    .dynamic-row li,
+    .scroll-list li {
+        @include p(10px);
+    }
+
+    .scroll-list {
+        height: 200px;
+    }
+
+    .spark-chart canvas {
+        height: 250px !important;
+    }
+
+    .piechart canvas {
+        width: 250px !important;
+    }
+
+    .f-45 {
+        @include f-s(35px);
+    }
+
+    .prod-item .prod-info {
+        @include p(20px 0 10px);
+    }
+
+    .list-group-item {
+        @include disp(inline-block);
+        max-width: 150px;
+        @include pt(5px);
+        @include pb(5px);
+    }
+
+    .email-icon {
+        @include mb(20px);
+    }
+
+    .list-group.compose-list-group {
+        @include mb(15px);
+        @include mt(15px);
+    }
+
+    .email-icon {
+        @include t-a(left);
+    }
+
+    .comming-soon h1 {
+        @include f-s(54px);
+    }
+
+    .cd-pricing-footer {
+        @include p(20px 0);
+    }
+
+    .social-timeline-left {
+        top: -140px;
+    }
+
+    .md-tabs .nav-item a {
+        @include p(15px 0 15px !important);
+    }
+
+    .to-do-list {
+        @include pb(15px);
+        @include mb(15px);
+    }
+
+    #task-container li,
+    .to-do-label {
+        @include mb(15px !important);
+    }
+
+    #task-container li:nth-child(n+4) {
+        @include mb(0);
+    }
+
+    .btn-print-invoice {
+        @include m(0 0 10px 0);
+    }
+
+    .blog-block h6 {
+        @include mr(5px);
+    }
+
+    .blog-single h4 {
+        @include mt(20px);
+    }
+
+    .blog-single p {
+        @include m(20px 0);
+
+        &:last-child {
+            @include mb(20px);
+        }
+    }
+
+    .blog-big-user {
+        @include mb(20px);
+    }
+
+    .dashboard-header i {
+        @include f-s(32px);
+    }
+
+    #website-stats {
+        height: 332px !important;
+    }
+
+    svg#sun {
+        height: 150px;
+        width: 150px;
+    }
+
+    .weather-temp h6 {
+        @include m(0);
+    }
+
+    .climacon {
+        width: 50px;
+        height: 30px;
+    }
+
+    .user-block-2-active {
+        @include mb(17px);
+    }
+
+    .navbar-nav .nav-item+.nav-item {
+        @include ml(5px);
+    }
+
+    #newc {
+        height: 190px !important;
+    }
+
+    #speed-count {
+        height: 345px !important;
+    }
+
+    .advance-elements .col-xl-3:nth-child(2n) {
+        @include mb(15px);
+    }
+
+    .m-b-30.advance-elements {
+        @include mb(15px !important);
+    }
+
+    .bootstrap-timer .form-group {
+        @include mb(0);
+    }
+
+    .wrap .f-120 {
+        @include f-s(100px);
+    }
+
+    .button-list {
+        @include pb(5px);
+    }
+
+    .f-64 {
+        @include f-s(44px);
+    }
+
+    .icofont-hand-drag {
+        @include m(0 !important);
+
+        ~h5 {
+            @include f-s(15px);
+        }
+    }
+
+    .breadcrumb-icon-block {
+        @include pt(10px);
+    }
+
+    .ms-container {
+        width: 240px;
+    }
+
+    .grid-item .col-sm-5.bg-warning {
+        @include p(20px);
+    }
+
+    .widget-social-list .p-15 {
+        @include p(15px);
+    }
+
+    .widget-card .col-lg-8 {
+        @include pl(0);
+    }
+
+    .jscolor {
+        @include mb(0);
+    }
+
+    .blog {
+        .blog-section:nth-child(even) .blog-detail {
+            @include pr(15px);
+        }
+
+        .blog-section {
+            .blog-detail {
+                @include pl(15px !important);
+            }
+
+            &:nth-child(even) .blog-detail h2 {
+                right: 15px;
+            }
+        }
+
+        .blog-detail {
+            @include pos(relative);
+        }
+    }
+
+    .blog-section img {
+        width: 100%;
+    }
+
+    .users-main-fix {
+        top: 139px;
+    }
+
+    .user-block-2 {
+        @include mb(0 !important);
+    }
+}
+@media only screen and (max-width: 1169px) {
+    .main-timeline:after,
+    .main-timeline:before {
+        opacity: 0;
+    }
+
+    .cd-timeline-content::before {
+        top: 15px;
+    }
+
+    .cd-date {
+        @include pt(0!important);
+    }
+
+    .cd-details {
+        @include pb(15px);
+    }
+
+    .cd-date,
+    .cd-details {
+        @include ml(15px);
+        @include disp(block !important);
+    }
+
+    .crm-timeline .cd-timeline-content::before {
+        @include disp(none);
+    }
+}
+@media only screen and (max-width: 991px) {
+    /*General css*/
+    .yourCountdownContainer {
+        .counter-text {
+            @include f-s(60px);
+        }
+
+        .f-24 {
+            @include f-s(14px !important);
+        }
+    }
+    .main-header-top{
+      .top-nav{
+          > li:nth-child(2),
+          > li:nth-child(4),
+          > li:nth-child(3),
+          > li:nth-child(5) span:nth-child(2) {
+              @include disp(none);
+          }
+          > li:nth-child(5) img {
+              width: 32px;
+              border: 2px solid #fff;
+          }
+      }
+      .lft-nav{
+         > li{
+            span{
+               @include disp(none);
+            }
+         }
+      }
+   }
+
+
+    .m-r-20 {
+        @include mr(13px);
+    }
+
+    .m-t-40 {
+        @include mt(20px);
+    }
+
+    .m-b-40 {
+        @include mb(20px);
+    }
+
+    .m-b-50 {
+        @include mb(30px);
+    }
+
+    .comming-soon {
+        > p {
+            @include f-s(22px);
+        }
+
+        h1 {
+            @include f-s(35px);
+        }
+    }
+
+    .messages-content {
+        @include b(none,right);
+    }
+
+    h4 {
+        @include f-s(20px);
+    }
+
+    table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
+    table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+        top: 10px;
+    }
+
+    .m-b-70 {
+        @include mb(35px);
+    }
+
+    #example-advanced-form,
+    #example-basic {
+        ul {
+            @include disp(table);
+            height: 100%;
+
+            li {
+                @include disp(table-cell);
+                height: 100%;
+
+                a {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .fc .fc-toolbar > * > :first-child {
+        @include ml(20px);
+    }
+
+    .inline-form-2 label {
+        @include disp(none);
+    }
+
+    .list-icons-img img {
+        left: -50px;
+    }
+
+    .product-right {
+        @include p(0);
+    }
+
+    .dataTables_scrollBody {
+        height: 400px !important;
+    }
+
+    .email-body {
+        .m-l-5 {
+            @include ml(0);
+        }
+
+        .m-r-15 {
+            @include mr(3px);
+        }
+    }
+
+    .faq-left {
+        @include t-a(center);
+
+        img {
+            @include m(0 auto);
+        }
+    }
+
+    .contact-box {
+        height: 100%;
+        @include bg(#fff);
+        @include pos(fixed);
+        z-index: 999;
+        bottom: 0;
+        top: 135px;
+        right: auto;
+        @include transition(all ease-in-out 0.3s);
+    }
+
+    .contact-hide {
+        left: 100%;
+    }
+
+    .messages .b-r-muted {
+        @include b(none);
+    }
+
+    h2 {
+        @include f-s(20px);
+    }
+
+    .cd-pricing-header {
+        @include p(15px 15px 0 15px);
+    }
+
+    .cd-pricing-features li {
+        @include p(13px);
+    }
+
+    .timeline-dot:after,
+    .timeline-dot:before {
+        left: 3.4%;
+    }
+
+    .icon-list-demo div {
+        @include mb(7px);
+    }
+
+    .bug-issue-link,
+    .isuue-btn-group {
+        @include disp(block);
+        @include t-a(center);
+        @include flt(none !important);
+    }
+
+    .bug-issue-link li {
+        @include flt(none);
+    }
+
+    .m-b-30 {
+        @include mb(20px !important);
+    }
+
+    .m-t-30 {
+        @include mt(20px !important);
+    }
+
+    .dotted-line-theme {
+        min-height: 25px;
+    }
+
+    .dashboard-header .col-sm-6:nth-child(1),
+    .dashboard-header .col-sm-6:nth-child(2) {
+        @include mb(20px);
+    }
+
+    .weather-temp li {
+        @include p(5px 8px);
+    }
+
+    #speed-count {
+        height: 340px !important;
+    }
+
+    .advance-elements .switchery,
+    .advance-elements [class*="col-"] {
+        @include mb(10px);
+    }
+
+    .m-b-30.advance-elements {
+        @include mb(0 !important);
+    }
+
+    .wrap .f-120 {
+        @include f-s(80px);
+    }
+
+    .email-welcome-txt {
+        @include mt(10px);
+    }
+
+    .email-content {
+        line-height: 2;
+    }
+
+    .email-card .user-mail {
+        @include ml(0);
+    }
+
+    .user-name {
+        @include mb(5px);
+    }
+
+    .ms-container {
+        width: 100%;
+    }
+
+    .product-detail {
+        @include mt(20px);
+        @include t-a(center);
+        justify-content: center;
+
+        .f-right {
+            @include flt(none !important);
+            @include disp(block);
+            @include mt(10px);
+        }
+
+        .detail-stars {
+            justify-content: center;
+            @include disp(flex);
+        }
+
+        .br-widget {
+            min-height: 30px;
+        }
+    }
+
+    .md-float-material {
+        @include disp(block);
+    }
+
+    .climacon-right {
+        @include pl(15px !important);
+    }
+
+    .dashboard-primary,
+    .dashboard-success {
+        @include mb(20px);
+    }
+
+    .box-shadow {
+        @include t-a(center);
+    }
+
+    .box-list div div {
+        @include mb(15px);
+    }
+
+    .animation-type {
+        .text-left {
+            @include t-a(center);
+        }
+
+        .text-left .btn {
+            @include ml(0);
+        }
+    }
+
+    .shares-like .btn-facebook,
+    .shares-like .btn-google-plus,
+    .shares-like .btn-linkedin,
+    .shares-like .btn-pinterest,
+    .shares-like .btn-twitter {
+        @include c(#fff);
+        @include p(4px 12px);
+    }
+
+    .btn-dribbble,
+    .btn-dropbox,
+    .btn-facebook,
+    .btn-flickr,
+    .btn-github,
+    .btn-google-plus,
+    .btn-instagram,
+    .btn-linkedin,
+    .btn-pinterest,
+    .btn-skype,
+    .btn-tumblr,
+    .btn-twitter,
+    .btn-youtube {
+        i {
+            @include p(5px 5px);
+        }
+    }
+
+    .blog-section {
+        @include mb(20px);
+    }
+
+    .contact-detail,
+    .messages-content {
+        width: 100%;
+    }
+
+    .morphsearch-content {
+        @include mt(2.5em);
+    }
+}
+@media only screen and (max-width: 767px) {
+    /*Generic Class*/
+    h3 {
+        line-height: 1.5;
+    }
+
+    h2 {
+        @include f-s(18px);
+    }
+
+    .error-400,
+    .error-403,
+    .error-404,
+    .error-500,
+    .error-503 {
+        h1 {
+            @include f-s(100px);
+        }
+
+        h5 {
+            @include f-s(23px);
+        }
+
+        p {
+            @include f-s(17px);
+        }
+    }
+
+    .sidebar-collapse {
+        .icon-arrow-down,
+        .nav-level {
+            @include disp(block);
+            @include bg-c(#fff);
+        }
+
+        span.menu-caption {
+            @include disp(block !important);
+        }
+    }
+
+    #issue-list-table_filter label {
+        @include pos(relative);
+        right: 0;
+    }
+
+     .sidebar-menu > li > a ,.sidebar-menu li > ul > li > a {
+        @include b(bottom,1px solid #efefef);
+        display: flex !important;
+        align-items: center;
+    }
+    .sidebar-menu li > a > .icon-arrow-down,.sidebar-menu li > ul > li > a > .icon-arrow-down{
+        margin-top: 0;
+    }
+    .m-b-50 {
+        @include mb(30px);
+    }
+
+    .form-group {
+        @include mb(10px);
+    }
+
+    .ct-chart-button {
+        top: 5px;
+        right: 15px;
+    }
+
+    .comming-soon h1 {
+        @include f-s(25px);
+        line-height: 1;
+    }
+
+    .quote {
+        @include disp(none);
+    }
+
+    .color-card .card {
+        @include mb(0);
+    }
+
+    .yourCountdownContainer .counter-text {
+        @include f-s(40px);
+    }
+
+    .comming-soon > p {
+        @include f-s(20px);
+    }
+
+    .f-45 {
+        @include f-s(25px);
+    }
+
+    .m-b-25 {
+        @include mb(10px);
+    }
+
+    hr {
+        @include mt(10px);
+        @include mb(10px);
+    }
+
+    .commimg-text {
+        line-height: 1.8;
+    }
+
+    .coming-social {
+        @include pt(20px);
+    }
+
+    #maintance {
+        @include pos(absolute);
+
+        img {
+            width: 400px;
+            @include m(0 auto);
+        }
+    }
+    /*Error pages*/
+    .error-400,
+    .error-403,
+    .error-404,
+    .error-500,
+    .error-503 {
+        h1 {
+            @include p(30px 0);
+            background-size: 170px 170px;
+        }
+    }
+
+    .btn-error {
+        @include p(7px 16px);
+        @include f-s(15px);
+    }
+    /*animation page*/
+    .wrap .f-120 {
+        @include f-s(60px);
+    }
+    /*Blog Detail*/
+    .articles,
+    .models .card-block,
+    .notifications .card-block {
+        @include t-a(center);
+    }
+
+    .related-artical div {
+        .articles {
+            @include mb(20px);
+            @include pb(20px);
+            @include b(1px solid #ccc,bottom);
+        }
+
+        &:last-child .articles {
+            @include mb(0);
+            @include pb(0);
+            @include b(none,bottom);
+        }
+    }
+
+    .articles img {
+        @include m(0 auto);
+    }
+
+    .dynamic-list .dynamic-row,
+    .shadow-box {
+        @include t-a(center);
+    }
+
+    .shadow-box {
+        .col-md-4 {
+            @include pb(15px);
+            @include b(1px solid #ccc,bottom);
+
+            &:last-child {
+                @include pb(0);
+                @include b(0,bottom);
+            }
+        }
+    }
+
+    .table {
+        td,
+        th {
+            @include p(6px 8px);
+        }
+    }
+
+    #crm-contact .img-circle,
+    img.comment-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #contact-list,
+    #crm-contact {
+        width: 100%;
+        mso-cellspacing: 0;
+    }
+
+    .dataTables_length label {
+        @include mb(0);
+    }
+
+    .masking-elements {
+        .col-md-12 .row {
+            .col-md-8 {
+                @include mb(20px !important);
+                @include pb(20px !important);
+                @include b(1px solid #ccc !important,bottom);
+            }
+
+            &:last-child .col-md-8 {
+                @include mb(20px !important);
+                @include pb(0 !important);
+                @include b(none !important,bottom);
+            }
+        }
+
+        .form-group {
+            @include mb(0);
+        }
+    }
+
+    .form-inline .form-control {
+        @include disp(block);
+    }
+
+    .inline-form-1 .btn {
+        @include mt(15px);
+    }
+
+    .inline-form-style .p-t-35 {
+        @include pt(20px);
+    }
+
+    .range-slider {
+        justify-content: center;
+        @include disp(flex !important);
+        @include t-a(center);
+    }
+
+    .f-45 {
+        @include f-s(25px);
+    }
+
+    .dataTables_scroll img {
+        height: 22px;
+        width: 22px;
+    }
+
+    .gallery .card-block .row {
+        .col-md-3,
+        .col-md-6 {
+            @include m(0);
+            @include pb(0);
+        }
+    }
+
+    .mail-compose .card-block .row .col-md-6 {
+        @include b(none);
+        @include pb(0);
+        @include mb(10px);
+    }
+
+    .fc{
+        button {
+            @include p(5px 10px);
+        }
+        .fc-toolbar > * > :first-child {
+            @include ml(0);
+        }
+    }
+
+    .cd-pricing-footer button {
+        @include flt(right);
+        @include mr(20px);
+    }
+
+    .social-timeline-left {
+        top: 0;
+        @include pos(relative);
+        @include mr(0);
+    }
+
+    .invoice-contact,
+    .invoive-info {
+        @include disp(block);
+    }
+
+    .invoice-client-info {
+        @include mb(20px);
+    }
+
+    .btn-print-invoice {
+        @include mb(0);
+    }
+
+    .invoice-btn-group {
+        @include t-a(center);
+        @include m(15px auto 0);
+    }
+
+    .coming-social a {
+        @include mr(15px);
+        @include f-s(20px);
+    }
+
+    .blog-tag li {
+        @include p(3px 10px);
+    }
+
+    .shares-like{
+        .btn-facebook,
+        .btn-google-plus,
+        .btn-linkedin,
+        .btn-pinterest,
+        .btn-twitter {
+            @include p(5px 15px);
+        }
+    }
+
+    #website-stats {
+        height: 305px !important;
+    }
+
+    .climacon-left {
+        @include pr(15px !important);
+    }
+
+    .climacon-right {
+        @include pl(15px !important);
+    }
+
+    #speed-count {
+        height: 320px !important;
+    }
+    .maintances,
+    .dasboard-map{
+        .d-flex {
+            @include disp(block);
+        }
+    }
+
+    .custom-width-66 {
+        width: 100%;
+    }
+
+    .blog-section h5 {
+        @include mb(10px);
+    }
+
+    .preloader4 {
+        @include m(35px 0);
+    }
+
+    .color-picker {
+        @include t-a(center);
+    }
+
+    .nav-tabs.md-tabs.tab-timeline li a {
+        @include f-s(16px);
+    }
+
+    .tabs p {
+        @include p(10px);
+    }
+
+    .cd-price .cd-price-month {
+        @include f-s(24px);
+    }
+
+    .messages-content {
+        @include p(0);
+        .media {
+            @include mb(10px);
+            .media-left {
+                @include pr(0);
+            }
+            .msg-reply,.msg-send {
+                @include p(7px);
+                @include f-s(12px);
+                @include disp(inline-block);
+                @include mb(10px);
+            }
+        }
+    }
+
+    .widget-browser {
+        @include disp(block);
+    }
+
+    .project-process{
+        h5, h6 {
+            @include mb(20px);
+        }
+    }
+
+    .grid-item .to-do-list {
+        @include pb(5px);
+    }
+
+    .photo-table img {
+        width: 35px;
+    }
+
+    .widget-timeline{
+        .media {
+            @include p(10px);
+        }
+        i {
+            top: 25px;
+        }
+    }
+
+    .main-sidebar {
+        @include shadow(0 8px 17px rgba(0, 0, 0, 0.1));
+    }
+
+    .widget-to-do-list .rkmd-checkbox .input-checkbox {
+        left: -10px;
+    }
+
+    .box-list div div {
+        @include mb(10px);
+    }
+
+    .users {
+        top: 150px;
+    }
+
+    .p-chat-user {
+        top: 100px;
+    }
+
+    .showChat_inner {
+        top: 100px;
+    }
+
+    .chat-reply-box {
+        bottom: 90px;
+    }
+
+    .shares-like li {
+        @include mr(5px);
+        @include mb(5px);
+    }
+
+    .social-login .btn {
+        @include pr(4px);
+        span:nth-child(2) {
+            @include disp(none);
+        }
+    }
+
+    .login-card{
+        .m-b-40 {
+            @include mb(10px);
+        }
+        .md-input-wrapper {
+            @include mb(15px);
+        }
+        h1 {
+            @include f-s(22px);
+        }
+    }
+
+    #simpletable_filter,
+    #task-table_filter {
+        @include mb(0px);
+        label {
+            @include pos(relative);
+        }
+    }
+
+    .f-fix {
+        @include pos(relative);
+    }
+
+    .footer-bg {
+        width: 100% !important;
+        bottom: -40px;
+    }
+
+    .btn-add-task {
+        @include mb(15px);
+        @include o-f(15px);
+    }
+
+    #advanced-table_filter label {
+        @include disp(none);
+    }
+
+    .users-main {
+        width: 75px;
+        right: 0;
+        .md-float-material {
+            @include disp(none);
+        }
+    }
+
+    .userlist-box {
+        @include pl(0);
+    }
+
+    .users {
+        width: 75px;
+    }
+
+    .forgot-phone {
+        @include t-a(inherit);
+        @include mb(25px);
+    }
+
+    .fix-showChat,
+    .showChat {
+        @include mt(0);
+    }
+
+    .top-showChat {
+        @include mt(-100px !important);
+    }
+
+    #contact-list_wrapper {
+        height: 350px !important;
+    }
+}
+@media only screen and (max-height: 433px) {
+    #maintance{
+        img {
+            @include pos(relative);
+            top: 0;
+            width: 500px;
+        }
+        h6 {
+            @include f-s(18px);
+        }
+        .f-30 {
+            @include f-s(20px);
+        }
+        .d-flex {
+            @include disp(flex !important);
+        }
+    }
+
+    .error-400,
+    .error-403,
+    .error-404,
+    .error-500,
+    .error-503{
+        @include pos(absolute);
+    }
+}
+@media only screen and (max-height: 433px) {
+    #maintance{
+        img {
+            @include pos(relative);
+            top: 0;
+            width: 500px;
+        }
+        h6 {
+            @include f-s(18px);
+        }
+        .f-30 {
+            @include f-s(20px);
+        }
+        .d-flex {
+            @include disp(flex !important);
+        }
+    }
+
+}
+@media only screen and (max-height: 300px) {
+    #maintance img {
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 330px) {
+    .menu-snaps h6 {
+        @include f-s(9px);
+    }
+}
+@media only screen and (max-width: 576px) {
+    .f-16 {
+        @include f-s(13px);
+    }
+
+    .error-400,
+    .error-403,
+    .error-404,
+    .error-500,
+    .error-503{
+        h5 {
+            @include f-s(17px);
+        }
+        p {
+            @include f-s(14px);
+        }
+    }
+
+    .m-b-30 {
+        @include mb(15px);
+    }
+
+    .m-b-25 {
+        @include mb(13px);
+    }
+
+    .m-b-20 {
+        @include mb(10px !important);
+    }
+
+    .f-45 {
+        @include f-s(19px);
+    }
+
+    .max-height-table .table thead th {
+        @include v-al(top);
+    }
+
+    .rkmd-checkbox {
+        @include mr(10px);
+    }
+
+    .form-radio label {
+        @include f-s(13px);
+    }
+
+    .blog .blog-social h6 {
+        @include f-s(13px);
+    }
+
+    .blog{
+        .blog-block {
+            @include ml(0);
+        }
+        .blog-left h2 {
+            @include pos(relative);
+            left: 0 !important;
+        }
+    }
+
+
+    .blog-section:nth-child(even) .blog-block {
+        @include mr(0);
+    }
+
+    .md-float-material .md-float-group {
+        @include mb(20px);
+    }
+
+    .shares-like .m-r-20 {
+        @include mr(3px);
+    }
+
+    .chart-redial .card-block {
+        @include t-a(center);
+    }
+
+    .login-card {
+        width: 290px;
+    }
+
+    .wizard .steps ul li {
+        width: 100%;
+    }
+
+    .form-inline .btn {
+        @include mt(0);
+    }
+
+    .inline-form-style .p-t-35 {
+        @include pt(0);
+    }
+
+    .icon-list-demo {
+        @include f-s(13px);
+    }
+
+    .btn-md {
+        @include p(6px 16px);
+    }
+
+    a {
+        @include f-s(14px);
+    }
+
+    .md-tabs .nav-item,
+    .nav-tabs .slide {
+        width: calc(100%);
+        bottom: initial;
+    }
+
+    .nav-tabs {
+        @include b(none,bottom);
+        .nav-item {
+            @include flt(none);
+            @include t-a(center);
+            &.open{
+                .nav-link,
+                .nav-link:focus,
+                .nav-link:hover{
+                    @include b(none);
+                }
+            }
+        }
+        .nav-link{
+            &.active,
+            &.active:focus,
+            &active:hover {
+                @include b(none);
+            }
+        }
+    }
+
+    .tabs-left,
+    .tabs-left-content,
+    .tabs-right,
+    .tabs-right-content {
+        @include disp(block);
+    }
+
+    .tabs-left,
+    .tabs-right {
+        width: 100%;
+    }
+
+    .img-tabs img {
+        width: 40px;
+    }
+
+    .tab-with-img{
+        .md-tabs .nav-item,
+        .nav-tabs .slide {
+            width: calc(100% / 4);
+        }
+    }
+
+    .tab-with-img .nav-tabs .nav-item {
+        @include flt(left);
+        @include t-a(center);
+    }
+
+    .nav.nav-tabs.md-tabs.tab-timeline .nav-item {
+        @include pb(0);
+    }
+
+    #task-container li,
+    .to-do-label {
+        @include mb(10px !important);
+    }
+
+    .blog-tag,.shares-like{
+        ul {
+            @include t-a(right);
+        }
+    }
+
+    .md-input-wrapper select,
+    .md-input-wrapper textarea,
+    input[type=email].md-form-control,
+    input[type=file].md-form-control,
+    input[type=number].md-form-control,
+    input[type=password].md-form-control,
+    input[type=text].md-form-control {
+        @include p(8px 4px);
+        @include f-s(13px);
+    }
+
+    .md-input-wrapper {
+        @include mb(15px);
+    }
+
+    .social-login .btn {
+        @include mb(10px);
+    }
+
+    .display-1 {
+        @include f-s(4rem);
+    }
+
+    .display-2 {
+        @include f-s(3.5rem);
+    }
+
+    .display-3 {
+        @include f-s(3rem);
+    }
+
+    .display-4 {
+        @include f-s(2.5rem);
+    }
+
+    .sign-in-up-left {
+        @include disp(none);
+        width: 0;
+    }
+
+    .sign-in-up-right {
+        width: 100%;
+        .md-tabs .nav-item a {
+            @include p(10px 0 !important);
+        }
+    }
+
+}
+@media only screen and (max-width: 544px) {
+    .f-18 {
+        @include f-s(15px);
+    }
+
+    .p-b-20 {
+        @include pb(10px);
+    }
+
+    .m-r-10 {
+        @include mr(5px);
+    }
+
+    .light-box img {
+        @include m(10px auto);
+    }
+
+    .br-widget,
+    .loader,
+    .loader-block {
+        justify-content: center;
+        @include disp(flex);
+        @include t-a(center);
+        @include m(0 auto);
+    }
+
+    .stars {
+        @include t-a(center);
+    }
+
+    .search2{
+        .d-flex {
+            @include disp(block);
+            @include t-a(center);
+        }
+        .search-content {
+            @include mb(20px !important);
+            @include pb(5px);
+        }
+    }
+
+    .dataTables_scrollBody {
+        height: 300px !important;
+    }
+
+    .email-card .f-right {
+        @include mt(10px);
+        @include flt(none);
+    }
+
+    .social-timelines:before {
+        left: 7%;
+    }
+
+    .timeline-dot:after,
+    .timeline-dot:before {
+        left: 6%;
+    }
+    /*Advance form elements start*/
+    .advance-elements .col-md-4:last-child .switchery-default,
+    .form-radio,
+    .radio {
+        @include mb(0 !important);
+    }
+
+    .animation-type{
+        .d-flex {
+            @include disp(block);
+        }
+        .text-left {
+            @include mt(15px);
+        }
+    }
+
+    .counter-email {
+        @include disp(block);
+        .btn-primary {
+            @include mb(15px);
+        }
+    }
+
+    .blog-add-cmnt {
+        @include mb(15px);
+    }
+
+    .dashboard-header .col-sm-6:nth-child(3) {
+        @include mb(20px);
+    }
+
+    .dashboard-sales .col-sm-4 {
+        @include mb(15px);
+        &:last-child {
+            @include mb(0);
+        }
+    }
+
+    .m-b-30 {
+        @include mb(15px !important);
+    }
+
+    .m-t-30 {
+        @include mt(15px !important);
+    }
+
+    .social-login {
+        @include mb(0);
+        @include pb(10px);
+        .btn {
+            @include mb(5px);
+        }
+    }
+
+    .f-30 {
+        @include f-s(20px);
+    }
+
+    .br-current-rating,
+    .title.current-rating,
+    .title.your-rating {
+        top: 70%;
+    }
+
+    .user-mail ~ .m-t-15 .row.m-t-15 .col-xs-9 {
+        @include mb(10px);
+        &:last-child {
+            @include mb(0);
+        }
+    }
+
+    .email-textarea {
+        width: 100%;
+        @include mt(0 !important);
+    }
+
+    .photo-contant {
+        @include disp(inline);
+    }
+
+    .seacrh-header,.search-content {
+        @include disp(block);
+        @include t-a(center);
+    }
+
+    .search-content img {
+        width: 100%;
+    }
+
+    .badge-top-left {
+        right: 52%;
+    }
+
+    .badge-bottom-left {
+        @include ml(-33px);
+        right: auto;
+    }
+
+    .generic-card-body,
+    .label-bagdes .card-block {
+        @include t-a(center);
+    }
+
+    .dashboard-header{
+        .col-sm-6{
+            &:nth-child(1),
+            &:nth-child(2) {
+                @include mb(15px);
+            }
+        }
+    }
+
+    .card {
+        @include mb(20px);
+    }
+
+    .project-table img {
+        height: auto;
+    }
+
+    .last-activity-table button:first-child {
+        @include m(0 0 8px);
+    }
+
+    .widget-activities h6 {
+        @include m(5px 0);
+    }
+
+    .owl-theme{
+        .owl-controls{
+            .owl-nav{
+                div {
+                    padding: 0;
+                    height: 30px;
+                    width: 30px;
+                    &.owl-next::before,
+                    &.owl-prev::before {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .dtr-data span {
+        @include disp(none);
+    }
+
+    .wrap .f-120 {
+        @include f-s(40px);
+    }
+
+    select.form-control:not([size]):not([multiple]) {
+        height: 2rem;
+        @include p(0 12px);
+        width: 100px;
+    }
+
+    #simpletable_filter,
+    #task-table_filter{
+        label {
+            right: 0;
+        }
+    }
+
+    #simpletable_length label {
+        @include ml(0);
+    }
+
+    .button-list .btn {
+        @include disp(inline-block);
+    }
+
+    .md-input-wrapper textarea ~ label {
+        top: 5px !important;
+    }
+
+    .wizard{
+        > .content {
+            min-height: 25em;
+        }
+        > .steps a,
+        > .steps a:active,
+        > .steps a:hover {
+            @include p(10px);
+        }
+    }
+    .user-borders-right {
+        width: 100%;
+    }
+    .issue-progress .progress .issue-text1 {
+        @include mr(-30px);
+        @include f-s(12px);
+    }
+}
+@media only screen and (max-width: 420px) {
+    .material-switch {
+        @include mb(15px);
+    }
+
+    .nvd-chart {
+        height: 200px;
+    }
+
+    .comming-soon > p {
+        @include f-s(15px);
+    }
+
+    #website-stats {
+        height: 230px !important;
+    }
+
+    .freelance-card-2 .freelance-2 {
+        @include p(15px);
+        .user-name {
+            @include mt(40px);
+        }
+    }
+
+    .weather-temp h6 {
+        @include f-s(12px);
+    }
+
+    .grid-item .button-list .btn {
+        @include mr(0);
+    }
+
+    .widget-income-footer {
+        @include p(15px);
+    }
+
+    .list-view .d-inline-block {
+        @include disp(block !important);
+        @include mb(10px);
+    }
+}
+@media only screen and (max-width: 480px) {
+    h6 {
+        @include f-s(13px);
+    }
+
+    .counter-txt,
+    h4 {
+        @include f-s(18px);
+    }
+
+    .error-400,
+    .error-403,
+    .error-404,
+    .error-500,
+    .error-503{
+        h5 {
+            @include f-s(20px);
+        }
+    }
+
+    .invoice-box {
+        @include disp(block);
+        @include mt(40px);
+        h1 {
+            @include f-s(3rem);
+        }
+    }
+
+    .invoice-table {
+        @include b(none,left);
+        @include pl(0);
+    }
+
+    .m-r-20 {
+        @include mr(10px);
+    }
+
+    .table{
+        td,
+        th {
+            @include f-s(13px);
+            @include p(7px 10px);
+        }
+    }
+
+    table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
+    table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+        top: 8px;
+    }
+
+    .page-item .page-link {
+        @include mt(10px);
+        @include p(1px 6px);
+    }
+
+    .m-r-30 {
+        @include mr(5px);
+    }
+
+    .edit-left,
+    .edit-right {
+        width: 100%;
+        @include t-a(center);
+    }
+
+    .user-block-2-active label {
+        @include mt(5px);
+    }
+
+    .main-timeline {
+        @include p(10px);
+    }
+
+    .cd-container {
+        width: 100%;
+    }
+
+    .mail-img{
+        .col-sm-4:first-child img {
+            @include mt(20px);
+        }
+        img {
+            @include mb(20px);
+        }
+    }
+
+    .cd-timeline-icon {
+        left: 7px;
+        width: 25px;
+        height: 25px;
+        i {
+            @include f-s(14px);
+            line-height: 1.1;
+        }
+    }
+
+    .m-t-20 {
+        @include mt(10px);
+    }
+
+    .cd-timeline-content {
+        @include ml(45px);
+        @include mb(10px);
+        @include mr(10px);
+    }
+
+    .popout .panel {
+        width: 240px;
+        right: -70%;
+        bottom: -15px;
+    }
+
+    .weather-temp li {
+        @include p(5px 2px);
+    }
+
+    .climacon {
+        width: 30px;
+    }
+    .error-400,
+    .error-403,
+    .error-404,
+    .error-500,
+    .error-503{
+        h1,h5,p{
+            @include mb(25px);
+        }
+    }
+
+    #area-example,
+    #donut-example,
+    #line-example{
+        svg {
+            height: 250px;
+        }
+    }
+
+    .flot-text {
+        height: 200px !important;
+    }
+
+    #placeholder,
+    #placeholder1 {
+        height: 220px !important;
+        canvas{
+            height: 220px !important;
+        }
+    }
+
+    .email-icon {
+        @include mb(5px);
+        button {
+            @include mb(10px);
+        }
+    }
+
+    .footer-bg {
+        @include f-s(12px);
+    }
+
+    .br-widget {
+        min-height: 150px;
+    }
+
+    .login-card h1 {
+        @include mb(10px);
+    }
+
+    .social-login .btn {
+        @include mr(0);
+        @include ml(0);
+    }
+
+    .navbar-nav .nav-item {
+        @include flt(none);
+    }
+
+    .navbar-light .btn {
+        @include mb(10px);
+    }
+
+    .placeholder3 {
+        height: 180px !important;
+        width: 180px !important;
+        @include m(80px auto 0);
+        > div.legend > table {
+            top: -90px;
+            left: -40px;
+        }
+    }
+
+    .owl-widget-bottom{
+        .f-24 {
+            @include f-s(16px);
+        }
+        .p-20 {
+            @include p(10px);
+        }
+    }
+
+    #product-list tbody tr td:last-child {
+        @include disp(none);
+    }
+    .blog-section{
+        h2 {
+            @include p(5px 30px);
+            @include f-s(16px);
+        }
+        .blog-block {
+            @include p(10px 15px);
+        }
+        p {
+            @include mt(5px);
+        }
+        h5 {
+            @include mb(0);
+            @include f-s(18px);
+        }
+    }
+    .d-block-phone {
+        @include disp(block);
+        @include t-a(center);
+    }
+}
+@media only screen and (max-width: 383px) {
+    .btn-new-tickets {
+        @include mb(10px);
+    }
+
+    .product-detail .m-r-20 {
+        @include mr(5px);
+    }
+
+    .widget-card .col-xl-9 {
+        @include m(0 7px 0 -8px);
+    }
+
+    .table.table-inverse {
+        @include o-f(hidden);
+    }
+
+    .menu-snaps h6 {
+        @include f-s(11px);
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .invoice-box {
+        @include disp(flex);
+        @include mt(40px);
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .task-list table.dataTable.dtr-inline.collapsed > tbody > tr{
+        >td,>th{
+            &:first-child:before {
+                top: 19px;
+            }
+        }
+    }
+
+    .task-detail-btn {
+        @include mt(10px);
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .chat-single-box {
+        width: 190px;
+    }
+
+    #main-chat .chat-box ul.boxs li.minimized {
+        left: -40px;
+        .chat-dropdown {
+            width: 130px;
+        }
+    }
+}

@@ -1,0 +1,432 @@
+/**  =====================
+      Generic-class css start
+==========================  **/
+
+@import "genral";
+/**  =====================
+      Margin-classes start
+==========================  **/
+/*========== All Margin ===========*/
+
+$m-val:0;
+@while $m-val <= 50 {
+    .m-#{$m-val}{
+        @if $m-val == 0{
+            @include m(#{$m-val} !important);
+        }@else{
+            @include m(#{$m-val}px);
+        }
+    }
+    $m-val: $m-val + 5;
+}
+
+/*========== Margin top ===========*/
+$m-t-val:0;
+@while $m-t-val <= 50 {
+    .m-t-#{$m-t-val}{
+        @if $m-t-val == 0{
+            @include mt(#{$m-t-val});
+        }@else if $m-t-val == 20{
+            @include mt(#{$m-t-val}px !important);
+        }@else{
+            @include mt(#{$m-t-val}px);
+        }
+    }
+    $m-t-val: $m-t-val + 5;
+}
+.m-t-70{
+    @include mt(70px);
+}
+.m-t-150{
+    @include mt(150px);
+}
+/*========== Margin Bottom ===========*/
+$m-b-val:0;
+@while $m-b-val <= 50 {
+    .m-b-#{$m-b-val}{
+        @if $m-b-val == 0{
+            @include mb(#{$m-b-val});
+        }@else if $m-b-val == 10 or $m-b-val == 20 or $m-b-val == 30{
+            @include mb(#{$m-b-val}px !important);
+        }@else{
+            @include mb(#{$m-b-val}px);
+        }
+    }
+    $m-b-val: $m-b-val + 5;
+}
+.m-b-70{
+    @include mb(70px);
+}
+
+/*========== Margin left ===========*/
+$m-l-val:0;
+@while $m-l-val <= 50 {
+    .m-l-#{$m-l-val}{
+        @if $m-l-val == 0{
+            @include ml(#{$m-l-val});
+        }@else{
+            @include ml(#{$m-l-val}px);
+        }
+    }
+    $m-l-val: $m-l-val + 5;
+}
+
+/*========== Margin Right ===========*/
+$m-r-val:5;
+.m-r-0 {
+    @include mr(0);
+}
+.m-r-3 {
+    @include mr(3px !important);
+}
+@while $m-r-val <= 50 {
+    .m-r-#{$m-r-val}{
+        @if $m-r-val == 5 or $m-r-val == 10 {
+            @include mr(#{$m-r-val}px !important);
+        }@else{
+            @include mr(#{$m-r-val}px);
+        }
+    }
+    $m-r-val: $m-r-val + 5;
+}
+/**  =====================
+      Padding-classes start
+==========================  **/
+/*========== All Padding ===========*/
+.p-0 {
+    @include p(0 !important);
+}
+.p-3 {
+    @include p(3px);
+}
+$p-val:5;
+@while $p-val <= 50 {
+    .p-#{$p-val}{
+        @if $p-val == 5 or $p-val == 10 or $p-val == 40{
+            @include p(#{$p-val}px !important);
+        }@else{
+            @include p(#{$p-val}px);
+        }
+    }
+    $p-val: $p-val + 5;
+}
+
+/*========== Padding top ===========*/
+.p-t-0 {
+    @include pt(0);
+}
+.p-t-2 {
+    @include pt(2px !important);
+}
+$p-t-val:5;
+@while $p-t-val <= 50 {
+    .p-t-#{$p-t-val}{
+        @if $p-t-val == 10{
+            @include pt(#{$p-t-val}px !important);
+        }@else{
+            @include pt(#{$p-t-val}px);
+        }
+    }
+    $p-t-val: $p-t-val + 5;
+}
+
+/*========== Padding Bottom ===========*/
+.p-b-0 {
+    @include pb(0);
+}
+.p-b-2 {
+    @include pb(2px !important);
+}
+$p-b-val:5;
+@while $p-b-val <= 50 {
+    .p-b-#{$p-b-val}{
+        @include pb(#{$p-b-val}px);
+    }
+    $p-b-val: $p-b-val + 5;
+}
+
+.p-b-70{
+    @include pb(70px);
+}
+.p-b-100{
+    @include pb(100px !important);
+}
+/*========== Padding left ===========*/
+.p-l-0 {
+    @include pl(0);
+}
+$p-l-val:5;
+@while $p-l-val <= 50 {
+    .p-l-#{$p-l-val}{
+        @include pl(#{$p-l-val}px);
+    }
+    $p-l-val: $p-l-val + 5;
+}
+/*========== Padding Right ===========*/
+$p-r-val:0;
+@while $p-r-val <= 50 {
+    .p-r-#{$p-r-val}{
+        @if $p-r-val == 0{
+            @include pr(#{$p-r-val});
+        }@else if $p-r-val == 20 {
+            @include pr(#{$p-r-val}px !important);
+        }@else{
+            @include pr(#{$p-r-val}px);
+        }
+    }
+    $p-r-val: $p-r-val + 5;
+}
+
+/**  =====================
+      Font-classes start
+==========================  **/
+/*========== Font Size ===========*/
+ @for $i from 12 through 16 {
+    .f-#{$i}{
+        @if($i == 15){
+            @include f-s(#{$i}px !important);
+        }
+        @else{
+            @include f-s(#{$i}px);
+        }
+    }
+}
+$f-s-val:18;
+@while $f-s-val <= 28 {
+    .f-#{$f-s-val}{
+        @if $f-s-val == 26 {
+            @include f-s(#{$f-s-val}px !important);
+        }@else{
+            @include f-s(#{$f-s-val}px);
+        }
+    }
+    $f-s-val: $f-s-val + 2;
+}
+$f-s-val:30;
+@while $f-s-val <= 45 {
+    .f-#{$f-s-val}{
+        @include f-s(#{$f-s-val}px);
+    }
+    $f-s-val: $f-s-val + 5;
+}
+.f-52 {
+    @include f-s(52px);
+}
+.f-64 {
+    @include f-s(64px);
+}
+.f-90 {
+    @include f-s(90px);
+}
+.f-120 {
+    @include f-s(120px);
+}
+/*========== Font Weight ===========*/
+
+.f-w-100 {
+    @include f-w(100);
+}
+.f-w-300 {
+    @include f-w(300);
+}
+.f-w-400 {
+    @include f-w(400);
+}
+.f-w-600 {
+    @include f-w(600);
+}
+.f-w-700 {
+    @include f-w(700);
+}
+.f-w-900 {
+    @include f-w(900);
+}
+.f-bold {
+    @include f-w(bold);
+}
+.f-thin {
+    @include f-w(lighter);
+}
+
+/*========== Font Style ===========*/
+
+.f-normal {
+    @include f-st(normal);
+}
+.f-italic {
+    @include f-st(italic);
+}
+.f-oblique {
+    @include f-st(oblique);
+}
+
+/**  =====================
+      Text-classes start
+==========================  **/
+
+/*========== Text align ===========*/
+.text-center {
+    @include t-a(center);
+}
+.text-left {
+    @include t-a(left);
+}
+.text-right {
+    @include t-a(right);
+}
+.text-overline {
+    @include t-d(overline);
+}
+.text-through {
+    @include t-d(line-through);
+}
+.text-underline {
+    @include t-d(underline);
+}
+.text-plain {
+    @include t-d(none);
+}
+/**  =====================
+      Positions start
+==========================  **/
+
+.p-relative {
+    @include pos(relative);
+}
+.p-absolute {
+    @include pos(absolute);
+}
+.p-static {
+    @include pos(static);
+}
+.p-fixed {
+    @include pos(fixed);
+}
+/**  =====================
+      Floating start
+==========================  **/
+
+.f-left {
+    @include flt(left);
+}
+.f-right {
+    @include flt(right !important);
+}
+.f-none {
+    @include flt(none);
+}
+/**  =====================
+      Overflow css start
+==========================  **/
+
+.o-hidden {
+    @include o-f(hidden);
+}
+.o-auto {
+    @include o-f(auto);
+}
+.o-visible {
+    @include o-f(visible);
+}
+/**  =====================
+      Background Color css start
+==========================  **/
+
+.bg-color-box {
+    @include t-a(center);
+    @include disp(inline-block);
+    @include c(#fff);
+    @include p(10px 20px);
+    @include shadow(0 0 5px 2px rgba(128, 128, 128, 0.49));
+    @include f-w(600);
+    @include mr(20px);
+    @include mb(20px);
+    cursor: pointer;
+}
+.bg-color-box span {
+    @include disp(block);
+}
+
+@each $value in $bg-color {
+    $i: index($bg-color, $value);
+    .bg-#{nth($bg-color-name,$i)}{
+        @include bg-c($value);
+    }
+}
+
+@each $value in $bg{
+    $i: index($bg, $value);
+    .#{nth($bg-name,$i)}{
+        @include bg($value);
+    }
+}
+
+/**  =====================
+      Text-color css start
+==========================  **/
+@each $value in $t-c-v{
+    $i: index($t-c-v, $value);
+    .txt-#{nth($t-c-n,$i)}{
+        @include c($value);
+    }
+}
+/**  =====================
+      Display-classes start
+==========================  **/
+
+.d-flex{
+    @include disp(flex);
+    align-items: center;
+}
+.d-block{
+    @include disp(block);
+}
+.d-none{
+    @include disp(none);
+}
+.d-inlineblock{
+    @include disp(inline-block);
+}
+
+/**  =====================
+      vertical-classes start
+==========================  **/
+
+.v-middle {
+    @include v-al(middle !important);
+}
+.v-top{
+    @include v-al(top);
+}
+.v-bottom{
+    @include v-al(bottom);
+}
+/**  =====================
+      Border-classes start
+==========================  **/
+
+.b-none {
+    @include b(none !important);
+}
+.b-solid {
+    @include b(1px solid #333);
+}
+.b-dotted {
+    @include b(1px dotted #333);
+}
+.b-radius-0{
+    @include b(1px dotted #333,radius);
+}
+.b-b-muted{
+    @include b(1px solid #ccc,bottom);
+}
+.b-t-muted{
+    @include b(1px solid #ccc,top);
+}
+.b-l-muted{
+    @include b(1px solid #ccc,left);
+}
+.b-r-muted{
+    @include b(1px solid #ccc,right);
+}
+/**====== Generic-class css end ======**/
